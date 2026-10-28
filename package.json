@@ -1,0 +1,21 @@
+{
+  "name": "sunsathiyai-app",
+  "version": "1.0.0",
+  "description": "SunSathiyAI voice assistant application powered by Gnani (Vachana) API",
+  "main": "server.mjs",
+  "type": "module",
+  "scripts": {
+    "start": "node server.mjs"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "keywords": [
+    "voice-assistant",
+    "stt",
+    "tts",
+    "gnani",
+    "vachana"
+  ],
+  "license": "ISC"
+}
