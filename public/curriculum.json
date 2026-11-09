@@ -1,0 +1,1250 @@
+{
+  "categories": [
+    {
+      "id": "campus",
+      "icon": "🎓",
+      "name": "Campus & Class",
+      "hi": "कैंपस और क्लास",
+      "bn": "ক্যাম্পাস ও ক্লাস",
+      "te": "క్యాంపస్ & క్లాస్"
+    },
+    {
+      "id": "canteen",
+      "icon": "☕",
+      "name": "Canteen & Chai",
+      "hi": "कैंटीन और चाय",
+      "bn": "ক্যান্টিন ও চা",
+      "te": "క్యాంటీన్ & టీ"
+    },
+    {
+      "id": "commute",
+      "icon": "🛺",
+      "name": "Auto & Metro",
+      "hi": "ऑटो और मेट्रो",
+      "bn": "অটো ও মেট্রো",
+      "te": "ఆటో & మెట్రో"
+    },
+    {
+      "id": "market",
+      "icon": "🛍️",
+      "name": "Market & UPI",
+      "hi": "बाज़ार और पेमेंट",
+      "bn": "বাজার ও পেমেন্ট",
+      "te": "మార్కెట్ & పేమెంట్"
+    },
+    {
+      "id": "hostel",
+      "icon": "🏠",
+      "name": "Hostel Life",
+      "hi": "हॉस्टल की ज़िंदगी",
+      "bn": "হোস্টেল জীবন",
+      "te": "హాస్టల్ లైఫ్"
+    },
+    {
+      "id": "social",
+      "icon": "🤝",
+      "name": "Friends & Social",
+      "hi": "दोस्ती और बातचीत",
+      "bn": "বন্ধুত্ব ও গল্প",
+      "te": "స్నేహం & పరిచయం"
+    },
+    {
+      "id": "health",
+      "icon": "🏥",
+      "name": "Health & Clinic",
+      "hi": "सेहत और दवाई",
+      "bn": "স্বাস্থ্য ও চিকিৎসা",
+      "te": "ఆరోగ్యం & క్లినిక్"
+    }
+  ],
+  "sentences": [
+    {
+      "id": 0,
+      "category": "campus",
+      "title": "Clarify with Professor",
+      "meaning": "Asking a teacher or professor to explain a concept once more",
+      "hi": [
+        "सर, फिर से समझाइए",
+        "Sir, phir se samjhaiye"
+      ],
+      "en": [
+        "Sir, could you please explain that again?",
+        "Sur, kood yoo pleez ek-splayn dhat uh-gen?"
+      ],
+      "bn": [
+        "স্যার, আবার বুঝিয়ে বলবেন?",
+        "Sir, abar bujhiye bolben?"
+      ],
+      "te": [
+        "సార్, మళ్ళీ వివరించండి",
+        "Sir, malli vivarinchandi"
+      ]
+    },
+    {
+      "id": 1,
+      "category": "campus",
+      "title": "Central Library",
+      "meaning": "Asking for the location of the campus central library",
+      "hi": [
+        "सेंट्रल लाइब्रेरी कहाँ है?",
+        "Central library kahan hai?"
+      ],
+      "en": [
+        "Where is the central library?",
+        "Wair iz dhuh sen-truhl ly-brer-ee?"
+      ],
+      "bn": [
+        "সেন্ট্রাল লাইব্রেরিটা কোন দিকে?",
+        "Central library-ta kon dike?"
+      ],
+      "te": [
+        "సెంట్రల్ లైబ్రరీ ఎక్కడ ఉంది?",
+        "Central library ekkada undi?"
+      ]
+    },
+    {
+      "id": 2,
+      "category": "campus",
+      "title": "Project Deadline",
+      "meaning": "Asking classmates about final assignment submission date",
+      "hi": [
+        "प्रोजेक्ट सबमिशन की आखिरी तारीख कब है?",
+        "Project submission ki aakhiri tareekh kab hai?"
+      ],
+      "en": [
+        "When is the project submission deadline?",
+        "Wen iz dhuh proj-ekt suhb-mish-uhn ded-lyn?"
+      ],
+      "bn": [
+        "প্রজেক্ট জমা দেওয়ার শেষ তারিখ কবে?",
+        "Project joma deowar shesh tarikh kobe?"
+      ],
+      "te": [
+        "ప్రాజెక్ట్ సబ్మిట్ చేయడానికి చివరి తేదీ ఎప్పుడు?",
+        "Project submit cheyadaniki chivari thedi eppudu?"
+      ]
+    },
+    {
+      "id": 3,
+      "category": "campus",
+      "title": "Borrow Class Notes",
+      "meaning": "Asking a classmate to share their handwritten or digital notes",
+      "hi": [
+        "क्या मुझे आज के क्लास नोट्स मिल सकते हैं?",
+        "Kya mujhe aaj ke class notes mil sakte hain?"
+      ],
+      "en": [
+        "Can I borrow your lecture notes for today?",
+        "Kan eye bah-roh yoor lek-chur nohts for tuh-day?"
+      ],
+      "bn": [
+        "আজকের ক্লাসের নোটগুলো একটু দেখতে দেবে?",
+        "Aajker class-er note-gulo ektu dekhte debe?"
+      ],
+      "te": [
+        "ఈరోజు క్లాస్ నోట్స్ కొంచెం ఇస్తారా?",
+        "Eeroju class notes konchem isthara?"
+      ]
+    },
+    {
+      "id": 4,
+      "category": "campus",
+      "title": "Lab Venue",
+      "meaning": "Inquiring about practical laboratory room and venue",
+      "hi": [
+        "कल का प्रैक्टिकल लैब कहाँ होगा?",
+        "Kal ka practical lab kahan hoga?"
+      ],
+      "en": [
+        "Where will tomorrow's practical lab be held?",
+        "Wair wil tuh-mah-roh'z prak-tih-kuhl lab bee held?"
+      ],
+      "bn": [
+        "কালকের প্র্যাকটিক্যাল ল্যাবটা কোথায় হবে?",
+        "Kalker practical lab-ta kothay hobe?"
+      ],
+      "te": [
+        "రేపటి ప్రాక్టికల్ ల్యాబ్ ఎక్కడ జరుగుతుంది?",
+        "Repati practical lab ekkada jaruguthundi?"
+      ]
+    },
+    {
+      "id": 5,
+      "category": "campus",
+      "title": "Enter Faculty Cabin",
+      "meaning": "Polite permission before entering faculty office or class",
+      "hi": [
+        "क्या मैं अंदर आ सकता हूँ, प्रोफेसर?",
+        "Kya main andar aa sakta hoon, professor?"
+      ],
+      "en": [
+        "May I come in, Professor?",
+        "May eye kum in, proh-fes-er?"
+      ],
+      "bn": [
+        "প্রফেসর, আমি কি ভেতরে আসতে পারি?",
+        "Professor, ami ki bhetore aashte pari?"
+      ],
+      "te": [
+        "ప్రొఫెసర్, నేను లోపలికి రావచ్చా?",
+        "Professor, nenu lopaliki ravachha?"
+      ]
+    },
+    {
+      "id": 6,
+      "category": "campus",
+      "title": "Desk in Classroom",
+      "meaning": "Checking if a bench or desk is occupied before sitting",
+      "hi": [
+        "क्या यहाँ कोई बैठा है?",
+        "Kya yahan koi baitha hai?"
+      ],
+      "en": [
+        "Is this seat taken?",
+        "Iz dhis seet tay-kuhn?"
+      ],
+      "bn": [
+        "এই সিটটায় কেউ বসেছে কি?",
+        "Ei seat-tay keu boseche ki?"
+      ],
+      "te": [
+        "ఈ సీట్లో ఎవరైనా కూర్చున్నారా?",
+        "Ee seat-lo evaraina kurchunnara?"
+      ]
+    },
+    {
+      "id": 7,
+      "category": "campus",
+      "title": "Attendance Sheet",
+      "meaning": "Checking the circulation of the student roll sheet",
+      "hi": [
+        "अटेंडेंस शीट यहाँ तक पहुँच गई क्या?",
+        "Attendance sheet yahan tak pahunch gayi kya?"
+      ],
+      "en": [
+        "Has the attendance sheet reached here?",
+        "Haz dhuh uh-ten-duhns sheet reecht heer?"
+      ],
+      "bn": [
+        "অ্যাটেনডেন্স শিটটা কি এদিকে এসেছে?",
+        "Attendance sheet-ta ki edike esheche?"
+      ],
+      "te": [
+        "అటెండెన్స్ షీట్ ఇక్కడికి వచ్చిందా?",
+        "Attendance sheet ikkadiki vachinda?"
+      ]
+    },
+    {
+      "id": 8,
+      "category": "canteen",
+      "title": "Chai and Samosa",
+      "meaning": "Ordering classic Indian evening snack combination",
+      "hi": [
+        "एक चाय और समोसा देना",
+        "Ek chai aur samosa dena"
+      ],
+      "en": [
+        "One tea and a samosa, please",
+        "Wun tee and uh suh-moh-suh, pleez"
+      ],
+      "bn": [
+        "একটা চা আর একটা সিঙ্গাড়া দিন",
+        "Ekta cha aar ekta singara din"
+      ],
+      "te": [
+        "ఒక టీ, ఒక సమోసా ఇవ్వండి",
+        "Oka tea, oka samosa ivvandi"
+      ]
+    },
+    {
+      "id": 9,
+      "category": "canteen",
+      "title": "Less Sugar Chai",
+      "meaning": "Customizing your beverage sweetness preference",
+      "hi": [
+        "चाय में चीनी कम रखना, भैया",
+        "Chai mein cheeni kam rakhna, bhaiya"
+      ],
+      "en": [
+        "Please make the tea with less sugar",
+        "Pleez mayk dhuh tee with les shoo-gur"
+      ],
+      "bn": [
+        "চায়ে চিনি একটু কম দেবেন, দাদা",
+        "Chaye chini ektu kom deben, dada"
+      ],
+      "te": [
+        "టీలో చెక్కర కొంచెం తక్కువ వేయండి, అన్నా",
+        "Tea-lo chekkara konchem thakkuva veyandi, anna"
+      ]
+    },
+    {
+      "id": 10,
+      "category": "canteen",
+      "title": "Mess Menu",
+      "meaning": "Inquiring about today's meal preparation in the hostel mess",
+      "hi": [
+        "आज मेस में खाने में क्या बना है?",
+        "Aaj mess mein khaane mein kya bana hai?"
+      ],
+      "en": [
+        "What is on the hostel mess menu today?",
+        "Wuht iz on dhuh hos-tuhl mes men-yoo tuh-day?"
+      ],
+      "bn": [
+        "আজকে হোস্টেল মেসে কী রান্না হয়েছে?",
+        "Aajke hostel mess-e kee ranna hoyeche?"
+      ],
+      "te": [
+        "ఈరోజు హాస్టల్ మెస్‌లో ఏం వండారు?",
+        "Eeroju hostel mess-lo em vandaru?"
+      ]
+    },
+    {
+      "id": 11,
+      "category": "canteen",
+      "title": "No Onion, No Garlic",
+      "meaning": "Specifying dietary preference or satvik food requirements",
+      "hi": [
+        "यह बिना प्याज और लहसुन के बनाना",
+        "Yeh bina pyaaz aur lehsun ke banana"
+      ],
+      "en": [
+        "Please prepare this without onion and garlic",
+        "Pleez pree-pair dhis widh-out uhn-yuhn and gar-lik"
+      ],
+      "bn": [
+        "এটা পেঁয়াজ-রসুন ছাড়া বানিয়ে দেবেন",
+        "Eta peyaj-roshun chara baniye deben"
+      ],
+      "te": [
+        "ఇది ఉల్లిపాయ, వెల్లుల్లి లేకుండా చేయండి",
+        "Idi ullipaya, vellulli lekunda cheyandi"
+      ]
+    },
+    {
+      "id": 12,
+      "category": "canteen",
+      "title": "Cold Coffee & Sandwich",
+      "meaning": "Ordering cold drinks and quick snacks at the cafeteria",
+      "hi": [
+        "एक कोल्ड कॉफ़ी और वेज सैंडविच मिलेगा?",
+        "Ek cold coffee aur veg sandwich milega?"
+      ],
+      "en": [
+        "Can I get one cold coffee and a veg sandwich?",
+        "Kan eye get wun kohld koh-fee and uh vej sand-wich?"
+      ],
+      "bn": [
+        "একটা কোল্ড কফি আর ভেজ স্যান্ডউইচ হবে?",
+        "Ekta cold coffee aar veg sandwich hobe?"
+      ],
+      "te": [
+        "ఒక కోల్డ్ కాఫీ, వెజ్ శాండ్‌విచ్ దొరుకుతుందా?",
+        "Oka cold coffee, veg sandwich dorukuthunda?"
+      ]
+    },
+    {
+      "id": 13,
+      "category": "canteen",
+      "title": "Drinking Water",
+      "meaning": "Asking for filtered potable drinking water location",
+      "hi": [
+        "यहाँ पीने का साफ़ पानी कहाँ मिलेगा?",
+        "Yahan peene ka saaf paani kahan milega?"
+      ],
+      "en": [
+        "Where can I find drinking water here?",
+        "Wair kan eye fynd dring-king wah-tur heer?"
+      ],
+      "bn": [
+        "এখানে খাবার জল কোথায় পাব?",
+        "Ekhane khabar jol kothay pabo?"
+      ],
+      "te": [
+        "ఇక్కడ తాగే నీళ్లు ఎక్కడ దొరుకుతాయి?",
+        "Ikkada thage neellu ekkada dorukuthayi?"
+      ]
+    },
+    {
+      "id": 14,
+      "category": "canteen",
+      "title": "Pack as Takeaway",
+      "meaning": "Requesting takeaway meal container",
+      "hi": [
+        "इसे पार्सल पैक कर दीजिए",
+        "Ise parcel pack kar deejiye"
+      ],
+      "en": [
+        "Please pack this for takeaway",
+        "Pleez pak dhis for tayk-uh-way"
+      ],
+      "bn": [
+        "এটা পার্সেল প্যাক করে দিন",
+        "Eta parcel pack kore din"
+      ],
+      "te": [
+        "దీన్ని పార్శిల్ కట్టి ఇవ్వండి",
+        "Deenni parcel katti ivvandi"
+      ]
+    },
+    {
+      "id": 15,
+      "category": "canteen",
+      "title": "Total Canteen Bill",
+      "meaning": "Asking for the total canteen bill amount due",
+      "hi": [
+        "कुल कितना बिल हुआ, भैया?",
+        "Kul kitna bill hua, bhaiya?"
+      ],
+      "en": [
+        "How much is the total bill?",
+        "How much iz dhuh toh-tuhl bil?"
+      ],
+      "bn": [
+        "দাদা, মোট কত বিল হলো?",
+        "Dada, mot koto bill holo?"
+      ],
+      "te": [
+        "మొత్తం ఎంత బిల్లు అయింది, అన్నా?",
+        "Motham entha billu ayindi, anna?"
+      ]
+    },
+    {
+      "id": 16,
+      "category": "commute",
+      "title": "Auto to Campus",
+      "meaning": "Hailing an auto-rickshaw to college campus",
+      "hi": [
+        "भैया, कैंपस चलोगे?",
+        "Bhaiya, campus chaloge?"
+      ],
+      "en": [
+        "Will you take me to the campus?",
+        "Wil yoo tayk mee too dhuh kam-puhs?"
+      ],
+      "bn": [
+        "দাদা, ক্যাম্পাসে যাবেন?",
+        "Dada, campus-e jaben?"
+      ],
+      "te": [
+        "అన్నా, క్యాంపస్‌కి వస్తారా?",
+        "Anna, campus-ki vastaara?"
+      ]
+    },
+    {
+      "id": 17,
+      "category": "commute",
+      "title": "Meter or Fixed Fare",
+      "meaning": "Confirming if auto driver will follow official meter",
+      "hi": [
+        "मीटर से चलोगे या फिक्स किराया है?",
+        "Meter se chaloge ya fix kiraya hai?"
+      ],
+      "en": [
+        "Will you run by meter or fixed fare?",
+        "Wil yoo ruhn by mee-tur or fikst fair?"
+      ],
+      "bn": [
+        "মিটারে যাবেন নাকি নির্দিষ্ট ভাড়া?",
+        "Meter-e jaben naaki nirdishto bhara?"
+      ],
+      "te": [
+        "మీటర్ వేస్తారా లేక ఫిక్స్డ్ రేటా?",
+        "Meter vesthara leka fixed rata?"
+      ]
+    },
+    {
+      "id": 18,
+      "category": "commute",
+      "title": "Metro Token or Card",
+      "meaning": "Purchasing metro transit tokens or recharging smart card",
+      "hi": [
+        "मेट्रो कार्ड या टोकन कहाँ मिलेगा?",
+        "Metro card ya token kahan milega?"
+      ],
+      "en": [
+        "Where can I buy a metro card or token?",
+        "Wair kan eye by uh meh-troh kard or toh-kuhn?"
+      ],
+      "bn": [
+        "মেট্রোর কার্ড বা টোকেন কোথায় কাটব?",
+        "Metro-r card ba token kothay katbo?"
+      ],
+      "te": [
+        "మెట్రో కార్డు లేదా టోకెన్ ఎక్కడ కొనుక్కోవాలి?",
+        "Metro card leda token ekkada konukkovali?"
+      ]
+    },
+    {
+      "id": 19,
+      "category": "commute",
+      "title": "Bus to Station",
+      "meaning": "Finding the right bus route to the train terminal",
+      "hi": [
+        "हावड़ा स्टेशन के लिए कौन सी बस जाएगी?",
+        "Howrah station ke liye kaun si bus jaayegi?"
+      ],
+      "en": [
+        "Which bus goes towards the railway station?",
+        "Which buhs gohz tuh-wardz dhuh rayl-way stay-shuhn?"
+      ],
+      "bn": [
+        "হাওড়া স্টেশনের দিকে কোন বাসটা যাবে?",
+        "Howrah station-er dike kon bus-ta jabe?"
+      ],
+      "te": [
+        "రైల్వే స్టేషన్ వైపు ఏ బస్సు వెళ్తుంది?",
+        "Railway station vaipu ae bus velthundi?"
+      ]
+    },
+    {
+      "id": 20,
+      "category": "commute",
+      "title": "Drop at Main Gate",
+      "meaning": "Specifying drop-off point to auto or cab driver",
+      "hi": [
+        "मुझे मेन गेट के पास उतार देना",
+        "Mujhe main gate ke paas utaar dena"
+      ],
+      "en": [
+        "Please drop me near the main gate",
+        "Pleez drop mee neer dhuh mayn gayt"
+      ],
+      "bn": [
+        "আমাকে মেইন গেটের সামনে নামিয়ে দেবেন",
+        "Aamake main gate-er shamne naamiye deben"
+      ],
+      "te": [
+        "నన్ను మెయిన్ గేటు దగ్గర దించండి",
+        "Nannu main gate daggara dinchandi"
+      ]
+    },
+    {
+      "id": 21,
+      "category": "commute",
+      "title": "Metro Stop Check",
+      "meaning": "Confirming train stopping at destination station",
+      "hi": [
+        "क्या यह ट्रेन एस्प्लेनेड मेट्रो पर रुकेगी?",
+        "Kya yeh train Esplanade metro par rukegi?"
+      ],
+      "en": [
+        "Does this train stop at Esplanade?",
+        "Duhz dhis trayn stop at Es-pluh-nayd?"
+      ],
+      "bn": [
+        "এই ট্রেনটা কি এসপ্ল্যানেড স্টেশনে থামবে?",
+        "Ei train-ta ki Esplanade station-e thambe?"
+      ],
+      "te": [
+        "ఈ ట్రైన్ ఎస్ప్లనేడ్ స్టేషన్‌లో ఆగుతుందా?",
+        "Ee train Esplanade station-lo aaguthunda?"
+      ]
+    },
+    {
+      "id": 22,
+      "category": "commute",
+      "title": "Time to Airport",
+      "meaning": "Estimating travel duration through city traffic",
+      "hi": [
+        "यहाँ से एयरपोर्ट पहुँचने में कितना समय लगेगा?",
+        "Yahan se airport pahunchne mein kitna samay lagega?"
+      ],
+      "en": [
+        "How long will it take to reach the airport?",
+        "How long wil it tayk too reech dhuh air-port?"
+      ],
+      "bn": [
+        "এখান থেকে এয়ারপোর্ট পৌঁছতে কতক্ষণ লাগবে?",
+        "Ekhan theke airport pouchhote kotokkhon lagbe?"
+      ],
+      "te": [
+        "ఇక్కడి నుండి ఎయిర్‌పోర్టుకు ఎంత సమయం పడుతుంది?",
+        "Ikkadi nundi airport-ku entha samayam paduthundi?"
+      ]
+    },
+    {
+      "id": 23,
+      "category": "commute",
+      "title": "Ticket to Destination",
+      "meaning": "Purchasing a single transit journey pass",
+      "hi": [
+        "पार्क स्ट्रीट के लिए एक टिकट दीजिए",
+        "Park Street ke liye ek ticket deejiye"
+      ],
+      "en": [
+        "Please give me one ticket to Park Street",
+        "Pleez giv mee wun tik-uht too Park Street"
+      ],
+      "bn": [
+        "পার্ক স্ট্রিটের একটা টিকিট দিন",
+        "Park Street-er ekta ticket din"
+      ],
+      "te": [
+        "పార్క్ స్ట్రీట్‌కి ఒక టికెట్ ఇవ్వండి",
+        "Park Street-ki oka ticket ivvandi"
+      ]
+    },
+    {
+      "id": 24,
+      "category": "market",
+      "title": "Price per Kilo",
+      "meaning": "Asking fruit/vegetable price in street bazaar",
+      "hi": [
+        "ये आम कितने रुपये किलो हैं?",
+        "Ye aam kitne rupaye kilo hain?"
+      ],
+      "en": [
+        "How much are these per kilogram?",
+        "How much ar dheez pur kil-oh-gram?"
+      ],
+      "bn": [
+        "এই আমগুলো কিলো কত করে?",
+        "Ei aam-gulo kilo koto kore?"
+      ],
+      "te": [
+        "ఈ మామిడికాయలు కిలో ఎంత?",
+        "Ee mamidikayalu kilo entha?"
+      ]
+    },
+    {
+      "id": 25,
+      "category": "market",
+      "title": "UPI Payment Option",
+      "meaning": "Asking shopkeeper about QR digital transaction",
+      "hi": [
+        "क्या यहाँ गूगल पे या यूपीआई चलेगा?",
+        "Kya yahan Google Pay ya UPI chalega?"
+      ],
+      "en": [
+        "Do you accept UPI or QR code payment?",
+        "Doo yoo ak-sept yoo-pee-eye or kyu-ar kohd pay-muhnt?"
+      ],
+      "bn": [
+        "এখানে কি গুগল পে বা ইউপিআই নেওয়া হবে?",
+        "Ekhane ki Google Pay ba UPI neowa hobe?"
+      ],
+      "te": [
+        "ఇక్కడ గూగుల్ పే లేదా యూపీఐ తీసుకుంటారా?",
+        "Ikkada Google Pay leda UPI theesukuntara?"
+      ]
+    },
+    {
+      "id": 26,
+      "category": "market",
+      "title": "Locate QR Standee",
+      "meaning": "Locating merchant payment scan code",
+      "hi": [
+        "आपका पेमेंट स्कैनर कहाँ रखा है?",
+        "Aapka payment scanner kahan rakha hai?"
+      ],
+      "en": [
+        "Where is your payment QR code scanner?",
+        "Wair iz yoor pay-muhnt kyu-ar kohd skan-ur?"
+      ],
+      "bn": [
+        "আপনার কিউআর কোড স্ক্যানারটা কোথায়?",
+        "Aapnar QR code scanner-ta kothay?"
+      ],
+      "te": [
+        "మీ పేమెంట్ క్యూఆర్ కోడ్ ఎక్కడ ఉంది?",
+        "Mee payment QR code ekkada undi?"
+      ]
+    },
+    {
+      "id": 27,
+      "category": "market",
+      "title": "Bargain Discount",
+      "meaning": "Polite bargaining in street shopping",
+      "hi": [
+        "भैया, थोड़ा दाम कम कर लीजिए ना",
+        "Bhaiya, thoda daam kam kar lijiye na"
+      ],
+      "en": [
+        "Can you give a small discount, please?",
+        "Kan yoo giv uh smawl dis-kownt, pleez?"
+      ],
+      "bn": [
+        "দাদা, দামটা একটু কম রাখা যাবে না?",
+        "Dada, daam-ta ektu kom rakha jabe na?"
+      ],
+      "te": [
+        "అన్నా, కొంచెం ధర తగ్గించండి",
+        "Anna, konchem dhara thagginchandi"
+      ]
+    },
+    {
+      "id": 28,
+      "category": "market",
+      "title": "Cash Change",
+      "meaning": "Requesting smaller cash denomination from shopkeeper",
+      "hi": [
+        "क्या पाँच सौ रुपये के छुट्टे मिलेंगे?",
+        "Kya paanch sau rupaye ke chhutte milenge?"
+      ],
+      "en": [
+        "Do you have change for five hundred rupees?",
+        "Doo yoo hav chaynj for fyv huhn-dred roo-peez?"
+      ],
+      "bn": [
+        "পাঁচশো টাকার খুচরো হবে কি?",
+        "Pachsho takar khuchro hobe ki?"
+      ],
+      "te": [
+        "ఐదు వందల రూపాయల చిల్లర దొరుకుతుందా?",
+        "Aidu vandhala roopayala chillara dorukuthunda?"
+      ]
+    },
+    {
+      "id": 29,
+      "category": "market",
+      "title": "Shopping Carry Bag",
+      "meaning": "Asking for a cloth or paper shopping bag",
+      "hi": [
+        "सामान के लिए एक थैला दे दीजिए",
+        "Saamaan ke liye ek thaila de deejiye"
+      ],
+      "en": [
+        "Could you give me a carry bag, please?",
+        "Kood yoo giv mee uh ka-ree bag, pleez?"
+      ],
+      "bn": [
+        "জিনিসপত্রের জন্য একটা ব্যাগ দিন",
+        "Jinisphotrer jonno ekta bag din"
+      ],
+      "te": [
+        "సామాన్లకు ఒక సంచి ఇవ్వండి",
+        "Samanklu oka sanchi ivvandi"
+      ]
+    },
+    {
+      "id": 30,
+      "category": "market",
+      "title": "Larger Size Stationery",
+      "meaning": "Inquiring about notebook dimensions in bookstore",
+      "hi": [
+        "क्या यह नोटबुक बड़े साइज़ में है?",
+        "Kya yeh notebook bade size mein hai?"
+      ],
+      "en": [
+        "Do you have this notebook in a larger size?",
+        "Doo yoo hav dhis noht-book in uh lar-jur syz?"
+      ],
+      "bn": [
+        "এই খাতাটার বড় সাইজ পাওয়া যাবে?",
+        "Ei khata-tar boro size paowa jabe?"
+      ],
+      "te": [
+        "ఈ బుక్ పెద్ద సైజులో ఉందా?",
+        "Ee book pedda size-lo unda?"
+      ]
+    },
+    {
+      "id": 31,
+      "category": "market",
+      "title": "Payment Confirmation",
+      "meaning": "Informing merchant after successful online money transfer",
+      "hi": [
+        "मैंने पैसे भेज दिए हैं, अपना फोन चेक कीजिए",
+        "Maine paise bhej diye hain, apna phone check kijiye"
+      ],
+      "en": [
+        "I have sent the payment, please check",
+        "Eye hav sent dhuh pay-muhnt, pleez chek"
+      ],
+      "bn": [
+        "টাকাটা পাঠিয়ে দিয়েছি, একটু ফোনটা দেখুন",
+        "Taka-ta pathiye diyechi, ektu phone-ta dekhun"
+      ],
+      "te": [
+        "డబ్బులు పంపించాను, మీ ఫోన్ ఒకసారి చూడండి",
+        "Dabbulu pampinchanu, mee phone okasari chudandi"
+      ]
+    },
+    {
+      "id": 32,
+      "category": "hostel",
+      "title": "Plumbing Complaint",
+      "meaning": "Reporting a hostel water supply problem to warden",
+      "hi": [
+        "कमरा नंबर 204 में पानी नहीं आ रहा है",
+        "Kamra number 204 mein paani nahi aa raha hai"
+      ],
+      "en": [
+        "There is no water coming in room 204",
+        "Dhair iz noh wah-tur kum-ing in room too-oh-for"
+      ],
+      "bn": [
+        "২০৪ নম্বর ঘরে জল আসছে না",
+        "Dushow char nombor ghore jol aashche na"
+      ],
+      "te": [
+        "రూమ్ నంబర్ 204 లో నీళ్లు రావడం లేదు",
+        "Room number 204 lo neellu ravadam ledu"
+      ]
+    },
+    {
+      "id": 33,
+      "category": "hostel",
+      "title": "Hostel Curfew",
+      "meaning": "Inquiring about night curfew gate closing hours",
+      "hi": [
+        "रात को हॉस्टल का गेट कितने बजे बंद होता है?",
+        "Raat ko hostel ka gate kitne baje band hota hai?"
+      ],
+      "en": [
+        "What time does the hostel gate lock at night?",
+        "Wuht tym duhz dhuh hos-tuhl gayt lok at nyt?"
+      ],
+      "bn": [
+        "রাতে হোস্টেলের মেন গেট কটায় বন্ধ হয়?",
+        "Raate hostel-er main gate kotay bondho hoy?"
+      ],
+      "te": [
+        "రాత్రి హాస్టల్ గేటు ఎన్ని గంటలకు మూస్తారు?",
+        "Rathri hostel gate enni gantalaku moostharu?"
+      ]
+    },
+    {
+      "id": 34,
+      "category": "hostel",
+      "title": "Courier Delivery",
+      "meaning": "Checking security desk for online parcel delivery",
+      "hi": [
+        "क्या मेरे नाम का कोई कूरियर पार्सल आया है?",
+        "Kya mere naam ka koi courier parcel aaya hai?"
+      ],
+      "en": [
+        "Has any courier delivery arrived for me?",
+        "Haz eh-nee koor-ee-ur deh-liv-uh-ree uh-ryvd for mee?"
+      ],
+      "bn": [
+        "আমার নামে কি কোনো কুরিয়ার পার্সেল এসেছে?",
+        "Aamar naame ki kono courier parcel esheche?"
+      ],
+      "te": [
+        "నా పేరు మీద ఏదైనా కొరియర్ పార్శిల్ వచ్చిందా?",
+        "Naa peru meeda edaina courier parcel vachinda?"
+      ]
+    },
+    {
+      "id": 35,
+      "category": "hostel",
+      "title": "Hostel Wi-Fi Down",
+      "meaning": "Reporting internet outage on the floor",
+      "hi": [
+        "इस फ्लोर का वाई-फाई नहीं चल रहा है",
+        "Is floor ka Wi-Fi nahi chal raha hai"
+      ],
+      "en": [
+        "The internet Wi-Fi on this floor is down",
+        "Dhuh in-tur-net wy-fy on dhis flor iz down"
+      ],
+      "bn": [
+        "এই ফ্লোরের ওয়াই-ফাই কাজ করছে না",
+        "Ei floor-er Wi-Fi kaaj korche na"
+      ],
+      "te": [
+        "ఈ ఫ్లోర్‌లో వై-ఫై పని చేయడం లేదు",
+        "Ee floor-lo Wi-Fi pani cheyadam ledu"
+      ]
+    },
+    {
+      "id": 36,
+      "category": "hostel",
+      "title": "Laundry Area",
+      "meaning": "Locating hostel washing machines and drying lines",
+      "hi": [
+        "कपड़े धोने और सुखाने की जगह कहाँ है?",
+        "Kapde dhone aur sukhaane ki jagah kahan hai?"
+      ],
+      "en": [
+        "Where is the place to wash and dry laundry?",
+        "Wair iz dhuh plays too wosh and dry lawn-dree?"
+      ],
+      "bn": [
+        "জামাকাপড় ধোওয়া এবং শুকানোর জায়গা কোনটা?",
+        "Jaamakapor dhowa ebong shukanor jaayga konta?"
+      ],
+      "te": [
+        "బట్టలు ఉతుక్కోవడానికి, ఆరేయడానికి స్థలం ఎక్కడ ఉంది?",
+        "Battalu uthukkovadaniki, aareyadaniki sthalam ekkada undi?"
+      ]
+    },
+    {
+      "id": 37,
+      "category": "hostel",
+      "title": "Exam Study Quiet",
+      "meaning": "Asking neighbours for quiet hours during exam preparation",
+      "hi": [
+        "गाना थोड़ा धीमा बजाओगे? कल मेरी परीक्षा है",
+        "Gaana thoda dheema bajaoge? Kal meri pareeksha hai"
+      ],
+      "en": [
+        "Could you lower the sound? I have an exam tomorrow",
+        "Kood yoo loh-wur dhuh sownd? Eye hav an eg-zam tuh-mah-roh"
+      ],
+      "bn": [
+        "গানের আওয়াজটা একটু কমাবে? কাল আমার পরীক্ষা আছে",
+        "Ganer aowaz-ta ektu komabe? Kaal aamar porikkha aache"
+      ],
+      "te": [
+        "సౌండ్ కొంచెం తగ్గిస్తారా? రేపు నాకు పరీక్ష ఉంది",
+        "Sound konchem thaggisthara? Repu naaku pareeksha undi"
+      ]
+    },
+    {
+      "id": 38,
+      "category": "hostel",
+      "title": "Weekend Outpass",
+      "meaning": "Requesting warden outpass signature for visiting family",
+      "hi": [
+        "वार्डन सर, मुझे वीकेंड पर घर जाने के लिए आउटपास चाहिए",
+        "Warden sir, mujhe weekend par ghar jaane ke liye outpass chahiye"
+      ],
+      "en": [
+        "Warden sir, I need a weekend leave outpass",
+        "War-duhn sur, eye need uh week-end leev owt-pas"
+      ],
+      "bn": [
+        "ওয়ার্ডেন স্যার, ছুটির দিনে বাইরে যাওয়ার পাস দরকার",
+        "Warden sir, chutir dine baire jaowar pass dorkar"
+      ],
+      "te": [
+        "వార్డెన్ సార్, వారాంతంలో ఇంటికి వెళ్ళడానికి ఔట్‌పాస్ కావాలి",
+        "Warden sir, varanthamlo intiki velladaniki outpass kavali"
+      ]
+    },
+    {
+      "id": 39,
+      "category": "social",
+      "title": "Hometown Introduction",
+      "meaning": "Polite icebreaker with fellow students",
+      "hi": [
+        "नमस्ते! आप मूल रूप से कहाँ के रहने वाले हैं?",
+        "Namaste! Aap mool roop se kahan ke rehne waale hain?"
+      ],
+      "en": [
+        "Hello! Which state or city are you from?",
+        "Hel-loh! Which stayt or sit-ee ar yoo fruhm?"
+      ],
+      "bn": [
+        "নমস্কার! আপনার বাড়ি আসলে কোন শহরে?",
+        "Nomoshkar! Aapnar bari aashole kon shohore?"
+      ],
+      "te": [
+        "నమస్కారం! మీ సొంత ఊరు ఎక్కడ?",
+        "Namaskaram! Mee sontha ooru ekkada?"
+      ]
+    },
+    {
+      "id": 40,
+      "category": "social",
+      "title": "Department & Branch",
+      "meaning": "Inquiring about academic fields of study",
+      "hi": [
+        "आपकी पढ़ाई की कौन सी ब्रांच है?",
+        "Aapki padhai ki kaun si branch hai?"
+      ],
+      "en": [
+        "Which department or branch are you studying in?",
+        "Which dih-part-muhnt or branch ar yoo stuh-dee-ing in?"
+      ],
+      "bn": [
+        "আপনার ডিপার্টমেন্ট এবং ব্রাঞ্চ কী?",
+        "Aapnar department ebong branch kee?"
+      ],
+      "te": [
+        "మీది ఏ బ్రాంచ్, ఏ డిపార్ట్‌మెంట్?",
+        "Meedi ae branch, ae department?"
+      ]
+    },
+    {
+      "id": 41,
+      "category": "social",
+      "title": "Evening Chai Invitation",
+      "meaning": "Gathering hostel friends for chai break outing",
+      "hi": [
+        "चलो, शाम को साथ में चाय पीने चलते हैं!",
+        "Chalo, shaam ko saath mein chai peene chalte hain!"
+      ],
+      "en": [
+        "Come, let us all go have tea together!",
+        "Kum, let uhs awl goh hav tee tuh-gedh-ur!"
+      ],
+      "bn": [
+        "চলুন, বিকেলে একসাথে চা খেতে যাই!",
+        "Cholun, bikele ekshathe cha khete jaai!"
+      ],
+      "te": [
+        "రండి, సాయంత్రం అందరం కలిసి టీ తాగుదాం!",
+        "Randi, sayanthram andaram kalisi tea thaagudam!"
+      ]
+    },
+    {
+      "id": 42,
+      "category": "social",
+      "title": "Exchange Numbers",
+      "meaning": "Exchanging phone contacts with new acquaintances",
+      "hi": [
+        "आपसे मिलकर बहुत अच्छा लगा! आपका नंबर क्या है?",
+        "Aapse milkar bahut achha laga! Aapka number kya hai?"
+      ],
+      "en": [
+        "It was great meeting you! Can I get your number?",
+        "It wuz grayt mee-ting yoo! Kan eye get yoor nuhm-bur?"
+      ],
+      "bn": [
+        "আপনার সাথে আলাপ হয়ে খুব ভালো লাগল! ফোন নম্বরটা দেবেন?",
+        "Aapnar shathe aalaap hoye khoob bhalo laglo! Phone number-ta deben?"
+      ],
+      "te": [
+        "మిమ్మల్ని కలవడం చాలా సంతోషం! మీ ఫోన్ నంబర్ ఎంత?",
+        "Mimmalni kalavadam chala santhosham! Mee phone number entha?"
+      ]
+    },
+    {
+      "id": 43,
+      "category": "social",
+      "title": "Play Sports",
+      "meaning": "Inviting hostel mates for evening sports on ground",
+      "hi": [
+        "क्या आज शाम को क्रिकेट या बैडमिंटन खेलोगे?",
+        "Kya aaj shaam ko cricket ya badminton kheloge?"
+      ],
+      "en": [
+        "Would you like to play sports this evening?",
+        "Wood yoo lyk too play sports dhis eev-ning?"
+      ],
+      "bn": [
+        "আজ বিকেলে ক্রিকেট বা ব্যাডমিন্টন খেলবেন নাকি?",
+        "Aaj bikele cricket ba badminton khelben naaki?"
+      ],
+      "te": [
+        "ఈ సాయంత్రం క్రికెట్ లేదా బ్యాడ్మింటన్ ఆడదామా?",
+        "Ee sayanthram cricket leda badminton aadadama?"
+      ]
+    },
+    {
+      "id": 44,
+      "category": "social",
+      "title": "Speak Slower Request",
+      "meaning": "Asking local speaker to slow down for comprehension",
+      "hi": [
+        "मैं अभी यह भाषा सीख रहा हूँ, कृपया थोड़ा धीरे बोलिए",
+        "Main abhi yeh bhasha seekh raha hoon, kripya thoda dheere boliye"
+      ],
+      "en": [
+        "I am still learning, please speak a bit slower",
+        "Eye am stil lur-ning, pleez speek uh bit sloh-wur"
+      ],
+      "bn": [
+        "আমি এখনও এই ভাষাটা শিখছি, একটু আস্তে বলবেন দয়া করে",
+        "Ami ekhono ei bhasha-ta shikhchi, ektu aaste bolben doya kore"
+      ],
+      "te": [
+        "నేను ఇప్పుడే ఈ భాష నేర్చుకుంటున్నాను, కొంచెం నెమ్మదిగా మాట్లాడండి",
+        "Nenu ippude ee bhasha nerchukuntunnanu, konchem nemmadiga matladandi"
+      ]
+    },
+    {
+      "id": 45,
+      "category": "social",
+      "title": "Saying Thank You",
+      "meaning": "Learning local politeness and gratitude phrase",
+      "hi": [
+        "आपकी मातृभाषा में 'बहुत-बहुत धन्यवाद' कैसे कहते हैं?",
+        "Aapki matribhasha mein 'bahut bahut dhanyavaad' kaise kehte hain?"
+      ],
+      "en": [
+        "How do you say 'Thank you' in your mother tongue?",
+        "How doo yoo say thank yoo in yoor muh-dhur tuhng?"
+      ],
+      "bn": [
+        "আপনার মাতৃভাষায় 'অনেক ধন্যবাদ' কীভাবে বলে?",
+        "Aapnar matribhashay 'onek dhonnobad' keebhabe bole?"
+      ],
+      "te": [
+        "మీ మాతృభాషలో 'చాలా ధన్యవాదాలు' అని ఎలా అంటారు?",
+        "Mee mathrubhashalo 'chala dhanyavadalu' ani ela antaru?"
+      ]
+    },
+    {
+      "id": 46,
+      "category": "social",
+      "title": "Weekend Outing",
+      "meaning": "Planning weekend trip to local tourist spots with classmates",
+      "hi": [
+        "क्या इस रविवार को शहर घूमने के लिए खाली हो?",
+        "Kya is ravivar ko shahar ghoomne ke liye khaali ho?"
+      ],
+      "en": [
+        "Are you free this Sunday to visit the city?",
+        "Ar yoo free dhis Suhn-day too viz-it dhuh sit-ee?"
+      ],
+      "bn": [
+        "এই রবিবার শহরটা ঘুরে দেখতে যাবেন নাকি?",
+        "Ei robibar shohor-ta ghure dekhte jaben naaki?"
+      ],
+      "te": [
+        "ఈ ఆదివారం నగరం చూడటానికి ఖాళీగా ఉన్నారా?",
+        "Ee aadivaram nagaram chudataniki khaaliga unnara?"
+      ]
+    },
+    {
+      "id": 47,
+      "category": "health",
+      "title": "Nearest Pharmacy",
+      "meaning": "Asking for emergency medicine chemist shop",
+      "hi": [
+        "पास में दवा की दुकान कहाँ है?",
+        "Paas mein dawa ki dukaan kahan hai?"
+      ],
+      "en": [
+        "Where is the nearest medical store?",
+        "Wair iz dhuh neer-est med-ih-kuhl stor?"
+      ],
+      "bn": [
+        "কাছের ওষুধের দোকানটা কোথায়?",
+        "Kaacher oshudher dokan-ta kothay?"
+      ],
+      "te": [
+        "దగ్గర్లో మందుల షాప్ ఎక్కడ ఉంది?",
+        "Daggarlo mandula shop ekkada undi?"
+      ]
+    },
+    {
+      "id": 48,
+      "category": "health",
+      "title": "Headache and Fever",
+      "meaning": "Explaining symptoms to college dispensary doctor",
+      "hi": [
+        "मुझे बहुत तेज़ सिरदर्द और बुखार है",
+        "Mujhe bahut tez sirdard aur bukhaar hai"
+      ],
+      "en": [
+        "I have a bad headache and fever",
+        "Eye hav uh bad hed-ayk and fee-vur"
+      ],
+      "bn": [
+        "আমার খুব তীব্র মাথা যন্ত্রণা আর জ্বর এসেছে",
+        "Aamar khoob teebro matha jontrona aar jwor esheche"
+      ],
+      "te": [
+        "నాకు విపరీతమైన తలనొప్పి, జ్వరం ఉన్నాయి",
+        "Naaku vipareethamaina thalanoppi, jwaram unnayi"
+      ]
+    },
+    {
+      "id": 49,
+      "category": "health",
+      "title": "Stomach Ache Relief",
+      "meaning": "Requesting stomach pain relief at pharmacy",
+      "hi": [
+        "पेट दर्द के लिए कोई दवाई दे दीजिए",
+        "Pet dard ke liye koi dawai de deejiye"
+      ],
+      "en": [
+        "Please give me some medicine for stomach ache",
+        "Pleez giv mee suhm med-ih-sin for stuhm-uk ayk"
+      ],
+      "bn": [
+        "পেট ব্যথার জন্য একটা ওষুধ দিন, দয়া করে",
+        "Pet byathar jonno ekta oshudh din, doya kore"
+      ],
+      "te": [
+        "కడుపు నొప్పికి ఏదైనా మందు ఇవ్వండి",
+        "Kadupu noppiki edaina mandu ivvandi"
+      ]
+    },
+    {
+      "id": 50,
+      "category": "health",
+      "title": "Medication Dosage",
+      "meaning": "Asking pharmacist about prescription dosage and schedule",
+      "hi": [
+        "यह गोली दिन में कितनी बार खानी है?",
+        "Yeh goli din mein kitni baar khaani hai?"
+      ],
+      "en": [
+        "How many times a day should I take this tablet?",
+        "How men-ee tymz uh day wood eye tayk dhis tab-luht?"
+      ],
+      "bn": [
+        "এই ট্যাবলেটটা দিনে কতবার খেতে হবে?",
+        "Ei tablet-ta dine kotobar khete hobe?"
+      ],
+      "te": [
+        "ఈ మాత్రను రోజుకు ఎన్ని సార్లు వేసుకోవాలి?",
+        "Ee mathranu rojuku enni saarlu vesukovali?"
+      ]
+    },
+    {
+      "id": 51,
+      "category": "health",
+      "title": "Call Ambulance",
+      "meaning": "Calling for emergency hospital vehicle assistance",
+      "hi": [
+        "जल्दी एम्बुलेंस बुलाइए, यह इमरजेंसी है!",
+        "Jaldi ambulance bulaiye, yeh emergency hai!"
+      ],
+      "en": [
+        "Please call an ambulance, it is urgent!",
+        "Pleez kawl an am-byoo-luhns, it iz ur-juhnt!"
+      ],
+      "bn": [
+        "তাড়াতাড়ি অ্যাম্বুলেন্স ডাকুন, জরুরি দরকার!",
+        "Tarathari ambulance dakun, joruri dorkar!"
+      ],
+      "te": [
+        "త్వరగా అంబులెన్స్ పిలవండి, ఇది ఎమర్జెన్సీ!",
+        "Twaraga ambulance pilavandi, idi emergency!"
+      ]
+    },
+    {
+      "id": 52,
+      "category": "health",
+      "title": "Allergy Check",
+      "meaning": "Inquiring about medical drug allergies",
+      "hi": [
+        "क्या आपको किसी दवाई से एलर्जी है?",
+        "Kya aapko kisi dawai se allergy hai?"
+      ],
+      "en": [
+        "Are you allergic to any medications?",
+        "Ar yoo uh-lur-jik too eh-nee med-ih-kay-shuhnz?"
+      ],
+      "bn": [
+        "আপনার কি কোনো ওষুধের প্রতি অ্যালার্জি আছে?",
+        "Aapnar ki kono oshudher proti allergy aache?"
+      ],
+      "te": [
+        "మీకు ఏవైనా మందులతో అలర్జీ ఉందా?",
+        "Meeku evaina mandulatho allergy unda?"
+      ]
+    },
+    {
+      "id": 53,
+      "category": "health",
+      "title": "Urgent Doctor Request",
+      "meaning": "Asking hostel warden or security for immediate doctor assistance",
+      "hi": [
+        "मुझे तुरंत डॉक्टर की ज़रूरत है, मदद कीजिए",
+        "Mujhe turant doctor ki zaroorat hai, madad kijiye"
+      ],
+      "en": [
+        "I urgently need a doctor, please help me",
+        "Eye ur-juhnt-lee need uh dok-tur, pleez help mee"
+      ],
+      "bn": [
+        "আমার এখনই ডাক্তার দরকার, দয়া করে সাহায্য করুন",
+        "Aamar ekhoni doctor dorkar, doya kore sahajjo korun"
+      ],
+      "te": [
+        "నాకు వెంటనే డాక్టర్ అవసరం, దయచేసి సహాయం చేయండి",
+        "Naaku ventane doctor avasaram, dayachesi sahayam cheyandi"
+      ]
+    }
+  ]
+}

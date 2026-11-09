@@ -1,0 +1,935 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SunSathiyAI — Sovereign Multilingual Voice Tutor</title>
+<meta name="description" content="Pick your comfort language, pick a target language, and practise speaking with a real-time AI voice tutor.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&family=Noto+Sans+Devanagari:wght@400;700&family=Noto+Sans+Bengali:wght@400;700&family=Noto+Sans+Telugu:wght@400;700&display=swap">
+<style>/*! tailwindcss v4.3.3 | MIT License | https://tailwindcss.com */
+@layer properties{@supports (((-webkit-hyphens:none)) and (not (margin-trim:inline))) or ((-moz-orient:inline) and (not (color:rgb(from red r g b)))){*,:before,:after,::backdrop{--tw-translate-x:0;--tw-translate-y:0;--tw-translate-z:0;--tw-rotate-x:initial;--tw-rotate-y:initial;--tw-rotate-z:initial;--tw-skew-x:initial;--tw-skew-y:initial;--tw-space-y-reverse:0;--tw-space-x-reverse:0;--tw-border-style:solid;--tw-leading:initial;--tw-font-weight:initial;--tw-tracking:initial;--tw-ordinal:initial;--tw-slashed-zero:initial;--tw-numeric-figure:initial;--tw-numeric-spacing:initial;--tw-numeric-fraction:initial;--tw-shadow:0 0 #0000;--tw-shadow-color:initial;--tw-shadow-alpha:100%;--tw-inset-shadow:0 0 #0000;--tw-inset-shadow-color:initial;--tw-inset-shadow-alpha:100%;--tw-ring-color:initial;--tw-ring-shadow:0 0 #0000;--tw-inset-ring-color:initial;--tw-inset-ring-shadow:0 0 #0000;--tw-ring-inset:initial;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-offset-shadow:0 0 #0000;--tw-outline-style:solid;--tw-blur:initial;--tw-brightness:initial;--tw-contrast:initial;--tw-grayscale:initial;--tw-hue-rotate:initial;--tw-invert:initial;--tw-opacity:initial;--tw-saturate:initial;--tw-sepia:initial;--tw-drop-shadow:initial;--tw-drop-shadow-color:initial;--tw-drop-shadow-alpha:100%;--tw-drop-shadow-size:initial;--tw-duration:initial;--tw-ease:initial;--tw-content:"";--tw-animation-delay:0s;--tw-animation-direction:normal;--tw-animation-duration:initial;--tw-animation-fill-mode:none;--tw-animation-iteration-count:1;--tw-enter-blur:0;--tw-enter-opacity:1;--tw-enter-rotate:0;--tw-enter-scale:1;--tw-enter-translate-x:0;--tw-enter-translate-y:0;--tw-exit-blur:0;--tw-exit-opacity:1;--tw-exit-rotate:0;--tw-exit-scale:1;--tw-exit-translate-x:0;--tw-exit-translate-y:0}}}@layer theme{:root,:host{--font-sans:"Space Grotesk", "Noto Sans Devanagari", "Noto Sans Bengali", "Noto Sans Telugu", sans-serif;--color-black:#000;--spacing:.25rem;--container-sm:24rem;--container-md:28rem;--container-lg:32rem;--container-2xl:42rem;--container-3xl:48rem;--container-4xl:56rem;--container-7xl:80rem;--text-xs:.75rem;--text-xs--line-height:calc(1 / .75);--text-sm:.875rem;--text-sm--line-height:calc(1.25 / .875);--text-base:1rem;--text-base--line-height:calc(1.5 / 1);--text-lg:1.125rem;--text-lg--line-height:calc(1.75 / 1.125);--text-xl:1.25rem;--text-xl--line-height:calc(1.75 / 1.25);--text-2xl:1.5rem;--text-2xl--line-height:calc(2 / 1.5);--text-3xl:1.875rem;--text-3xl--line-height:calc(2.25 / 1.875);--text-4xl:2.25rem;--text-4xl--line-height:calc(2.5 / 2.25);--text-5xl:3rem;--text-5xl--line-height:1;--text-7xl:4.5rem;--text-7xl--line-height:1;--font-weight-normal:400;--font-weight-medium:500;--font-weight-semibold:600;--font-weight-bold:700;--tracking-tight:-.025em;--tracking-wide:.025em;--tracking-wider:.05em;--tracking-widest:.1em;--leading-relaxed:1.625;--ease-in-out:cubic-bezier(.4, 0, .2, 1);--animate-pulse:pulse 2s cubic-bezier(.4, 0, .6, 1) infinite;--aspect-video:16 / 9;--default-transition-duration:.15s;--default-transition-timing-function:cubic-bezier(.4, 0, .2, 1);--default-font-family:"Space Grotesk", "Noto Sans Devanagari", "Noto Sans Bengali", "Noto Sans Telugu", sans-serif;--default-mono-font-family:"JetBrains Mono", "Noto Sans Devanagari", "Noto Sans Bengali", "Noto Sans Telugu", ui-monospace, monospace;--color-background:var(--background);--color-foreground:var(--foreground);--color-border:var(--border)}}@layer base{*,:after,:before,::backdrop{box-sizing:border-box;border:0 solid;margin:0;padding:0}::file-selector-button{box-sizing:border-box;border:0 solid;margin:0;padding:0}html,:host{-webkit-text-size-adjust:100%;tab-size:4;line-height:1.5;font-family:var(--default-font-family,-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji");font-feature-settings:var(--default-font-feature-settings,normal);font-variation-settings:var(--default-font-variation-settings,normal);-webkit-tap-highlight-color:transparent}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;-webkit-text-decoration:inherit;-webkit-text-decoration:inherit;-webkit-text-decoration:inherit;-webkit-text-decoration:inherit;-webkit-text-decoration:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,samp,pre{font-family:var(--default-mono-font-family,ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace);font-feature-settings:var(--default-mono-font-feature-settings,normal);font-variation-settings:var(--default-mono-font-variation-settings,normal);font-size:1em}small{font-size:80%}sub,sup{vertical-align:baseline;font-size:75%;line-height:0;position:relative}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}:-moz-focusring:where(:not(iframe)){outline:auto}progress{vertical-align:baseline}summary{display:list-item}ol,ul,menu{list-style:none}img,svg,video,canvas,audio,iframe,embed,object{vertical-align:middle;display:block}img,video{max-width:100%;height:auto}button,input,select,optgroup,textarea{font:inherit;font-feature-settings:inherit;font-variation-settings:inherit;letter-spacing:inherit;color:inherit;opacity:1;background-color:#0000;border-radius:0}::file-selector-button{font:inherit;font-feature-settings:inherit;font-variation-settings:inherit;letter-spacing:inherit;color:inherit;opacity:1;background-color:#0000;border-radius:0}:where(select:is([multiple],[size])) optgroup{font-weight:bolder}:where(select:is([multiple],[size])) optgroup option{padding-inline-start:20px}::file-selector-button{margin-inline-end:4px}::placeholder{opacity:1}@supports (not ((-webkit-appearance:-apple-pay-button))) or (contain-intrinsic-size:1px){::placeholder{color:currentColor}@supports (color:color-mix(in lab, red, red)){::placeholder{color:color-mix(in oklab, currentcolor 50%, transparent)}}}textarea{resize:vertical}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-date-and-time-value{min-height:1lh;text-align:inherit}::-webkit-datetime-edit{display:inline-flex}::-webkit-datetime-edit-fields-wrapper{padding:0}::-webkit-datetime-edit{padding-block:0}::-webkit-datetime-edit-year-field{padding-block:0}::-webkit-datetime-edit-month-field{padding-block:0}::-webkit-datetime-edit-day-field{padding-block:0}::-webkit-datetime-edit-hour-field{padding-block:0}::-webkit-datetime-edit-minute-field{padding-block:0}::-webkit-datetime-edit-second-field{padding-block:0}::-webkit-datetime-edit-millisecond-field{padding-block:0}::-webkit-datetime-edit-meridiem-field{padding-block:0}::-webkit-calendar-picker-indicator{line-height:1}:-moz-ui-invalid{box-shadow:none}button,input:where([type=button],[type=reset],[type=submit]){appearance:button}::file-selector-button{appearance:button}::-webkit-inner-spin-button{height:auto}::-webkit-outer-spin-button{height:auto}[hidden]:where(:not([hidden=until-found])){display:none!important}*{border-color:var(--color-border)}html{scroll-behavior:smooth}body{background-color:var(--color-background);color:var(--color-foreground);font-family:var(--font-sans);background-image:radial-gradient(var(--foreground) 1px, transparent 1px)}@supports (color:color-mix(in lab, red, red)){body{background-image:radial-gradient(color-mix(in oklab, var(--foreground) 9%, transparent) 1px, transparent 1px)}}body{background-size:22px 22px}::selection{background:var(--g-yellow);color:var(--background)}}@layer components;@layer utilities{.pointer-events-none{pointer-events:none}.collapse{visibility:collapse}.invisible{visibility:hidden}.link-gemini{position:relative}.link-gemini:after{content:"";background:var(--gradient-gemini);width:0;height:3px;transition:width .2s;position:absolute;bottom:-4px;left:0}.link-gemini:hover:after{width:100%}.sr-only{clip-path:inset(50%);white-space:nowrap;border-width:0;width:1px;height:1px;margin:-1px;padding:0;position:absolute;overflow:hidden}.btn-outline-gemini{background:var(--background);color:var(--foreground);border:3px solid var(--foreground);border-radius:var(--radius);box-shadow:var(--shadow-brutal);font-weight:700;transition:transform .12s,box-shadow .12s,border-color .15s;position:relative}.btn-outline-gemini:hover{background:linear-gradient(var(--background), var(--background)) padding-box, var(--gradient-gemini) border-box;box-shadow:4px 4px 0 0 var(--g-blue), 8px 8px 0 0 var(--g-red);border-color:#0000;transform:translate(-3px,-3px)}.btn-outline-gemini:active{box-shadow:none;transform:translate(4px,4px)}.btn-outline-gemini[data-active=true]{background:var(--gradient-gemini);color:var(--background);border-color:var(--foreground);box-shadow:var(--shadow-brutal);background-size:220% 220%;animation:6s infinite gemini-pan}.btn-gemini{background:var(--gradient-gemini);color:var(--background);border:3px solid var(--foreground);border-radius:var(--radius);box-shadow:var(--shadow-brutal);background-size:220% 220%;font-weight:700;transition:transform .12s,box-shadow .12s,background-position .6s;animation:6s infinite gemini-pan;position:relative}.btn-gemini:hover{box-shadow:8px 8px 0 0 var(--foreground), 0 0 36px -4px var(--g-purple);transform:translate(-3px,-3px)}.btn-gemini:active{box-shadow:0 0 0 0 var(--foreground);transform:translate(4px,4px)}.absolute{position:absolute}.fixed{position:fixed}.relative{position:relative}.sticky{position:sticky}.inset-0{inset:0}.inset-x-0{inset-inline:0}.inset-y-0{inset-block:0}.-top-12{top:calc(var(--spacing) * -12)}.top-0{top:0}.top-1\.5{top:calc(var(--spacing) * 1.5)}.top-1\/2{top:50%}.top-3\.5{top:calc(var(--spacing) * 3.5)}.top-4{top:calc(var(--spacing) * 4)}.top-\[1px\]{top:1px}.top-\[50\%\]{top:50%}.top-\[60\%\]{top:60%}.top-full{top:100%}.-right-12{right:calc(var(--spacing) * -12)}.right-0{right:0}.right-1{right:var(--spacing)}.right-2{right:calc(var(--spacing) * 2)}.right-3{right:calc(var(--spacing) * 3)}.right-4{right:calc(var(--spacing) * 4)}.-bottom-12{bottom:calc(var(--spacing) * -12)}.bottom-0{bottom:0}.-left-12{left:calc(var(--spacing) * -12)}.left-0{left:0}.left-1\/2{left:50%}.left-2{left:calc(var(--spacing) * 2)}.left-\[50\%\]{left:50%}.left-full{left:100%}.z-10{z-index:10}.z-20{z-index:20}.z-50{z-index:50}.z-\[1\]{z-index:1}.col-start-2{grid-column-start:2}.col-start-3{grid-column-start:3}.-mx-1{margin-inline:calc(var(--spacing) * -1)}.mx-2{margin-inline:calc(var(--spacing) * 2)}.mx-3\.5{margin-inline:calc(var(--spacing) * 3.5)}.mx-auto{margin-inline:auto}.my-0\.5{margin-block:calc(var(--spacing) * .5)}.my-1{margin-block:var(--spacing)}.-mt-4{margin-top:calc(var(--spacing) * -4)}.mt-1{margin-top:var(--spacing)}.mt-1\.5{margin-top:calc(var(--spacing) * 1.5)}.mt-2{margin-top:calc(var(--spacing) * 2)}.mt-4{margin-top:calc(var(--spacing) * 4)}.mt-6{margin-top:calc(var(--spacing) * 6)}.mt-24{margin-top:calc(var(--spacing) * 24)}.mt-auto{margin-top:auto}.mr-2{margin-right:calc(var(--spacing) * 2)}.mb-1{margin-bottom:var(--spacing)}.-ml-4{margin-left:calc(var(--spacing) * -4)}.ml-1{margin-left:var(--spacing)}.ml-3{margin-left:calc(var(--spacing) * 3)}.ml-auto{margin-left:auto}.block{display:block}.contents{display:contents}.flex{display:flex}.grid{display:grid}.hidden{display:none}.inline-block{display:inline-block}.inline-flex{display:inline-flex}.table{display:table}.aspect-square{aspect-ratio:1}.aspect-video{aspect-ratio:var(--aspect-video)}.size-\(--cell-size\){width:var(--cell-size);height:var(--cell-size)}.size-4{width:calc(var(--spacing) * 4);height:calc(var(--spacing) * 4)}.h-\(--cell-size\){height:var(--cell-size)}.h-1\.5{height:calc(var(--spacing) * 1.5)}.h-2{height:calc(var(--spacing) * 2)}.h-2\.5{height:calc(var(--spacing) * 2.5)}.h-3{height:calc(var(--spacing) * 3)}.h-3\.5{height:calc(var(--spacing) * 3.5)}.h-4{height:calc(var(--spacing) * 4)}.h-5{height:calc(var(--spacing) * 5)}.h-6{height:calc(var(--spacing) * 6)}.h-7{height:calc(var(--spacing) * 7)}.h-8{height:calc(var(--spacing) * 8)}.h-9{height:calc(var(--spacing) * 9)}.h-10{height:calc(var(--spacing) * 10)}.h-12{height:calc(var(--spacing) * 12)}.h-36{height:calc(var(--spacing) * 36)}.h-\[1px\]{height:1px}.h-\[var\(--radix-navigation-menu-viewport-height\)\]{height:var(--radix-navigation-menu-viewport-height)}.h-\[var\(--radix-select-trigger-height\)\]{height:var(--radix-select-trigger-height)}.h-auto{height:auto}.h-full{height:100%}.h-px{height:1px}.h-svh{height:100svh}.max-h-\(--radix-context-menu-content-available-height\){max-height:var(--radix-context-menu-content-available-height)}.max-h-\(--radix-select-content-available-height\){max-height:var(--radix-select-content-available-height)}.max-h-\[300px\]{max-height:300px}.max-h-\[var\(--radix-dropdown-menu-content-available-height\)\]{max-height:var(--radix-dropdown-menu-content-available-height)}.min-h-0{min-height:0}.min-h-\[60px\]{min-height:60px}.min-h-screen{min-height:100vh}.min-h-svh{min-height:100svh}.w-\(--cell-size\){width:var(--cell-size)}.w-\(--sidebar-width\){width:var(--sidebar-width)}.w-0{width:0}.w-1{width:var(--spacing)}.w-2{width:calc(var(--spacing) * 2)}.w-2\.5{width:calc(var(--spacing) * 2.5)}.w-3{width:calc(var(--spacing) * 3)}.w-3\.5{width:calc(var(--spacing) * 3.5)}.w-3\/4{width:75%}.w-4{width:calc(var(--spacing) * 4)}.w-5{width:calc(var(--spacing) * 5)}.w-6{width:calc(var(--spacing) * 6)}.w-7{width:calc(var(--spacing) * 7)}.w-8{width:calc(var(--spacing) * 8)}.w-9{width:calc(var(--spacing) * 9)}.w-10{width:calc(var(--spacing) * 10)}.w-36{width:calc(var(--spacing) * 36)}.w-64{width:calc(var(--spacing) * 64)}.w-72{width:calc(var(--spacing) * 72)}.w-\[1px\]{width:1px}.w-\[100px\]{width:100px}.w-auto{width:auto}.w-fit{width:fit-content}.w-full{width:100%}.w-max{width:max-content}.w-px{width:1px}.max-w-\(--skeleton-width\){max-width:var(--skeleton-width)}.max-w-2xl{max-width:var(--container-2xl)}.max-w-3xl{max-width:var(--container-3xl)}.max-w-4xl{max-width:var(--container-4xl)}.max-w-7xl{max-width:var(--container-7xl)}.max-w-lg{max-width:var(--container-lg)}.max-w-max{max-width:max-content}.max-w-md{max-width:var(--container-md)}.min-w-\(--cell-size\){min-width:var(--cell-size)}.min-w-0{min-width:0}.min-w-5{min-width:calc(var(--spacing) * 5)}.min-w-8{min-width:calc(var(--spacing) * 8)}.min-w-9{min-width:calc(var(--spacing) * 9)}.min-w-10{min-width:calc(var(--spacing) * 10)}.min-w-\[8rem\]{min-width:8rem}.min-w-\[12rem\]{min-width:12rem}.min-w-\[var\(--radix-select-trigger-width\)\]{min-width:var(--radix-select-trigger-width)}.flex-1{flex:1}.shrink-0{flex-shrink:0}.grow{flex-grow:1}.grow-0{flex-grow:0}.basis-full{flex-basis:100%}.caption-bottom{caption-side:bottom}.border-collapse{border-collapse:collapse}.origin-\(--radix-context-menu-content-transform-origin\){transform-origin:var(--radix-context-menu-content-transform-origin)}.origin-\(--radix-dropdown-menu-content-transform-origin\){transform-origin:var(--radix-dropdown-menu-content-transform-origin)}.origin-\(--radix-hover-card-content-transform-origin\){transform-origin:var(--radix-hover-card-content-transform-origin)}.origin-\(--radix-menubar-content-transform-origin\){transform-origin:var(--radix-menubar-content-transform-origin)}.origin-\(--radix-popover-content-transform-origin\){transform-origin:var(--radix-popover-content-transform-origin)}.origin-\(--radix-select-content-transform-origin\){transform-origin:var(--radix-select-content-transform-origin)}.origin-\(--radix-tooltip-content-transform-origin\){transform-origin:var(--radix-tooltip-content-transform-origin)}.-translate-x-1\/2{--tw-translate-x:calc(calc(1 / 2 * 100%) * -1);translate:var(--tw-translate-x) var(--tw-translate-y)}.-translate-x-px{--tw-translate-x:-1px;translate:var(--tw-translate-x) var(--tw-translate-y)}.translate-x-\[-50\%\]{--tw-translate-x:-50%;translate:var(--tw-translate-x) var(--tw-translate-y)}.translate-x-px{--tw-translate-x:1px;translate:var(--tw-translate-x) var(--tw-translate-y)}.-translate-y-1\/2{--tw-translate-y:calc(calc(1 / 2 * 100%) * -1);translate:var(--tw-translate-x) var(--tw-translate-y)}.translate-y-\[-50\%\]{--tw-translate-y:-50%;translate:var(--tw-translate-x) var(--tw-translate-y)}.-rotate-1{rotate:-1deg}.rotate-45{rotate:45deg}.rotate-90{rotate:90deg}.transform{transform:var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,)}.text-gemini{background:var(--gradient-gemini);color:#0000;background-size:200% 200%;-webkit-background-clip:text;background-clip:text;animation:6s infinite gemini-pan}.bg-gemini{background:var(--gradient-gemini);background-size:200% 200%;animation:6s infinite gemini-pan}.animate-caret-blink{animation:1.25s ease-out infinite caret-blink}.animate-in{animation:enter var(--tw-animation-duration,var(--tw-duration,.15s))var(--tw-ease,ease)var(--tw-animation-delay,0s)var(--tw-animation-iteration-count,1)var(--tw-animation-direction,normal)var(--tw-animation-fill-mode,none)}.animate-marquee{animation:28s linear infinite marquee}.animate-pulse{animation:var(--animate-pulse)}.glow-pulse{animation:1.6s ease-in-out infinite glow-pulse}.cursor-default{cursor:default}.cursor-pointer{cursor:pointer}.touch-none{touch-action:none}.scroll-mt-36{scroll-margin-top:calc(var(--spacing) * 36)}.list-none{list-style-type:none}.grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}.grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.grid-cols-\[1fr_auto_1fr\]{grid-template-columns:1fr auto 1fr}.flex-col{flex-direction:column}.flex-col-reverse{flex-direction:column-reverse}.flex-row{flex-direction:row}.flex-wrap{flex-wrap:wrap}.place-content-center{place-content:center}.place-items-center{place-items:center}.items-center{align-items:center}.items-end{align-items:flex-end}.items-start{align-items:flex-start}.items-stretch{align-items:stretch}.justify-between{justify-content:space-between}.justify-center{justify-content:center}.gap-1{gap:var(--spacing)}.gap-1\.5{gap:calc(var(--spacing) * 1.5)}.gap-2{gap:calc(var(--spacing) * 2)}.gap-3{gap:calc(var(--spacing) * 3)}.gap-4{gap:calc(var(--spacing) * 4)}.gap-6{gap:calc(var(--spacing) * 6)}.gap-8{gap:calc(var(--spacing) * 8)}.gap-10{gap:calc(var(--spacing) * 10)}:where(.space-y-1\.5>:not(:last-child)){--tw-space-y-reverse:0;margin-block-start:calc(calc(var(--spacing) * 1.5) * var(--tw-space-y-reverse));margin-block-end:calc(calc(var(--spacing) * 1.5) * calc(1 - var(--tw-space-y-reverse)))}:where(.space-y-2>:not(:last-child)){--tw-space-y-reverse:0;margin-block-start:calc(calc(var(--spacing) * 2) * var(--tw-space-y-reverse));margin-block-end:calc(calc(var(--spacing) * 2) * calc(1 - var(--tw-space-y-reverse)))}:where(.space-y-3>:not(:last-child)){--tw-space-y-reverse:0;margin-block-start:calc(calc(var(--spacing) * 3) * var(--tw-space-y-reverse));margin-block-end:calc(calc(var(--spacing) * 3) * calc(1 - var(--tw-space-y-reverse)))}:where(.space-y-4>:not(:last-child)){--tw-space-y-reverse:0;margin-block-start:calc(calc(var(--spacing) * 4) * var(--tw-space-y-reverse));margin-block-end:calc(calc(var(--spacing) * 4) * calc(1 - var(--tw-space-y-reverse)))}:where(.space-y-6>:not(:last-child)){--tw-space-y-reverse:0;margin-block-start:calc(calc(var(--spacing) * 6) * var(--tw-space-y-reverse));margin-block-end:calc(calc(var(--spacing) * 6) * calc(1 - var(--tw-space-y-reverse)))}:where(.space-y-8>:not(:last-child)){--tw-space-y-reverse:0;margin-block-start:calc(calc(var(--spacing) * 8) * var(--tw-space-y-reverse));margin-block-end:calc(calc(var(--spacing) * 8) * calc(1 - var(--tw-space-y-reverse)))}:where(.space-y-12>:not(:last-child)){--tw-space-y-reverse:0;margin-block-start:calc(calc(var(--spacing) * 12) * var(--tw-space-y-reverse));margin-block-end:calc(calc(var(--spacing) * 12) * calc(1 - var(--tw-space-y-reverse)))}:where(.space-y-28>:not(:last-child)){--tw-space-y-reverse:0;margin-block-start:calc(calc(var(--spacing) * 28) * var(--tw-space-y-reverse));margin-block-end:calc(calc(var(--spacing) * 28) * calc(1 - var(--tw-space-y-reverse)))}:where(.space-x-1>:not(:last-child)){--tw-space-x-reverse:0;margin-inline-start:calc(var(--spacing) * var(--tw-space-x-reverse));margin-inline-end:calc(var(--spacing) * calc(1 - var(--tw-space-x-reverse)))}.justify-self-end{justify-self:flex-end}.overflow-auto{overflow:auto}.overflow-hidden{overflow:hidden}.overflow-x-hidden{overflow-x:hidden}.overflow-y-auto{overflow-y:auto}.brutal-card{background:var(--card);border:3px solid var(--foreground);border-radius:var(--radius);box-shadow:var(--shadow-brutal-lg)}.rounded-\[2px\]{border-radius:2px}.rounded-\[inherit\]{border-radius:inherit}.rounded-full{border-radius:2147483647px}.rounded-lg{border-radius:var(--radius)}.rounded-md{border-radius:calc(var(--radius) - 2px)}.rounded-none{border-radius:0}.rounded-sm{border-radius:calc(var(--radius) - 4px)}.rounded-xl{border-radius:calc(var(--radius) + 4px)}.rounded-t-\[10px\]{border-top-left-radius:10px;border-top-right-radius:10px}.rounded-l-md{border-top-left-radius:calc(var(--radius) - 2px);border-bottom-left-radius:calc(var(--radius) - 2px)}.rounded-tl-sm{border-top-left-radius:calc(var(--radius) - 4px)}.rounded-r-md{border-top-right-radius:calc(var(--radius) - 2px);border-bottom-right-radius:calc(var(--radius) - 2px)}.border{border-style:var(--tw-border-style);border-width:1px}.border-2{border-style:var(--tw-border-style);border-width:2px}.border-\[1\.5px\]{border-style:var(--tw-border-style);border-width:1.5px}.border-\[3px\]{border-style:var(--tw-border-style);border-width:3px}.border-y{border-block-style:var(--tw-border-style);border-block-width:1px}.border-t{border-top-style:var(--tw-border-style);border-top-width:1px}.border-t-2{border-top-style:var(--tw-border-style);border-top-width:2px}.border-t-\[3px\]{border-top-style:var(--tw-border-style);border-top-width:3px}.border-r{border-right-style:var(--tw-border-style);border-right-width:1px}.border-b{border-bottom-style:var(--tw-border-style);border-bottom-width:1px}.border-b-\[3px\]{border-bottom-style:var(--tw-border-style);border-bottom-width:3px}.border-l{border-left-style:var(--tw-border-style);border-left-width:1px}.border-dashed{--tw-border-style:dashed;border-style:dashed}.border-\(--color-border\){border-color:var(--color-border)}.border-border\/50{border-color:var(--border)}@supports (color:color-mix(in lab, red, red)){.border-border\/50{border-color:color-mix(in oklab, var(--border) 50%, transparent)}}.border-destructive\/50{border-color:var(--destructive)}@supports (color:color-mix(in lab, red, red)){.border-destructive\/50{border-color:color-mix(in oklab, var(--destructive) 50%, transparent)}}.border-foreground,.border-foreground\/30{border-color:var(--foreground)}@supports (color:color-mix(in lab, red, red)){.border-foreground\/30{border-color:color-mix(in oklab, var(--foreground) 30%, transparent)}}.border-input{border-color:var(--input)}.border-primary,.border-primary\/50{border-color:var(--primary)}@supports (color:color-mix(in lab, red, red)){.border-primary\/50{border-color:color-mix(in oklab, var(--primary) 50%, transparent)}}.border-transparent{border-color:#0000}.border-t-transparent{border-top-color:#0000}.border-l-transparent{border-left-color:#0000}.bg-\(--color-bg\){background-color:var(--color-bg)}.bg-accent{background-color:var(--accent)}.bg-background{background-color:var(--background)}.bg-black\/80{background-color:#000c}@supports (color:color-mix(in lab, red, red)){.bg-black\/80{background-color:color-mix(in oklab, var(--color-black) 80%, transparent)}}.bg-border{background-color:var(--border)}.bg-card{background-color:var(--card)}.bg-destructive{background-color:var(--destructive)}.bg-foreground{background-color:var(--foreground)}.bg-g-green{background-color:var(--g-green)}.bg-muted,.bg-muted\/50{background-color:var(--muted)}@supports (color:color-mix(in lab, red, red)){.bg-muted\/50{background-color:color-mix(in oklab, var(--muted) 50%, transparent)}}.bg-popover{background-color:var(--popover)}.bg-primary,.bg-primary\/10{background-color:var(--primary)}@supports (color:color-mix(in lab, red, red)){.bg-primary\/10{background-color:color-mix(in oklab, var(--primary) 10%, transparent)}}.bg-primary\/20{background-color:var(--primary)}@supports (color:color-mix(in lab, red, red)){.bg-primary\/20{background-color:color-mix(in oklab, var(--primary) 20%, transparent)}}.bg-secondary{background-color:var(--secondary)}.bg-transparent{background-color:#0000}.fill-current{fill:currentColor}.fill-primary{fill:var(--primary)}.p-0{padding:0}.p-1{padding:var(--spacing)}.p-2{padding:calc(var(--spacing) * 2)}.p-3{padding:calc(var(--spacing) * 3)}.p-4{padding:calc(var(--spacing) * 4)}.p-5{padding:calc(var(--spacing) * 5)}.p-6{padding:calc(var(--spacing) * 6)}.p-8{padding:calc(var(--spacing) * 8)}.p-\[1px\]{padding:1px}.px-\(--cell-size\){padding-inline:var(--cell-size)}.px-1{padding-inline:var(--spacing)}.px-1\.5{padding-inline:calc(var(--spacing) * 1.5)}.px-2{padding-inline:calc(var(--spacing) * 2)}.px-2\.5{padding-inline:calc(var(--spacing) * 2.5)}.px-3{padding-inline:calc(var(--spacing) * 3)}.px-4{padding-inline:calc(var(--spacing) * 4)}.px-8{padding-inline:calc(var(--spacing) * 8)}.py-0\.5{padding-block:calc(var(--spacing) * .5)}.py-1{padding-block:var(--spacing)}.py-1\.5{padding-block:calc(var(--spacing) * 1.5)}.py-2{padding-block:calc(var(--spacing) * 2)}.py-3{padding-block:calc(var(--spacing) * 3)}.py-4{padding-block:calc(var(--spacing) * 4)}.py-6{padding-block:calc(var(--spacing) * 6)}.py-8{padding-block:calc(var(--spacing) * 8)}.py-14{padding-block:calc(var(--spacing) * 14)}.pt-0{padding-top:0}.pt-3{padding-top:calc(var(--spacing) * 3)}.pt-4{padding-top:calc(var(--spacing) * 4)}.pr-1{padding-right:var(--spacing)}.pr-2{padding-right:calc(var(--spacing) * 2)}.pr-2\.5{padding-right:calc(var(--spacing) * 2.5)}.pr-8{padding-right:calc(var(--spacing) * 8)}.pb-3{padding-bottom:calc(var(--spacing) * 3)}.pb-4{padding-bottom:calc(var(--spacing) * 4)}.pb-6{padding-bottom:calc(var(--spacing) * 6)}.pl-2{padding-left:calc(var(--spacing) * 2)}.pl-2\.5{padding-left:calc(var(--spacing) * 2.5)}.pl-4{padding-left:calc(var(--spacing) * 4)}.pl-8{padding-left:calc(var(--spacing) * 8)}.text-center{text-align:center}.text-left{text-align:left}.align-middle{vertical-align:middle}.font-display{font-family:Archivo Black,Noto Sans Devanagari,Noto Sans Bengali,Noto Sans Telugu,sans-serif}.font-mono{font-family:JetBrains Mono,Noto Sans Devanagari,Noto Sans Bengali,Noto Sans Telugu,ui-monospace,monospace}.text-3xl{font-size:var(--text-3xl);line-height:var(--tw-leading,var(--text-3xl--line-height))}.text-4xl{font-size:var(--text-4xl);line-height:var(--tw-leading,var(--text-4xl--line-height))}.text-5xl{font-size:var(--text-5xl);line-height:var(--tw-leading,var(--text-5xl--line-height))}.text-7xl{font-size:var(--text-7xl);line-height:var(--tw-leading,var(--text-7xl--line-height))}.text-base{font-size:var(--text-base);line-height:var(--tw-leading,var(--text-base--line-height))}.text-lg{font-size:var(--text-lg);line-height:var(--tw-leading,var(--text-lg--line-height))}.text-sm{font-size:var(--text-sm);line-height:var(--tw-leading,var(--text-sm--line-height))}.text-xl{font-size:var(--text-xl);line-height:var(--tw-leading,var(--text-xl--line-height))}.text-xs{font-size:var(--text-xs);line-height:var(--tw-leading,var(--text-xs--line-height))}.text-\[0\.8rem\]{font-size:.8rem}.text-\[10px\]{font-size:10px}.text-\[11px\]{font-size:11px}.leading-\[0\.95\]{--tw-leading:.95;line-height:.95}.leading-none{--tw-leading:1;line-height:1}.font-bold{--tw-font-weight:var(--font-weight-bold);font-weight:var(--font-weight-bold)}.font-medium{--tw-font-weight:var(--font-weight-medium);font-weight:var(--font-weight-medium)}.font-normal{--tw-font-weight:var(--font-weight-normal);font-weight:var(--font-weight-normal)}.font-semibold{--tw-font-weight:var(--font-weight-semibold);font-weight:var(--font-weight-semibold)}.tracking-tight{--tw-tracking:var(--tracking-tight);letter-spacing:var(--tracking-tight)}.tracking-wide{--tw-tracking:var(--tracking-wide);letter-spacing:var(--tracking-wide)}.tracking-wider{--tw-tracking:var(--tracking-wider);letter-spacing:var(--tracking-wider)}.tracking-widest{--tw-tracking:var(--tracking-widest);letter-spacing:var(--tracking-widest)}.break-words{overflow-wrap:break-word}.whitespace-nowrap{white-space:nowrap}.text-accent-foreground{color:var(--accent-foreground)}.text-background{color:var(--background)}.text-card-foreground{color:var(--card-foreground)}.text-current{color:currentColor}.text-destructive{color:var(--destructive)}.text-destructive-foreground{color:var(--destructive-foreground)}.text-foreground{color:var(--foreground)}.text-g-blue{color:var(--g-blue)}.text-g-green{color:var(--g-green)}.text-g-purple{color:var(--g-purple)}.text-g-red{color:var(--g-red)}.text-g-yellow{color:var(--g-yellow)}.text-muted-foreground{color:var(--muted-foreground)}.text-popover-foreground{color:var(--popover-foreground)}.text-primary{color:var(--primary)}.text-primary-foreground{color:var(--primary-foreground)}.text-secondary-foreground{color:var(--secondary-foreground)}.uppercase{text-transform:uppercase}.tabular-nums{--tw-numeric-spacing:tabular-nums;font-variant-numeric:var(--tw-ordinal,) var(--tw-slashed-zero,) var(--tw-numeric-figure,) var(--tw-numeric-spacing,) var(--tw-numeric-fraction,)}.underline-offset-4{text-underline-offset:4px}.opacity-0{opacity:0}.opacity-50{opacity:.5}.opacity-60{opacity:.6}.opacity-70{opacity:.7}.opacity-80{opacity:.8}.shadow{--tw-shadow:0 1px 3px 0 var(--tw-shadow-color,#0000001a), 0 1px 2px -1px var(--tw-shadow-color,#0000001a);box-shadow:var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)}.shadow-\[0_0_0_1px_var\(--sidebar-border\)\]{--tw-shadow:0 0 0 1px var(--tw-shadow-color,var(--sidebar-border));box-shadow:var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)}.shadow-\[var\(--shadow-brutal\)\]{--tw-shadow:var(--shadow-brutal);box-shadow:var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px var(--tw-shadow-color,#0000001a), 0 4px 6px -4px var(--tw-shadow-color,#0000001a);box-shadow:var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)}.shadow-md{--tw-shadow:0 4px 6px -1px var(--tw-shadow-color,#0000001a), 0 2px 4px -2px var(--tw-shadow-color,#0000001a);box-shadow:var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)}.shadow-none{--tw-shadow:0 0 #0000;box-shadow:var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 3px 0 var(--tw-shadow-color,#0000001a), 0 1px 2px -1px var(--tw-shadow-color,#0000001a);box-shadow:var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)}.shadow-xl{--tw-shadow:0 20px 25px -5px var(--tw-shadow-color,#0000001a), 0 8px 10px -6px var(--tw-shadow-color,#0000001a);box-shadow:var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)}.shadow-xs{--tw-shadow:0 1px 2px 0 var(--tw-shadow-color,#0000000d);box-shadow:var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)}.ring-0{--tw-ring-shadow:var(--tw-ring-inset,) 0 0 0 calc(0px + var(--tw-ring-offset-width)) var(--tw-ring-color,currentcolor);box-shadow:var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)}.ring-1{--tw-ring-shadow:var(--tw-ring-inset,) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color,currentcolor);box-shadow:var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)}.ring-ring{--tw-ring-color:var(--ring)}.ring-offset-background{--tw-ring-offset-color:var(--background)}.outline{outline-style:var(--tw-outline-style);outline-width:1px}.filter{filter:var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,)}.transition{transition-property:color,background-color,border-color,outline-color,text-decoration-color,fill,stroke,--tw-gradient-from,--tw-gradient-via,--tw-gradient-to,opacity,box-shadow,transform,translate,scale,rotate,filter,-webkit-backdrop-filter,backdrop-filter,display,content-visibility,overlay,pointer-events;transition-timing-function:var(--tw-ease,var(--default-transition-timing-function));transition-duration:var(--tw-duration,var(--default-transition-duration))}.transition-\[left\,right\,width\]{transition-property:left,right,width;transition-timing-function:var(--tw-ease,var(--default-transition-timing-function));transition-duration:var(--tw-duration,var(--default-transition-duration))}.transition-\[margin\,opacity\]{transition-property:margin,opacity;transition-timing-function:var(--tw-ease,var(--default-transition-timing-function));transition-duration:var(--tw-duration,var(--default-transition-duration))}.transition-\[width\,height\,padding\]{transition-property:width,height,padding;transition-timing-function:var(--tw-ease,var(--default-transition-timing-function));transition-duration:var(--tw-duration,var(--default-transition-duration))}.transition-\[width\]{transition-property:width;transition-timing-function:var(--tw-ease,var(--default-transition-timing-function));transition-duration:var(--tw-duration,var(--default-transition-duration))}.transition-all{transition-property:all;transition-timing-function:var(--tw-ease,var(--default-transition-timing-function));transition-duration:var(--tw-duration,var(--default-transition-duration))}.transition-colors{transition-property:color,background-color,border-color,outline-color,text-decoration-color,fill,stroke,--tw-gradient-from,--tw-gradient-via,--tw-gradient-to;transition-timing-function:var(--tw-ease,var(--default-transition-timing-function));transition-duration:var(--tw-duration,var(--default-transition-duration))}.transition-opacity{transition-property:opacity;transition-timing-function:var(--tw-ease,var(--default-transition-timing-function));transition-duration:var(--tw-duration,var(--default-transition-duration))}.transition-shadow{transition-property:box-shadow;transition-timing-function:var(--tw-ease,var(--default-transition-timing-function));transition-duration:var(--tw-duration,var(--default-transition-duration))}.transition-transform{transition-property:transform,translate,scale,rotate;transition-timing-function:var(--tw-ease,var(--default-transition-timing-function));transition-duration:var(--tw-duration,var(--default-transition-duration))}.duration-200{--tw-duration:.2s;transition-duration:.2s}.duration-300{--tw-duration:.3s;transition-duration:.3s}.duration-1000{--tw-duration:1s;transition-duration:1s}.ease-in-out{--tw-ease:var(--ease-in-out);transition-timing-function:var(--ease-in-out)}.ease-linear{--tw-ease:linear;transition-timing-function:linear}.fade-in-0{--tw-enter-opacity:0}.outline-none{--tw-outline-style:none;outline-style:none}.select-none{-webkit-user-select:none;user-select:none}.zoom-in-95{--tw-enter-scale:.95}.\[--cell-size\:2rem\]{--cell-size:2rem}.running{animation-play-state:running}.group-focus-within\/menu-item\:opacity-100:is(:where(.group\/menu-item):focus-within *){opacity:1}@media (hover:hover){.group-hover\/menu-item\:opacity-100:is(:where(.group\/menu-item):hover *){opacity:1}}.group-has-\[\[data-sidebar\=menu-action\]\]\/menu-item\:pr-8:is(:where(.group\/menu-item):has([data-sidebar=menu-action]) *){padding-right:calc(var(--spacing) * 8)}.group-data-\[collapsible\=icon\]\:-mt-8:is(:where(.group)[data-collapsible=icon] *){margin-top:calc(var(--spacing) * -8)}.group-data-\[collapsible\=icon\]\:hidden:is(:where(.group)[data-collapsible=icon] *){display:none}.group-data-\[collapsible\=icon\]\:\!size-8:is(:where(.group)[data-collapsible=icon] *){width:calc(var(--spacing) * 8)!important;height:calc(var(--spacing) * 8)!important}.group-data-\[collapsible\=icon\]\:w-\(--sidebar-width-icon\):is(:where(.group)[data-collapsible=icon] *){width:var(--sidebar-width-icon)}.group-data-\[collapsible\=icon\]\:w-\[calc\(var\(--sidebar-width-icon\)_\+_theme\(spacing\.4\)\)\]:is(:where(.group)[data-collapsible=icon] *){width:calc(var(--sidebar-width-icon) + 1rem)}.group-data-\[collapsible\=icon\]\:w-\[calc\(var\(--sidebar-width-icon\)_\+_theme\(spacing\.4\)_\+2px\)\]:is(:where(.group)[data-collapsible=icon] *){width:calc(var(--sidebar-width-icon) + 1rem + 2px)}.group-data-\[collapsible\=icon\]\:overflow-hidden:is(:where(.group)[data-collapsible=icon] *){overflow:hidden}.group-data-\[collapsible\=icon\]\:\!p-0:is(:where(.group)[data-collapsible=icon] *){padding:0!important}.group-data-\[collapsible\=icon\]\:\!p-2:is(:where(.group)[data-collapsible=icon] *){padding:calc(var(--spacing) * 2)!important}.group-data-\[collapsible\=icon\]\:opacity-0:is(:where(.group)[data-collapsible=icon] *){opacity:0}.group-data-\[collapsible\=offcanvas\]\:right-\[calc\(var\(--sidebar-width\)\*-1\)\]:is(:where(.group)[data-collapsible=offcanvas] *){right:calc(var(--sidebar-width) * -1)}.group-data-\[collapsible\=offcanvas\]\:left-\[calc\(var\(--sidebar-width\)\*-1\)\]:is(:where(.group)[data-collapsible=offcanvas] *){left:calc(var(--sidebar-width) * -1)}.group-data-\[collapsible\=offcanvas\]\:w-0:is(:where(.group)[data-collapsible=offcanvas] *){width:0}.group-data-\[collapsible\=offcanvas\]\:translate-x-0:is(:where(.group)[data-collapsible=offcanvas] *){--tw-translate-x:0px;translate:var(--tw-translate-x) var(--tw-translate-y)}.group-data-\[focused\=true\]\/day\:relative:is(:where(.group\/day)[data-focused=true] *){position:relative}.group-data-\[focused\=true\]\/day\:z-10:is(:where(.group\/day)[data-focused=true] *){z-index:10}.group-data-\[focused\=true\]\/day\:border-ring:is(:where(.group\/day)[data-focused=true] *){border-color:var(--ring)}.group-data-\[focused\=true\]\/day\:ring-\[3px\]:is(:where(.group\/day)[data-focused=true] *){--tw-ring-shadow:var(--tw-ring-inset,) 0 0 0 calc(3px + var(--tw-ring-offset-width)) var(--tw-ring-color,currentcolor);box-shadow:var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)}.group-data-\[focused\=true\]\/day\:ring-ring\/50:is(:where(.group\/day)[data-focused=true] *){--tw-ring-color:var(--ring)}@supports (color:color-mix(in lab, red, red)){.group-data-\[focused\=true\]\/day\:ring-ring\/50:is(:where(.group\/day)[data-focused=true] *){--tw-ring-color:color-mix(in oklab, var(--ring) 50%, transparent)}}.group-data-\[side\=left\]\:-right-4:is(:where(.group)[data-side=left] *){right:calc(var(--spacing) * -4)}.group-data-\[side\=left\]\:border-r:is(:where(.group)[data-side=left] *){border-right-style:var(--tw-border-style);border-right-width:1px}.group-data-\[side\=right\]\:left-0:is(:where(.group)[data-side=right] *){left:0}.group-data-\[side\=right\]\:rotate-180:is(:where(.group)[data-side=right] *){rotate:180deg}.group-data-\[side\=right\]\:border-l:is(:where(.group)[data-side=right] *){border-left-style:var(--tw-border-style);border-left-width:1px}.group-data-\[state\=open\]\:rotate-180:is(:where(.group)[data-state=open] *){rotate:180deg}.group-data-\[variant\=floating\]\:rounded-lg:is(:where(.group)[data-variant=floating] *){border-radius:var(--radius)}.group-data-\[variant\=floating\]\:border:is(:where(.group)[data-variant=floating] *){border-style:var(--tw-border-style);border-width:1px}.group-data-\[variant\=floating\]\:shadow:is(:where(.group)[data-variant=floating] *){--tw-shadow:0 1px 3px 0 var(--tw-shadow-color,#0000001a), 0 1px 2px -1px var(--tw-shadow-color,#0000001a);box-shadow:var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)}.group-\[\.toast\]\:bg-muted:is(:where(.group).toast *){background-color:var(--muted)}.group-\[\.toast\]\:bg-primary:is(:where(.group).toast *){background-color:var(--primary)}.group-\[\.toast\]\:text-muted-foreground:is(:where(.group).toast *){color:var(--muted-foreground)}.group-\[\.toast\]\:text-primary-foreground:is(:where(.group).toast *){color:var(--primary-foreground)}.group-\[\.toaster\]\:border-border:is(:where(.group).toaster *){border-color:var(--border)}.group-\[\.toaster\]\:bg-background:is(:where(.group).toaster *){background-color:var(--background)}.group-\[\.toaster\]\:text-foreground:is(:where(.group).toaster *){color:var(--foreground)}.group-\[\.toaster\]\:shadow-lg:is(:where(.group).toaster *){--tw-shadow:0 10px 15px -3px var(--tw-shadow-color,#0000001a), 0 4px 6px -4px var(--tw-shadow-color,#0000001a);box-shadow:var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)}.peer-disabled\:cursor-not-allowed:is(:where(.peer):disabled~*){cursor:not-allowed}.peer-disabled\:opacity-70:is(:where(.peer):disabled~*){opacity:.7}.peer-data-\[size\=default\]\/menu-button\:top-1\.5:is(:where(.peer\/menu-button)[data-size=default]~*){top:calc(var(--spacing) * 1.5)}.peer-data-\[size\=lg\]\/menu-button\:top-2\.5:is(:where(.peer\/menu-button)[data-size=lg]~*){top:calc(var(--spacing) * 2.5)}.peer-data-\[size\=sm\]\/menu-button\:top-1:is(:where(.peer\/menu-button)[data-size=sm]~*){top:var(--spacing)}.file\:border-0::file-selector-button{border-style:var(--tw-border-style);border-width:0}.file\:bg-transparent::file-selector-button{background-color:#0000}.file\:text-sm::file-selector-button{font-size:var(--text-sm);line-height:var(--tw-leading,var(--text-sm--line-height))}.file\:font-medium::file-selector-button{--tw-font-weight:var(--font-weight-medium);font-weight:var(--font-weight-medium)}.file\:text-foreground::file-selector-button{color:var(--foreground)}.placeholder\:text-muted-foreground::placeholder{color:var(--muted-foreground)}.after\:absolute:after{content:var(--tw-content);position:absolute}.after\:-inset-2:after{content:var(--tw-content);inset:calc(var(--spacing) * -2)}.after\:inset-y-0:after{content:var(--tw-content);inset-block:0}.after\:left-1\/2:after{content:var(--tw-content);left:50%}.after\:w-1:after{content:var(--tw-content);width:var(--spacing)}.after\:w-\[2px\]:after{content:var(--tw-content);width:2px}.after\:-translate-x-1\/2:after{content:var(--tw-content);--tw-translate-x:calc(calc(1 / 2 * 100%) * -1);translate:var(--tw-translate-x) var(--tw-translate-y)}.group-data-\[collapsible\=offcanvas\]\:after\:left-full:is(:where(.group)[data-collapsible=offcanvas] *):after{content:var(--tw-content);left:100%}.first\:rounded-l-md:first-child{border-top-left-radius:calc(var(--radius) - 2px);border-bottom-left-radius:calc(var(--radius) - 2px)}.first\:border-l:first-child{border-left-style:var(--tw-border-style);border-left-width:1px}.last\:rounded-r-md:last-child{border-top-right-radius:calc(var(--radius) - 2px);border-bottom-right-radius:calc(var(--radius) - 2px)}@media (hover:hover){.hover\:-rotate-1:hover{rotate:-1deg}.hover\:bg-accent:hover{background-color:var(--accent)}.hover\:bg-destructive\/80:hover{background-color:var(--destructive)}@supports (color:color-mix(in lab, red, red)){.hover\:bg-destructive\/80:hover{background-color:color-mix(in oklab, var(--destructive) 80%, transparent)}}.hover\:bg-destructive\/90:hover{background-color:var(--destructive)}@supports (color:color-mix(in lab, red, red)){.hover\:bg-destructive\/90:hover{background-color:color-mix(in oklab, var(--destructive) 90%, transparent)}}.hover\:bg-muted:hover,.hover\:bg-muted\/50:hover{background-color:var(--muted)}@supports (color:color-mix(in lab, red, red)){.hover\:bg-muted\/50:hover{background-color:color-mix(in oklab, var(--muted) 50%, transparent)}}.hover\:bg-primary\/80:hover{background-color:var(--primary)}@supports (color:color-mix(in lab, red, red)){.hover\:bg-primary\/80:hover{background-color:color-mix(in oklab, var(--primary) 80%, transparent)}}.hover\:bg-primary\/90:hover{background-color:var(--primary)}@supports (color:color-mix(in lab, red, red)){.hover\:bg-primary\/90:hover{background-color:color-mix(in oklab, var(--primary) 90%, transparent)}}.hover\:bg-secondary\/80:hover{background-color:var(--secondary)}@supports (color:color-mix(in lab, red, red)){.hover\:bg-secondary\/80:hover{background-color:color-mix(in oklab, var(--secondary) 80%, transparent)}}.hover\:text-accent-foreground:hover{color:var(--accent-foreground)}.hover\:text-foreground:hover{color:var(--foreground)}.hover\:text-muted-foreground:hover{color:var(--muted-foreground)}.hover\:underline:hover{text-decoration-line:underline}.hover\:opacity-100:hover{opacity:1}.hover\:shadow-\[0_0_0_1px_var\(--sidebar-accent\)\]:hover{--tw-shadow:0 0 0 1px var(--tw-shadow-color,var(--sidebar-accent));box-shadow:var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)}}.focus\:bg-accent:focus{background-color:var(--accent)}.focus\:text-accent-foreground:focus{color:var(--accent-foreground)}.focus\:shadow-\[var\(--shadow-brutal-color\)\]:focus{--tw-shadow:var(--shadow-brutal-color);box-shadow:var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)}.focus\:ring-1:focus{--tw-ring-shadow:var(--tw-ring-inset,) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color,currentcolor);box-shadow:var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)}.focus\:ring-2:focus{--tw-ring-shadow:var(--tw-ring-inset,) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color,currentcolor);box-shadow:var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)}.focus\:ring-ring:focus{--tw-ring-color:var(--ring)}.focus\:ring-offset-2:focus{--tw-ring-offset-width:2px;--tw-ring-offset-shadow:var(--tw-ring-inset,) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color)}.focus\:outline-none:focus{--tw-outline-style:none;outline-style:none}.focus-visible\:ring-1:focus-visible{--tw-ring-shadow:var(--tw-ring-inset,) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color,currentcolor);box-shadow:var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)}.focus-visible\:ring-2:focus-visible{--tw-ring-shadow:var(--tw-ring-inset,) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color,currentcolor);box-shadow:var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)}.focus-visible\:ring-ring:focus-visible{--tw-ring-color:var(--ring)}.focus-visible\:ring-offset-1:focus-visible{--tw-ring-offset-width:1px;--tw-ring-offset-shadow:var(--tw-ring-inset,) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color)}.focus-visible\:ring-offset-2:focus-visible{--tw-ring-offset-width:2px;--tw-ring-offset-shadow:var(--tw-ring-inset,) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color)}.focus-visible\:ring-offset-background:focus-visible{--tw-ring-offset-color:var(--background)}.focus-visible\:outline-none:focus-visible{--tw-outline-style:none;outline-style:none}.disabled\:pointer-events-none:disabled{pointer-events:none}.disabled\:cursor-not-allowed:disabled{cursor:not-allowed}.disabled\:opacity-50:disabled{opacity:.5}.disabled\:opacity-60:disabled{opacity:.6}.has-focus\:border-ring:has(:focus){border-color:var(--ring)}.has-focus\:ring-\[3px\]:has(:focus){--tw-ring-shadow:var(--tw-ring-inset,) 0 0 0 calc(3px + var(--tw-ring-offset-width)) var(--tw-ring-color,currentcolor);box-shadow:var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)}.has-focus\:ring-ring\/50:has(:focus){--tw-ring-color:var(--ring)}@supports (color:color-mix(in lab, red, red)){.has-focus\:ring-ring\/50:has(:focus){--tw-ring-color:color-mix(in oklab, var(--ring) 50%, transparent)}}.has-\[\:disabled\]\:opacity-50:has(:disabled){opacity:.5}.aria-disabled\:pointer-events-none[aria-disabled=true]{pointer-events:none}.aria-disabled\:opacity-50[aria-disabled=true]{opacity:.5}.aria-selected\:text-muted-foreground[aria-selected=true]{color:var(--muted-foreground)}.data-\[active\=true\]\:font-medium[data-active=true]{--tw-font-weight:var(--font-weight-medium);font-weight:var(--font-weight-medium)}.data-\[disabled\]\:pointer-events-none[data-disabled]{pointer-events:none}.data-\[disabled\]\:opacity-50[data-disabled]{opacity:.5}.data-\[disabled\=true\]\:pointer-events-none[data-disabled=true]{pointer-events:none}.data-\[disabled\=true\]\:opacity-50[data-disabled=true]{opacity:.5}.data-\[motion\=from-end\]\:slide-in-from-right-52[data-motion=from-end]{--tw-enter-translate-x:calc(52*var(--spacing))}.data-\[motion\=from-start\]\:slide-in-from-left-52[data-motion=from-start]{--tw-enter-translate-x:calc(52*var(--spacing)*-1)}.data-\[motion\=to-end\]\:slide-out-to-right-52[data-motion=to-end]{--tw-exit-translate-x:calc(52*var(--spacing))}.data-\[motion\=to-start\]\:slide-out-to-left-52[data-motion=to-start]{--tw-exit-translate-x:calc(52*var(--spacing)*-1)}.data-\[motion\^\=from-\]\:animate-in[data-motion^=from-]{animation:enter var(--tw-animation-duration,var(--tw-duration,.15s))var(--tw-ease,ease)var(--tw-animation-delay,0s)var(--tw-animation-iteration-count,1)var(--tw-animation-direction,normal)var(--tw-animation-fill-mode,none)}.data-\[motion\^\=from-\]\:fade-in[data-motion^=from-]{--tw-enter-opacity:0}.data-\[motion\^\=to-\]\:animate-out[data-motion^=to-]{animation:exit var(--tw-animation-duration,var(--tw-duration,.15s))var(--tw-ease,ease)var(--tw-animation-delay,0s)var(--tw-animation-iteration-count,1)var(--tw-animation-direction,normal)var(--tw-animation-fill-mode,none)}.data-\[motion\^\=to-\]\:fade-out[data-motion^=to-]{--tw-exit-opacity:0}.data-\[panel-group-direction\=vertical\]\:h-px[data-panel-group-direction=vertical]{height:1px}.data-\[panel-group-direction\=vertical\]\:w-full[data-panel-group-direction=vertical]{width:100%}.data-\[panel-group-direction\=vertical\]\:flex-col[data-panel-group-direction=vertical]{flex-direction:column}.data-\[panel-group-direction\=vertical\]\:after\:left-0[data-panel-group-direction=vertical]:after{content:var(--tw-content);left:0}.data-\[panel-group-direction\=vertical\]\:after\:h-1[data-panel-group-direction=vertical]:after{content:var(--tw-content);height:var(--spacing)}.data-\[panel-group-direction\=vertical\]\:after\:w-full[data-panel-group-direction=vertical]:after{content:var(--tw-content);width:100%}.data-\[panel-group-direction\=vertical\]\:after\:translate-x-0[data-panel-group-direction=vertical]:after{content:var(--tw-content);--tw-translate-x:0px;translate:var(--tw-translate-x) var(--tw-translate-y)}.data-\[panel-group-direction\=vertical\]\:after\:-translate-y-1\/2[data-panel-group-direction=vertical]:after{content:var(--tw-content);--tw-translate-y:calc(calc(1 / 2 * 100%) * -1);translate:var(--tw-translate-x) var(--tw-translate-y)}.data-\[placeholder\]\:text-muted-foreground[data-placeholder]{color:var(--muted-foreground)}.data-\[range-end\=true\]\:rounded-md[data-range-end=true]{border-radius:calc(var(--radius) - 2px)}.data-\[range-end\=true\]\:bg-primary[data-range-end=true]{background-color:var(--primary)}.data-\[range-end\=true\]\:text-primary-foreground[data-range-end=true]{color:var(--primary-foreground)}.data-\[range-middle\=true\]\:rounded-none[data-range-middle=true]{border-radius:0}.data-\[range-middle\=true\]\:bg-accent[data-range-middle=true]{background-color:var(--accent)}.data-\[range-middle\=true\]\:text-accent-foreground[data-range-middle=true]{color:var(--accent-foreground)}.data-\[range-start\=true\]\:rounded-md[data-range-start=true]{border-radius:calc(var(--radius) - 2px)}.data-\[range-start\=true\]\:bg-primary[data-range-start=true]{background-color:var(--primary)}.data-\[range-start\=true\]\:text-primary-foreground[data-range-start=true]{color:var(--primary-foreground)}.data-\[selected-single\=true\]\:bg-primary[data-selected-single=true]{background-color:var(--primary)}.data-\[selected-single\=true\]\:text-primary-foreground[data-selected-single=true]{color:var(--primary-foreground)}.data-\[selected\=true\]\:rounded-none[data-selected=true]{border-radius:0}.data-\[selected\=true\]\:bg-accent[data-selected=true]{background-color:var(--accent)}.data-\[selected\=true\]\:text-accent-foreground[data-selected=true]{color:var(--accent-foreground)}.data-\[side\=bottom\]\:translate-y-1[data-side=bottom]{--tw-translate-y:var(--spacing);translate:var(--tw-translate-x) var(--tw-translate-y)}.data-\[side\=bottom\]\:slide-in-from-top-2[data-side=bottom]{--tw-enter-translate-y:calc(2*var(--spacing)*-1)}.data-\[side\=left\]\:-translate-x-1[data-side=left]{--tw-translate-x:calc(var(--spacing) * -1);translate:var(--tw-translate-x) var(--tw-translate-y)}.data-\[side\=left\]\:slide-in-from-right-2[data-side=left]{--tw-enter-translate-x:calc(2*var(--spacing))}.data-\[side\=right\]\:translate-x-1[data-side=right]{--tw-translate-x:var(--spacing);translate:var(--tw-translate-x) var(--tw-translate-y)}.data-\[side\=right\]\:slide-in-from-left-2[data-side=right]{--tw-enter-translate-x:calc(2*var(--spacing)*-1)}.data-\[side\=top\]\:-translate-y-1[data-side=top]{--tw-translate-y:calc(var(--spacing) * -1);translate:var(--tw-translate-x) var(--tw-translate-y)}.data-\[side\=top\]\:slide-in-from-bottom-2[data-side=top]{--tw-enter-translate-y:calc(2*var(--spacing))}.data-\[state\=active\]\:bg-background[data-state=active]{background-color:var(--background)}.data-\[state\=active\]\:text-foreground[data-state=active]{color:var(--foreground)}.data-\[state\=active\]\:shadow[data-state=active]{--tw-shadow:0 1px 3px 0 var(--tw-shadow-color,#0000001a), 0 1px 2px -1px var(--tw-shadow-color,#0000001a);box-shadow:var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)}.data-\[state\=checked\]\:translate-x-4[data-state=checked]{--tw-translate-x:calc(var(--spacing) * 4);translate:var(--tw-translate-x) var(--tw-translate-y)}.data-\[state\=checked\]\:bg-gemini[data-state=checked]{background:var(--gradient-gemini);background-size:200% 200%;animation:6s infinite gemini-pan}.data-\[state\=checked\]\:border-foreground[data-state=checked]{border-color:var(--foreground)}.data-\[state\=checked\]\:bg-primary[data-state=checked]{background-color:var(--primary)}.data-\[state\=checked\]\:text-background[data-state=checked]{color:var(--background)}.data-\[state\=checked\]\:text-primary-foreground[data-state=checked]{color:var(--primary-foreground)}.data-\[state\=closed\]\:animate-accordion-up[data-state=closed]{animation:accordion-up var(--tw-animation-duration,var(--tw-duration,.2s))var(--tw-ease,ease-out)var(--tw-animation-delay,0s)var(--tw-animation-iteration-count,1)var(--tw-animation-direction,normal)var(--tw-animation-fill-mode,none)}.data-\[state\=closed\]\:animate-out[data-state=closed]{animation:exit var(--tw-animation-duration,var(--tw-duration,.15s))var(--tw-ease,ease)var(--tw-animation-delay,0s)var(--tw-animation-iteration-count,1)var(--tw-animation-direction,normal)var(--tw-animation-fill-mode,none)}.data-\[state\=closed\]\:duration-300[data-state=closed]{--tw-duration:.3s;transition-duration:.3s}.data-\[state\=closed\]\:fade-out-0[data-state=closed]{--tw-exit-opacity:0}.data-\[state\=closed\]\:zoom-out-95[data-state=closed]{--tw-exit-scale:.95}.data-\[state\=closed\]\:slide-out-to-bottom[data-state=closed]{--tw-exit-translate-y:100%}.data-\[state\=closed\]\:slide-out-to-left[data-state=closed]{--tw-exit-translate-x:-100%}.data-\[state\=closed\]\:slide-out-to-right[data-state=closed]{--tw-exit-translate-x:100%}.data-\[state\=closed\]\:slide-out-to-top[data-state=closed]{--tw-exit-translate-y:-100%}.data-\[state\=hidden\]\:animate-out[data-state=hidden]{animation:exit var(--tw-animation-duration,var(--tw-duration,.15s))var(--tw-ease,ease)var(--tw-animation-delay,0s)var(--tw-animation-iteration-count,1)var(--tw-animation-direction,normal)var(--tw-animation-fill-mode,none)}.data-\[state\=hidden\]\:fade-out[data-state=hidden]{--tw-exit-opacity:0}.data-\[state\=on\]\:bg-accent[data-state=on]{background-color:var(--accent)}.data-\[state\=on\]\:text-accent-foreground[data-state=on]{color:var(--accent-foreground)}.data-\[state\=open\]\:animate-accordion-down[data-state=open]{animation:accordion-down var(--tw-animation-duration,var(--tw-duration,.2s))var(--tw-ease,ease-out)var(--tw-animation-delay,0s)var(--tw-animation-iteration-count,1)var(--tw-animation-direction,normal)var(--tw-animation-fill-mode,none)}.data-\[state\=open\]\:animate-in[data-state=open]{animation:enter var(--tw-animation-duration,var(--tw-duration,.15s))var(--tw-ease,ease)var(--tw-animation-delay,0s)var(--tw-animation-iteration-count,1)var(--tw-animation-direction,normal)var(--tw-animation-fill-mode,none)}.data-\[state\=open\]\:bg-accent[data-state=open],.data-\[state\=open\]\:bg-accent\/50[data-state=open]{background-color:var(--accent)}@supports (color:color-mix(in lab, red, red)){.data-\[state\=open\]\:bg-accent\/50[data-state=open]{background-color:color-mix(in oklab, var(--accent) 50%, transparent)}}.data-\[state\=open\]\:bg-secondary[data-state=open]{background-color:var(--secondary)}.data-\[state\=open\]\:text-accent-foreground[data-state=open]{color:var(--accent-foreground)}.data-\[state\=open\]\:text-muted-foreground[data-state=open]{color:var(--muted-foreground)}.data-\[state\=open\]\:opacity-100[data-state=open]{opacity:1}.data-\[state\=open\]\:duration-500[data-state=open]{--tw-duration:.5s;transition-duration:.5s}.data-\[state\=open\]\:fade-in-0[data-state=open]{--tw-enter-opacity:0}.data-\[state\=open\]\:zoom-in-90[data-state=open]{--tw-enter-scale:.9}.data-\[state\=open\]\:zoom-in-95[data-state=open]{--tw-enter-scale:.95}.data-\[state\=open\]\:slide-in-from-bottom[data-state=open]{--tw-enter-translate-y:100%}.data-\[state\=open\]\:slide-in-from-left[data-state=open]{--tw-enter-translate-x:-100%}.data-\[state\=open\]\:slide-in-from-right[data-state=open]{--tw-enter-translate-x:100%}.data-\[state\=open\]\:slide-in-from-top[data-state=open]{--tw-enter-translate-y:-100%}@media (hover:hover){.data-\[state\=open\]\:hover\:bg-accent[data-state=open]:hover{background-color:var(--accent)}}.data-\[state\=open\]\:focus\:bg-accent[data-state=open]:focus{background-color:var(--accent)}.data-\[state\=selected\]\:bg-muted[data-state=selected]{background-color:var(--muted)}.data-\[state\=unchecked\]\:translate-x-0[data-state=unchecked]{--tw-translate-x:0px;translate:var(--tw-translate-x) var(--tw-translate-y)}.data-\[state\=unchecked\]\:bg-input[data-state=unchecked]{background-color:var(--input)}.data-\[state\=visible\]\:animate-in[data-state=visible]{animation:enter var(--tw-animation-duration,var(--tw-duration,.15s))var(--tw-ease,ease)var(--tw-animation-delay,0s)var(--tw-animation-iteration-count,1)var(--tw-animation-direction,normal)var(--tw-animation-fill-mode,none)}.data-\[state\=visible\]\:fade-in[data-state=visible]{--tw-enter-opacity:0}@media (width>=40rem){.sm\:mt-0{margin-top:0}.sm\:block{display:block}.sm\:flex{display:flex}.sm\:max-w-sm{max-width:var(--container-sm)}.sm\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}.sm\:grid-cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}.sm\:flex-row{flex-direction:row}.sm\:justify-end{justify-content:flex-end}.sm\:gap-2\.5{gap:calc(var(--spacing) * 2.5)}.sm\:gap-4{gap:calc(var(--spacing) * 4)}:where(.sm\:space-x-2>:not(:last-child)){--tw-space-x-reverse:0;margin-inline-start:calc(calc(var(--spacing) * 2) * var(--tw-space-x-reverse));margin-inline-end:calc(calc(var(--spacing) * 2) * calc(1 - var(--tw-space-x-reverse)))}.sm\:rounded-lg{border-radius:var(--radius)}.sm\:p-10{padding:calc(var(--spacing) * 10)}.sm\:text-left{text-align:left}.sm\:text-2xl{font-size:var(--text-2xl);line-height:var(--tw-leading,var(--text-2xl--line-height))}.sm\:text-3xl{font-size:var(--text-3xl);line-height:var(--tw-leading,var(--text-3xl--line-height))}.sm\:text-5xl{font-size:var(--text-5xl);line-height:var(--tw-leading,var(--text-5xl--line-height))}.sm\:text-7xl{font-size:var(--text-7xl);line-height:var(--tw-leading,var(--text-7xl--line-height))}.sm\:text-lg{font-size:var(--text-lg);line-height:var(--tw-leading,var(--text-lg--line-height))}}@media (width>=48rem){.md\:absolute{position:absolute}.md\:block{display:block}.md\:flex{display:flex}.md\:w-\[var\(--radix-navigation-menu-viewport-width\)\]{width:var(--radix-navigation-menu-viewport-width)}.md\:w-auto{width:auto}.md\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}.md\:grid-cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}.md\:grid-cols-\[1fr_auto\]{grid-template-columns:1fr auto}.md\:flex-row{flex-direction:row}.md\:items-center{align-items:center}.md\:items-end{align-items:flex-end}.md\:text-sm{font-size:var(--text-sm);line-height:var(--tw-leading,var(--text-sm--line-height))}.md\:opacity-0{opacity:0}.md\:peer-data-\[variant\=inset\]\:m-2:is(:where(.peer)[data-variant=inset]~*){margin:calc(var(--spacing) * 2)}.md\:peer-data-\[variant\=inset\]\:ml-0:is(:where(.peer)[data-variant=inset]~*){margin-left:0}.md\:peer-data-\[variant\=inset\]\:rounded-xl:is(:where(.peer)[data-variant=inset]~*){border-radius:calc(var(--radius) + 4px)}.md\:peer-data-\[variant\=inset\]\:shadow:is(:where(.peer)[data-variant=inset]~*){--tw-shadow:0 1px 3px 0 var(--tw-shadow-color,#0000001a), 0 1px 2px -1px var(--tw-shadow-color,#0000001a);box-shadow:var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)}.md\:peer-data-\[state\=collapsed\]\:peer-data-\[variant\=inset\]\:ml-2:is(:where(.peer)[data-state=collapsed]~*):is(:where(.peer)[data-variant=inset]~*){margin-left:calc(var(--spacing) * 2)}}.after\:md\:hidden:after{content:var(--tw-content)}@media (width>=48rem){.after\:md\:hidden:after{display:none}}@media (width>=64rem){.lg\:inline-block{display:inline-block}.lg\:px-8{padding-inline:calc(var(--spacing) * 8)}}.dark\:border-destructive:is(.dark *){border-color:var(--destructive)}.\[\&_\.recharts-cartesian-axis-tick_text\]\:fill-muted-foreground .recharts-cartesian-axis-tick text{fill:var(--muted-foreground)}.\[\&_\.recharts-cartesian-grid_line\[stroke\=\'\#ccc\'\]\]\:stroke-border\/50 .recharts-cartesian-grid line[stroke=\#ccc]{stroke:var(--border)}@supports (color:color-mix(in lab, red, red)){.\[\&_\.recharts-cartesian-grid_line\[stroke\=\'\#ccc\'\]\]\:stroke-border\/50 .recharts-cartesian-grid line[stroke=\#ccc]{stroke:color-mix(in oklab, var(--border) 50%, transparent)}}.\[\&_\.recharts-curve\.recharts-tooltip-cursor\]\:stroke-border .recharts-curve.recharts-tooltip-cursor{stroke:var(--border)}.\[\&_\.recharts-dot\[stroke\=\'\#fff\'\]\]\:stroke-transparent .recharts-dot[stroke=\#fff]{stroke:#0000}.\[\&_\.recharts-layer\]\:outline-none .recharts-layer{--tw-outline-style:none;outline-style:none}.\[\&_\.recharts-polar-grid_\[stroke\=\'\#ccc\'\]\]\:stroke-border .recharts-polar-grid [stroke=\#ccc]{stroke:var(--border)}.\[\&_\.recharts-radial-bar-background-sector\]\:fill-muted .recharts-radial-bar-background-sector,.\[\&_\.recharts-rectangle\.recharts-tooltip-cursor\]\:fill-muted .recharts-rectangle.recharts-tooltip-cursor{fill:var(--muted)}.\[\&_\.recharts-reference-line_\[stroke\=\'\#ccc\'\]\]\:stroke-border .recharts-reference-line [stroke=\#ccc]{stroke:var(--border)}.\[\&_\.recharts-sector\]\:outline-none .recharts-sector{--tw-outline-style:none;outline-style:none}.\[\&_\.recharts-sector\[stroke\=\'\#fff\'\]\]\:stroke-transparent .recharts-sector[stroke=\#fff]{stroke:#0000}.\[\&_\.recharts-surface\]\:outline-none .recharts-surface{--tw-outline-style:none;outline-style:none}.\[\&_\[cmdk-group-heading\]\]\:px-2 [cmdk-group-heading]{padding-inline:calc(var(--spacing) * 2)}.\[\&_\[cmdk-group-heading\]\]\:py-1\.5 [cmdk-group-heading]{padding-block:calc(var(--spacing) * 1.5)}.\[\&_\[cmdk-group-heading\]\]\:text-xs [cmdk-group-heading]{font-size:var(--text-xs);line-height:var(--tw-leading,var(--text-xs--line-height))}.\[\&_\[cmdk-group-heading\]\]\:font-medium [cmdk-group-heading]{--tw-font-weight:var(--font-weight-medium);font-weight:var(--font-weight-medium)}.\[\&_\[cmdk-group-heading\]\]\:text-muted-foreground [cmdk-group-heading]{color:var(--muted-foreground)}.\[\&_\[cmdk-group\]\]\:px-2 [cmdk-group]{padding-inline:calc(var(--spacing) * 2)}.\[\&_\[cmdk-group\]\:not\(\[hidden\]\)_\~\[cmdk-group\]\]\:pt-0 [cmdk-group]:not([hidden])~[cmdk-group]{padding-top:0}.\[\&_\[cmdk-input-wrapper\]_svg\]\:h-5 [cmdk-input-wrapper] svg{height:calc(var(--spacing) * 5)}.\[\&_\[cmdk-input-wrapper\]_svg\]\:w-5 [cmdk-input-wrapper] svg{width:calc(var(--spacing) * 5)}.\[\&_\[cmdk-input\]\]\:h-12 [cmdk-input]{height:calc(var(--spacing) * 12)}.\[\&_\[cmdk-item\]\]\:px-2 [cmdk-item]{padding-inline:calc(var(--spacing) * 2)}.\[\&_\[cmdk-item\]\]\:py-3 [cmdk-item]{padding-block:calc(var(--spacing) * 3)}.\[\&_\[cmdk-item\]_svg\]\:h-5 [cmdk-item] svg{height:calc(var(--spacing) * 5)}.\[\&_\[cmdk-item\]_svg\]\:w-5 [cmdk-item] svg{width:calc(var(--spacing) * 5)}.\[\&_p\]\:leading-relaxed p{--tw-leading:var(--leading-relaxed);line-height:var(--leading-relaxed)}.\[\&_svg\]\:pointer-events-none svg{pointer-events:none}.\[\&_svg\]\:size-4 svg{width:calc(var(--spacing) * 4);height:calc(var(--spacing) * 4)}.\[\&_svg\]\:shrink-0 svg{flex-shrink:0}.\[\&_tr\]\:border-b tr{border-bottom-style:var(--tw-border-style);border-bottom-width:1px}.\[\&_tr\:last-child\]\:border-0 tr:last-child{border-style:var(--tw-border-style);border-width:0}.\[\&\:first-child\[data-selected\=true\]_button\]\:rounded-l-md:first-child[data-selected=true] button{border-top-left-radius:calc(var(--radius) - 2px);border-bottom-left-radius:calc(var(--radius) - 2px)}.\[\&\:has\(\[role\=checkbox\]\)\]\:pr-0:has([role=checkbox]){padding-right:0}:is(.rtl\:\*\*\:\[\.rdp-button\\_next\>svg\]\:rotate-180:where(:is(:lang(ae),:lang(ar),:lang(arc),:lang(bcc),:lang(bqi),:lang(ckb),:lang(dv),:lang(fa),:lang(glk),:lang(he),:lang(ku),:lang(mzn),:lang(nqo),:lang(pnb),:lang(ps),:lang(sd),:lang(ug),:lang(ur),:lang(yi)),[dir=rtl],[dir=rtl] *) *):is(.rdp-button_next>svg),:is(.rtl\:\*\*\:\[\.rdp-button\\_previous\>svg\]\:rotate-180:where(:is(:lang(ae),:lang(ar),:lang(arc),:lang(bcc),:lang(bqi),:lang(ckb),:lang(dv),:lang(fa),:lang(glk),:lang(he),:lang(ku),:lang(mzn),:lang(nqo),:lang(pnb),:lang(ps),:lang(sd),:lang(ug),:lang(ur),:lang(yi)),[dir=rtl],[dir=rtl] *) *):is(.rdp-button_previous>svg){rotate:180deg}.\[\&\:last-child\[data-selected\=true\]_button\]\:rounded-r-md:last-child[data-selected=true] button{border-top-right-radius:calc(var(--radius) - 2px);border-bottom-right-radius:calc(var(--radius) - 2px)}.\[\&\>\[role\=checkbox\]\]\:translate-y-\[2px\]>[role=checkbox]{--tw-translate-y:2px;translate:var(--tw-translate-x) var(--tw-translate-y)}.\[\&\>button\]\:hidden>button{display:none}.\[\&\>span\]\:line-clamp-1>span{-webkit-line-clamp:1;-webkit-box-orient:vertical;display:-webkit-box;overflow:hidden}.\[\&\>span\]\:text-xs>span{font-size:var(--text-xs);line-height:var(--tw-leading,var(--text-xs--line-height))}.\[\&\>span\]\:opacity-70>span{opacity:.7}.\[\&\>span\:last-child\]\:truncate>span:last-child{text-overflow:ellipsis;white-space:nowrap;overflow:hidden}.\[\&\>svg\]\:absolute>svg{position:absolute}.\[\&\>svg\]\:top-4>svg{top:calc(var(--spacing) * 4)}.\[\&\>svg\]\:left-4>svg{left:calc(var(--spacing) * 4)}.\[\&\>svg\]\:size-3\.5>svg{width:calc(var(--spacing) * 3.5);height:calc(var(--spacing) * 3.5)}.\[\&\>svg\]\:size-4>svg{width:calc(var(--spacing) * 4);height:calc(var(--spacing) * 4)}.\[\&\>svg\]\:h-2\.5>svg{height:calc(var(--spacing) * 2.5)}.\[\&\>svg\]\:h-3>svg{height:calc(var(--spacing) * 3)}.\[\&\>svg\]\:h-3\.5>svg{height:calc(var(--spacing) * 3.5)}.\[\&\>svg\]\:w-2\.5>svg{width:calc(var(--spacing) * 2.5)}.\[\&\>svg\]\:w-3>svg{width:calc(var(--spacing) * 3)}.\[\&\>svg\]\:w-3\.5>svg{width:calc(var(--spacing) * 3.5)}.\[\&\>svg\]\:shrink-0>svg{flex-shrink:0}.\[\&\>svg\]\:text-destructive>svg{color:var(--destructive)}.\[\&\>svg\]\:text-foreground>svg{color:var(--foreground)}.\[\&\>svg\]\:text-muted-foreground>svg{color:var(--muted-foreground)}.\[\&\>svg\+div\]\:translate-y-\[-3px\]>svg+div{--tw-translate-y:-3px;translate:var(--tw-translate-x) var(--tw-translate-y)}.\[\&\>svg\~\*\]\:pl-7>svg~*{padding-left:calc(var(--spacing) * 7)}.\[\&\>tr\]\:last\:border-b-0>tr:last-child{border-bottom-style:var(--tw-border-style);border-bottom-width:0}.\[\&\[data-panel-group-direction\=vertical\]\>div\]\:rotate-90[data-panel-group-direction=vertical]>div{rotate:90deg}.\[\&\[data-state\=open\]\>svg\]\:rotate-180[data-state=open]>svg{rotate:180deg}[data-side=left] .\[\[data-side\=left\]_\&\]\:cursor-w-resize{cursor:w-resize}[data-side=left][data-collapsible=offcanvas] .\[\[data-side\=left\]\[data-collapsible\=offcanvas\]_\&\]\:-right-2{right:calc(var(--spacing) * -2)}[data-side=left][data-state=collapsed] .\[\[data-side\=left\]\[data-state\=collapsed\]_\&\]\:cursor-e-resize,[data-side=right] .\[\[data-side\=right\]_\&\]\:cursor-e-resize{cursor:e-resize}[data-side=right][data-collapsible=offcanvas] .\[\[data-side\=right\]\[data-collapsible\=offcanvas\]_\&\]\:-left-2{left:calc(var(--spacing) * -2)}[data-side=right][data-state=collapsed] .\[\[data-side\=right\]\[data-state\=collapsed\]_\&\]\:cursor-w-resize{cursor:w-resize}[data-slot=card-content] .\[\[data-slot\=card-content\]_\&\]\:bg-transparent,[data-slot=popover-content] .\[\[data-slot\=popover-content\]_\&\]\:bg-transparent{background-color:#0000}}@property --tw-animation-delay{syntax:"*";inherits:false;initial-value:0s}@property --tw-animation-direction{syntax:"*";inherits:false;initial-value:normal}@property --tw-animation-duration{syntax:"*";inherits:false}@property --tw-animation-fill-mode{syntax:"*";inherits:false;initial-value:none}@property --tw-animation-iteration-count{syntax:"*";inherits:false;initial-value:1}@property --tw-enter-blur{syntax:"*";inherits:false;initial-value:0}@property --tw-enter-opacity{syntax:"*";inherits:false;initial-value:1}@property --tw-enter-rotate{syntax:"*";inherits:false;initial-value:0}@property --tw-enter-scale{syntax:"*";inherits:false;initial-value:1}@property --tw-enter-translate-x{syntax:"*";inherits:false;initial-value:0}@property --tw-enter-translate-y{syntax:"*";inherits:false;initial-value:0}@property --tw-exit-blur{syntax:"*";inherits:false;initial-value:0}@property --tw-exit-opacity{syntax:"*";inherits:false;initial-value:1}@property --tw-exit-rotate{syntax:"*";inherits:false;initial-value:0}@property --tw-exit-scale{syntax:"*";inherits:false;initial-value:1}@property --tw-exit-translate-x{syntax:"*";inherits:false;initial-value:0}@property --tw-exit-translate-y{syntax:"*";inherits:false;initial-value:0}:root{--radius:.5rem;--background:oklch(8% 0 0);--foreground:oklch(99% 0 0);--card:oklch(13% 0 0);--card-foreground:oklch(99% 0 0);--popover:oklch(13% 0 0);--popover-foreground:oklch(99% 0 0);--primary:oklch(99% 0 0);--primary-foreground:oklch(8% 0 0);--secondary:oklch(18% 0 0);--secondary-foreground:oklch(99% 0 0);--muted:oklch(18% 0 0);--muted-foreground:oklch(72% 0 0);--accent:oklch(22% 0 0);--accent-foreground:oklch(99% 0 0);--destructive:oklch(63% .22 27);--destructive-foreground:oklch(99% 0 0);--border:oklch(99% 0 0);--input:oklch(99% 0 0);--ring:oklch(65% .19 258);--g-blue:oklch(65% .19 258);--g-purple:oklch(62% .13 305);--g-red:oklch(63% .21 27);--g-yellow:oklch(84% .17 85);--g-green:oklch(65% .16 150);--gradient-gemini:linear-gradient(120deg, var(--g-blue) 0%, var(--g-purple) 35%, var(--g-red) 68%, var(--g-yellow) 100%);--gradient-gemini-shift:linear-gradient(120deg, var(--g-yellow) 0%, var(--g-red) 30%, var(--g-purple) 65%, var(--g-blue) 100%);--shadow-brutal:5px 5px 0 0 var(--foreground);--shadow-brutal-lg:8px 8px 0 0 var(--foreground);--shadow-brutal-color:6px 6px 0 0 var(--g-blue), 12px 12px 0 0 var(--g-red)}@keyframes gemini-pan{0%,to{background-position:0%}50%{background-position:100%}}@keyframes glow-pulse{0%,to{box-shadow:0 0 18px var(--g-blue), 6px 6px 0 0 var(--foreground)}50%{box-shadow:0 0 36px var(--g-red), 6px 6px 0 0 var(--foreground)}}@keyframes marquee{0%{transform:translate(0)}to{transform:translate(-50%)}}@property --tw-translate-x{syntax:"*";inherits:false;initial-value:0}@property --tw-translate-y{syntax:"*";inherits:false;initial-value:0}@property --tw-translate-z{syntax:"*";inherits:false;initial-value:0}@property --tw-rotate-x{syntax:"*";inherits:false}@property --tw-rotate-y{syntax:"*";inherits:false}@property --tw-rotate-z{syntax:"*";inherits:false}@property --tw-skew-x{syntax:"*";inherits:false}@property --tw-skew-y{syntax:"*";inherits:false}@property --tw-space-y-reverse{syntax:"*";inherits:false;initial-value:0}@property --tw-space-x-reverse{syntax:"*";inherits:false;initial-value:0}@property --tw-border-style{syntax:"*";inherits:false;initial-value:solid}@property --tw-leading{syntax:"*";inherits:false}@property --tw-font-weight{syntax:"*";inherits:false}@property --tw-tracking{syntax:"*";inherits:false}@property --tw-ordinal{syntax:"*";inherits:false}@property --tw-slashed-zero{syntax:"*";inherits:false}@property --tw-numeric-figure{syntax:"*";inherits:false}@property --tw-numeric-spacing{syntax:"*";inherits:false}@property --tw-numeric-fraction{syntax:"*";inherits:false}@property --tw-shadow{syntax:"*";inherits:false;initial-value:0 0 #0000}@property --tw-shadow-color{syntax:"*";inherits:false}@property --tw-shadow-alpha{syntax:"<percentage>";inherits:false;initial-value:100%}@property --tw-inset-shadow{syntax:"*";inherits:false;initial-value:0 0 #0000}@property --tw-inset-shadow-color{syntax:"*";inherits:false}@property --tw-inset-shadow-alpha{syntax:"<percentage>";inherits:false;initial-value:100%}@property --tw-ring-color{syntax:"*";inherits:false}@property --tw-ring-shadow{syntax:"*";inherits:false;initial-value:0 0 #0000}@property --tw-inset-ring-color{syntax:"*";inherits:false}@property --tw-inset-ring-shadow{syntax:"*";inherits:false;initial-value:0 0 #0000}@property --tw-ring-inset{syntax:"*";inherits:false}@property --tw-ring-offset-width{syntax:"<length>";inherits:false;initial-value:0}@property --tw-ring-offset-color{syntax:"*";inherits:false;initial-value:#fff}@property --tw-ring-offset-shadow{syntax:"*";inherits:false;initial-value:0 0 #0000}@property --tw-outline-style{syntax:"*";inherits:false;initial-value:solid}@property --tw-blur{syntax:"*";inherits:false}@property --tw-brightness{syntax:"*";inherits:false}@property --tw-contrast{syntax:"*";inherits:false}@property --tw-grayscale{syntax:"*";inherits:false}@property --tw-hue-rotate{syntax:"*";inherits:false}@property --tw-invert{syntax:"*";inherits:false}@property --tw-opacity{syntax:"*";inherits:false}@property --tw-saturate{syntax:"*";inherits:false}@property --tw-sepia{syntax:"*";inherits:false}@property --tw-drop-shadow{syntax:"*";inherits:false}@property --tw-drop-shadow-color{syntax:"*";inherits:false}@property --tw-drop-shadow-alpha{syntax:"<percentage>";inherits:false;initial-value:100%}@property --tw-drop-shadow-size{syntax:"*";inherits:false}@property --tw-duration{syntax:"*";inherits:false}@property --tw-ease{syntax:"*";inherits:false}@property --tw-content{syntax:"*";inherits:false;initial-value:""}@keyframes pulse{50%{opacity:.5}}@keyframes enter{0%{opacity:var(--tw-enter-opacity,1);transform:translate3d(var(--tw-enter-translate-x,0),var(--tw-enter-translate-y,0),0)scale3d(var(--tw-enter-scale,1),var(--tw-enter-scale,1),var(--tw-enter-scale,1))rotate(var(--tw-enter-rotate,0));filter:blur(var(--tw-enter-blur,0))}}@keyframes exit{to{opacity:var(--tw-exit-opacity,1);transform:translate3d(var(--tw-exit-translate-x,0),var(--tw-exit-translate-y,0),0)scale3d(var(--tw-exit-scale,1),var(--tw-exit-scale,1),var(--tw-exit-scale,1))rotate(var(--tw-exit-rotate,0));filter:blur(var(--tw-exit-blur,0))}}@keyframes accordion-down{0%{height:0}to{height:var(--radix-accordion-content-height,var(--bits-accordion-content-height,var(--reka-accordion-content-height,var(--kb-accordion-content-height,var(--ngp-accordion-content-height,auto)))))}}@keyframes accordion-up{0%{height:var(--radix-accordion-content-height,var(--bits-accordion-content-height,var(--reka-accordion-content-height,var(--kb-accordion-content-height,var(--ngp-accordion-content-height,auto)))))}to{height:0}}@keyframes caret-blink{0%,70%,to{opacity:1}20%,50%{opacity:0}}
+#apply{appearance:none;-webkit-appearance:none;flex:none;display:grid;place-content:center}#apply:checked{background:var(--gradient-gemini)}#apply:checked::after{content:'✓';color:var(--background);font-weight:900;font-size:16px;line-height:1}
+@keyframes soundwave {
+  0%, 100% { height: 6px; }
+  50% { height: 26px; }
+}
+.wave-bar {
+  width: 4px;
+  background: var(--g-red);
+  border-radius: 2px;
+  animation: soundwave 0.8s ease-in-out infinite;
+}
+.wave-bar:nth-child(2) { animation-delay: 0.15s; background: var(--g-yellow); }
+.wave-bar:nth-child(3) { animation-delay: 0.3s; background: var(--g-blue); }
+.wave-bar:nth-child(4) { animation-delay: 0.45s; background: var(--g-purple); }
+.wave-bar:nth-child(5) { animation-delay: 0.6s; background: var(--g-green); }
+.prog-langs { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
+.prog-lang { display: flex; flex-direction: column; }
+.prog-grid { display: grid; gap: 1.5rem; }
+@media (min-width: 768px) { .prog-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.prog-bar { position: relative; display: block; height: 12px; border: 2px solid var(--foreground); border-radius: 999px; background: var(--background); overflow: hidden; }
+.prog-fill { position: absolute; inset: 0 auto 0 0; background: var(--gradient-gemini); transition: width .4s ease; }
+.prog-fill-soft { background: var(--g-blue); opacity: .3; }
+.prog-spark { width: 100%; height: 200px; overflow: visible; }
+.prog-spark-line { fill: none; stroke: var(--g-blue); stroke-width: 3; stroke-linejoin: round; stroke-linecap: round; vector-effect: non-scaling-stroke; }
+.prog-spark-goal { stroke: var(--g-green); stroke-width: 1.5; stroke-dasharray: 6 5; vector-effect: non-scaling-stroke; }
+.prog-spark-dot { fill: currentColor; stroke: var(--foreground); stroke-width: 1; vector-effect: non-scaling-stroke; }
+.border-foreground\/20 { border-color: color-mix(in oklab, var(--foreground) 20%, transparent); }
+.border-foreground\/50 { border-color: color-mix(in oklab, var(--foreground) 50%, transparent); }
+.justify-end { justify-content: flex-end; }
+.last\:border-0:last-child { border-width: 0; }
+.max-w-xl { max-width: 36rem; }
+.px-6 { padding-inline: 1.5rem; }
+@media (min-width: 40rem) { .sm\:p-8 { padding: 2rem; } }
+.text-2xl { font-size: 1.5rem; line-height: 2rem; }
+.truncate { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.shrink-0 { flex-shrink: 0; }
+.min-w-0 { min-width: 0; }
+.streak-panel { display: grid; gap: 1.75rem; align-items: center; }
+@media (min-width: 900px) { .streak-panel { grid-template-columns: auto minmax(0, 1fr) 220px; } }
+.streak-now { text-align: center; }
+.streak-flame { display: inline-block; animation: streak-flicker 1.6s ease-in-out infinite; transform-origin: bottom center; }
+@keyframes streak-flicker { 0%, 100% { transform: scale(1) rotate(0deg); } 50% { transform: scale(1.06) rotate(-2deg); } }
+.streak-days { display: grid; grid-template-columns: repeat(14, minmax(0, 1fr)); gap: 6px; }
+@media (max-width: 560px) { .streak-days { grid-template-columns: repeat(7, minmax(0, 1fr)); } }
+.streak-day { display: flex; flex-direction: column; align-items: center; gap: 2px; padding: 6px 0; border: 2px solid color-mix(in oklab, var(--foreground) 35%, transparent); border-radius: 8px; background: var(--background); font-family: "JetBrains Mono", monospace; }
+.streak-day[data-on=true] { background: var(--gradient-gemini); border-color: var(--foreground); color: var(--background); }
+.streak-day[data-today=true] { outline: 3px solid var(--g-yellow); outline-offset: 2px; }
+.streak-wd { font-size: 10px; opacity: .8; }
+.streak-num { font-size: 13px; font-weight: 700; }
+.streak-dot { font-size: 12px; line-height: 1; }
+.streak-status { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .75rem; padding: .75rem 1rem; border: 2px solid var(--g-yellow); border-radius: 8px; }
+.streak-status[data-done=true] { border-color: var(--g-green); }
+.streak-badges { display: flex; flex-wrap: wrap; gap: .5rem; }
+.streak-badge { padding: .35rem .65rem; border: 2px solid var(--foreground); border-radius: 999px; font-family: "JetBrains Mono", monospace; font-size: 12px; font-weight: 700; }
+.streak-badge[data-earned=false] { opacity: .4; border-style: dashed; }
+</style>
+</head>
+<body>
+<div id="app" class="min-h-screen"></div>
+
+
+<script>
+const UI = {"en":{"navSetup":"01. Languages","navTutor":"02. Voice Tutor & RPG","navClassroom":"03. Progress","navStatus":"04. API Status","tagline":"Real-time 16kHz WAV pipeline","marqueeStart":"● ARTHA STACK ARMED","marqueeEnd":"● LIVE VOICE BUILD","heroBadge":"✨ The Great Indian AI Internship Challenge","heroPre":"Speak, learn & survive in ","heroHighlight":"any Indian classroom","heroPost":"","heroSub":"Pick your comfort language and the one you want to learn. Your mic records real 16kHz audio, transcribes it, scores your pronunciation, and speaks back.","fieldName":"1. Your name","fieldComfort":"2. Comfort language (UI, meaning & phonetics)","fieldTarget":"3. Target language (what you want to speak)","applyLabel":"Apply to application","launch":"🎙️ Launch live voice tutor, {name}","friend":"friend","tutorKicker":"Station 02 · 54 Everyday Indic Phrases Across 7 Categories","tutorTitle":"Metro Voice Tutor & Story RPG","tabLessons":"🚇 54 Phrases (7 Categories)","tabRpg":"🎮 Station 4: RPG","station":"STATION","sayThis":"Say this in {lang}","hear":"🔊 Hear pronunciation","speaking":"🔊 Speaking…","weHeard":"WE HEARD","nothingClear":"— nothing clear —","scoreLabel":"PRONUNCIATION SCORE","tryAgain":"try again","micStop":"Stop recording","micStart":"Start recording","tapToStop":"Tap to stop","checking":"Listening back…","tapToSpeak":"Tap & speak","micBlocked":"Microphone access was blocked. Please allow the mic in your browser and try again.","playFailed":"Couldn't play the audio","genericError":"Something went wrong","rpgChapter":"CHAPTER 1 · FIRST DAY IN KOLKATA","rpgPre":"You step off the metro at Esplanade. A senior shouts your name — ","rpgPost":"! — and asks you, in {lang}, where you're headed. What do you say?","rpgChoices":["To the library","To the canteen","I'm lost, help!"],"classKicker":"Station 03 · Progress analysis","classTitle":"Your Learning Progress","statusKicker":"Station 04 · Under the hood","statusTitle":"API Status","online":"ONLINE","footer":"Built for every Indian voice.","stations":[{"title":"Auto & Campus Commute","meaning":"Asking an auto driver to take you to campus"},{"title":"Canteen & Hostel","meaning":"Ordering one tea and a samosa"},{"title":"Classroom Survival","meaning":"Asking the teacher to explain again"}],"langNames":{"hi":"Hindi","en":"English","bn":"Bengali","te":"Telugu"},"categoryLabel":"Categories","progSaved":"Saved on this device","progEmptyTitle":"No practice recorded yet","progEmptyText":"Speak a phrase in the voice tutor and your scores will appear here, for every language you learn.","progStart":"Start practising →","progAll":"All languages","progAttempts":"Attempts","progAvg":"Average score","progMastered":"Phrases mastered","progStreak":"Day streak","progTrend":"Score trend (last 20)","progByCat":"Progress by category","progNeedsWork":"Needs more practice","progNoWeak":"Nothing here — every practised phrase scores 60 or more.","progRecent":"Recent attempts","progPractise":"Practise","progPracticed":"practised","progBest":"best","progStory":"Story RPG","progReset":"Reset progress","progResetConfirm":"Delete all saved progress on this device?","streakTitle":"Practice streak","streakDays":"days in a row","streakBest":"Best streak","streakLast14":"Last 14 days","streakMilestones":"Milestones","streakDayUnit":"{n}-day","streakDone":"✅ Practised today — your streak is safe!","streakKeep":"⏳ Practise one phrase today to keep your {n}-day streak going!","streakStart":"🌱 Practise one phrase today to start a new streak.","streakAttemptsOn":"attempts","streakPractiseNow":"Practise now →"},"hi":{"navSetup":"01. भाषाएँ","navTutor":"02. वॉइस ट्यूटर और RPG","navClassroom":"03. प्रगति","navStatus":"04. API स्टेटस","tagline":"रीयल-टाइम 16kHz WAV पाइपलाइन","marqueeStart":"● ARTHA स्टैक तैयार","marqueeEnd":"● लाइव वॉइस बिल्ड","heroBadge":"✨ द ग्रेट इंडियन AI इंटर्नशिप चैलेंज","heroPre":"","heroHighlight":"किसी भी भारतीय क्लासरूम में","heroPost":" बोलिए, सीखिए और डटे रहिए","heroSub":"अपनी सुविधा की भाषा चुनें और वह भाषा भी जो आप सीखना चाहते हैं। आपका माइक असली 16kHz ऑडियो रिकॉर्ड करता है, उसे टेक्स्ट में बदलता है, आपके उच्चारण को स्कोर देता है और जवाब में बोलता है।","fieldName":"1. आपका नाम","fieldComfort":"2. सुविधा की भाषा (इंटरफ़ेस, अर्थ और उच्चारण)","fieldTarget":"3. लक्ष्य भाषा (जो आप बोलना चाहते हैं)","applyLabel":"एप्लिकेशन पर लागू करें","launch":"🎙️ लाइव वॉइस ट्यूटर शुरू करें, {name}","friend":"दोस्त","tutorKicker":"स्टेशन 02 · 7 श्रेणियों में 54 दैनिक भारतीय वाक्य","tutorTitle":"मेट्रो वॉइस ट्यूटर और स्टोरी RPG","tabLessons":"🚇 54 अभ्यास वाक्य (7 श्रेणियाँ)","tabRpg":"🎮 स्टेशन 4: RPG","station":"स्टेशन","sayThis":"{lang} में यह बोलें","hear":"🔊 उच्चारण सुनें","speaking":"🔊 बोल रहा है…","weHeard":"हमने सुना","nothingClear":"— कुछ साफ़ नहीं —","scoreLabel":"उच्चारण स्कोर","tryAgain":"फिर कोशिश करें","micStop":"रिकॉर्डिंग रोकें","micStart":"रिकॉर्डिंग शुरू करें","tapToStop":"रोकने के लिए टैप करें","checking":"सुन रहे हैं…","tapToSpeak":"टैप करें और बोलें","micBlocked":"माइक्रोफ़ोन की अनुमति रोक दी गई थी। कृपया अपने ब्राउज़र में माइक की अनुमति दें और फिर कोशिश करें।","playFailed":"ऑडियो नहीं चल सका","genericError":"कुछ गलत हो गया","rpgChapter":"अध्याय 1 · कोलकाता में पहला दिन","rpgPre":"आप एस्प्लेनेड पर मेट्रो से उतरते हैं। एक सीनियर आपका नाम पुकारता है — ","rpgPost":"! — और {lang} में पूछता है कि आप कहाँ जा रहे हैं। आप क्या कहेंगे?","rpgChoices":["लाइब्रेरी की ओर","कैंटीन की ओर","रास्ता नहीं मिल रहा, मदद करें!"],"classKicker":"स्टेशन 03 · प्रगति विश्लेषण","classTitle":"आपकी सीखने की प्रगति","statusKicker":"स्टेशन 04 · पर्दे के पीछे","statusTitle":"API स्टेटस","online":"ऑनलाइन","footer":"हर भारतीय आवाज़ के लिए बनाया गया।","stations":[{"title":"ऑटो और कैंपस का सफ़र","meaning":"ऑटो वाले से कैंपस चलने के लिए पूछना"},{"title":"कैंटीन और हॉस्टल","meaning":"एक चाय और एक समोसा ऑर्डर करना"},{"title":"क्लासरूम में टिके रहना","meaning":"शिक्षक से दोबारा समझाने के लिए कहना"}],"langNames":{"hi":"हिन्दी","en":"अंग्रेज़ी","bn":"बंगाली","te":"तेलुगु"},"categoryLabel":"श्रेणियाँ","progSaved":"इस डिवाइस पर सहेजा गया","progEmptyTitle":"अभी तक कोई अभ्यास दर्ज नहीं","progEmptyText":"वॉइस ट्यूटर में कोई वाक्य बोलें — आप जो भी भाषा सीखें, उसके स्कोर यहाँ दिखेंगे।","progStart":"अभ्यास शुरू करें →","progAll":"सभी भाषाएँ","progAttempts":"प्रयास","progAvg":"औसत स्कोर","progMastered":"महारत वाले वाक्य","progStreak":"लगातार दिन","progTrend":"स्कोर रुझान (पिछले 20)","progByCat":"श्रेणी के अनुसार प्रगति","progNeedsWork":"और अभ्यास चाहिए","progNoWeak":"यहाँ कुछ नहीं — हर अभ्यास किए गए वाक्य का स्कोर 60 या अधिक है।","progRecent":"हाल के प्रयास","progPractise":"अभ्यास करें","progPracticed":"अभ्यास किए","progBest":"सर्वश्रेष्ठ","progStory":"स्टोरी RPG","progReset":"प्रगति रीसेट करें","progResetConfirm":"इस डिवाइस पर सहेजी गई सारी प्रगति हटाएँ?","streakTitle":"अभ्यास स्ट्रीक","streakDays":"दिन लगातार","streakBest":"सबसे लंबी स्ट्रीक","streakLast14":"पिछले 14 दिन","streakMilestones":"उपलब्धियाँ","streakDayUnit":"{n} दिन","streakDone":"✅ आज अभ्यास हो गया — आपकी स्ट्रीक सुरक्षित है!","streakKeep":"⏳ अपनी {n} दिन की स्ट्रीक बनाए रखने के लिए आज एक वाक्य का अभ्यास करें!","streakStart":"🌱 नई स्ट्रीक शुरू करने के लिए आज एक वाक्य का अभ्यास करें।","streakAttemptsOn":"प्रयास","streakPractiseNow":"अभी अभ्यास करें →"},"bn":{"navSetup":"01. ভাষা","navTutor":"02. ভয়েস টিউটর ও RPG","navClassroom":"03. অগ্রগতি","navStatus":"04. API স্ট্যাটাস","tagline":"রিয়েল-টাইম 16kHz WAV পাইপলাইন","marqueeStart":"● ARTHA স্ট্যাক প্রস্তুত","marqueeEnd":"● লাইভ ভয়েস বিল্ড","heroBadge":"✨ দ্য গ্রেট ইন্ডিয়ান AI ইন্টার্নশিপ চ্যালেঞ্জ","heroPre":"","heroHighlight":"যেকোনো ভারতীয় ক্লাসরুমে","heroPost":" বলুন, শিখুন আর টিকে থাকুন","heroSub":"আপনার স্বচ্ছন্দ ভাষা এবং যে ভাষাটি শিখতে চান তা বেছে নিন। আপনার মাইক আসল 16kHz অডিও রেকর্ড করে, তা লিখিত রূপে বদলায়, আপনার উচ্চারণের স্কোর দেয় এবং উত্তরে কথা বলে।","fieldName":"1. আপনার নাম","fieldComfort":"2. স্বচ্ছন্দ ভাষা (ইন্টারফেস, অর্থ ও উচ্চারণ)","fieldTarget":"3. লক্ষ্য ভাষা (যে ভাষায় বলতে চান)","applyLabel":"অ্যাপ্লিকেশনে প্রয়োগ করুন","launch":"🎙️ লাইভ ভয়েস টিউটর চালু করুন, {name}","friend":"বন্ধু","tutorKicker":"স্টেশন ০২ · ৭টি বিভাগে ৫৪টি দৈনন্দিন ভারতীয় বাক্য","tutorTitle":"মেট্রো ভয়েস টিউটর ও স্টোরি RPG","tabLessons":"🚇 ৫৪টি অনুশীলন বাক্য (৭টি বিভাগ)","tabRpg":"🎮 স্টেশন 4: RPG","station":"স্টেশন","sayThis":"{lang} ভাষায় এটি বলুন","hear":"🔊 উচ্চারণ শুনুন","speaking":"🔊 বলছে…","weHeard":"আমরা শুনেছি","nothingClear":"— স্পষ্ট কিছু নয় —","scoreLabel":"উচ্চারণ স্কোর","tryAgain":"আবার চেষ্টা করুন","micStop":"রেকর্ডিং বন্ধ করুন","micStart":"রেকর্ডিং শুরু করুন","tapToStop":"থামাতে ট্যাপ করুন","checking":"শুনছি…","tapToSpeak":"ট্যাপ করুন ও বলুন","micBlocked":"মাইক্রোফোনের অনুমতি ব্লক করা হয়েছিল। অনুগ্রহ করে ব্রাউজারে মাইকের অনুমতি দিন এবং আবার চেষ্টা করুন।","playFailed":"অডিও চালানো যায়নি","genericError":"কিছু ভুল হয়েছে","rpgChapter":"অধ্যায় 1 · কলকাতায় প্রথম দিন","rpgPre":"আপনি এসপ্ল্যানেডে মেট্রো থেকে নামলেন। এক সিনিয়র আপনার নাম ধরে ডাকলেন — ","rpgPost":"! — এবং {lang} ভাষায় জানতে চাইলেন আপনি কোথায় যাচ্ছেন। আপনি কী বলবেন?","rpgChoices":["লাইব্রেরিতে","ক্যান্টিনে","আমি হারিয়ে গেছি, সাহায্য করুন!"],"classKicker":"স্টেশন ০৩ · অগ্রগতি বিশ্লেষণ","classTitle":"আপনার শেখার অগ্রগতি","statusKicker":"স্টেশন 04 · ভেতরের কথা","statusTitle":"API স্ট্যাটাস","online":"অনলাইন","footer":"প্রতিটি ভারতীয় কণ্ঠের জন্য তৈরি।","stations":[{"title":"অটো ও ক্যাম্পাস যাতায়াত","meaning":"অটোচালককে ক্যাম্পাসে যেতে জিজ্ঞেস করা"},{"title":"ক্যান্টিন ও হস্টেল","meaning":"একটা চা আর একটা সিঙ্গাড়া অর্ডার করা"},{"title":"ক্লাসরুমে টিকে থাকা","meaning":"শিক্ষককে আবার বুঝিয়ে বলতে বলা"}],"langNames":{"hi":"হিন্দি","en":"ইংরেজি","bn":"বাংলা","te":"তেলুগু"},"categoryLabel":"বিভাগ","progSaved":"এই ডিভাইসে সংরক্ষিত","progEmptyTitle":"এখনও কোনো অনুশীলন রেকর্ড হয়নি","progEmptyText":"ভয়েস টিউটরে একটি বাক্য বলুন — আপনি যে ভাষাই শিখুন, তার স্কোর এখানে দেখা যাবে।","progStart":"অনুশীলন শুরু করুন →","progAll":"সব ভাষা","progAttempts":"প্রচেষ্টা","progAvg":"গড় স্কোর","progMastered":"আয়ত্ত করা বাক্য","progStreak":"টানা দিন","progTrend":"স্কোরের ধারা (শেষ ২০)","progByCat":"বিভাগ অনুযায়ী অগ্রগতি","progNeedsWork":"আরও অনুশীলন দরকার","progNoWeak":"এখানে কিছু নেই — প্রতিটি অনুশীলিত বাক্যের স্কোর ৬০ বা তার বেশি।","progRecent":"সাম্প্রতিক প্রচেষ্টা","progPractise":"অনুশীলন","progPracticed":"অনুশীলিত","progBest":"সেরা","progStory":"স্টোরি RPG","progReset":"অগ্রগতি রিসেট করুন","progResetConfirm":"এই ডিভাইসে সংরক্ষিত সব অগ্রগতি মুছবেন?","streakTitle":"অনুশীলন স্ট্রিক","streakDays":"দিন টানা","streakBest":"সেরা স্ট্রিক","streakLast14":"শেষ ১৪ দিন","streakMilestones":"মাইলফলক","streakDayUnit":"{n} দিন","streakDone":"✅ আজ অনুশীলন হয়ে গেছে — আপনার স্ট্রিক নিরাপদ!","streakKeep":"⏳ আপনার {n} দিনের স্ট্রিক ধরে রাখতে আজ একটি বাক্য অনুশীলন করুন!","streakStart":"🌱 নতুন স্ট্রিক শুরু করতে আজ একটি বাক্য অনুশীলন করুন।","streakAttemptsOn":"প্রচেষ্টা","streakPractiseNow":"এখনই অনুশীলন করুন →"},"te":{"navSetup":"01. భాషలు","navTutor":"02. వాయిస్ ట్యూటర్ & RPG","navClassroom":"03. పురోగతి","navStatus":"04. API స్థితి","tagline":"రియల్-టైమ్ 16kHz WAV పైప్‌లైన్","marqueeStart":"● ARTHA స్టాక్ సిద్ధం","marqueeEnd":"● లైవ్ వాయిస్ బిల్డ్","heroBadge":"✨ ది గ్రేట్ ఇండియన్ AI ఇంటర్న్‌షిప్ ఛాలెంజ్","heroPre":"","heroHighlight":"ఏ భారతీయ తరగతి గదిలోనైనా","heroPost":" మాట్లాడండి, నేర్చుకోండి, నిలదొక్కుకోండి","heroSub":"మీకు సౌకర్యంగా ఉండే భాషను, నేర్చుకోవాలనుకుంటున్న భాషను ఎంచుకోండి. మీ మైక్ నిజమైన 16kHz ఆడియోను రికార్డ్ చేసి, దాన్ని టెక్స్ట్‌గా మారుస్తుంది, మీ ఉచ్చారణకు స్కోర్ ఇస్తుంది, తిరిగి మాట్లాడుతుంది.","fieldName":"1. మీ పేరు","fieldComfort":"2. సౌకర్యవంతమైన భాష (ఇంటర్‌ఫేస్, అర్థం & ఉచ్చారణ)","fieldTarget":"3. లక్ష్య భాష (మీరు మాట్లాడాలనుకునేది)","applyLabel":"అప్లికేషన్‌కు వర్తింపజేయండి","launch":"🎙️ లైవ్ వాయిస్ ట్యూటర్‌ను ప్రారంభించండి, {name}","friend":"మిత్రమా","tutorKicker":"స్టేషన్ 02 · 7 విభాగాలలో 54 రోజువారీ భారతీయ వాక్యాలు","tutorTitle":"మెట్రో వాయిస్ ట్యూటర్ & స్టోరీ RPG","tabLessons":"🚇 54 అభ్యాస వాక్యాలు (7 విభాగాలు)","tabRpg":"🎮 స్టేషన్ 4: RPG","station":"స్టేషన్","sayThis":"దీన్ని {lang}లో చెప్పండి","hear":"🔊 ఉచ్చారణ వినండి","speaking":"🔊 మాట్లాడుతోంది…","weHeard":"మేము విన్నది","nothingClear":"— స్పష్టంగా ఏమీ లేదు —","scoreLabel":"ఉచ్చారణ స్కోర్","tryAgain":"మళ్ళీ ప్రయత్నించండి","micStop":"రికార్డింగ్ ఆపండి","micStart":"రికార్డింగ్ ప్రారంభించండి","tapToStop":"ఆపడానికి ట్యాప్ చేయండి","checking":"వింటున్నాం…","tapToSpeak":"ట్యాప్ చేసి మాట్లాడండి","micBlocked":"మైక్రోఫోన్ యాక్సెస్ బ్లాక్ చేయబడింది. దయచేసి మీ బ్రౌజర్‌లో మైక్‌ను అనుమతించి, మళ్ళీ ప్రయత్నించండి.","playFailed":"ఆడియో ప్లే కాలేదు","genericError":"ఏదో తప్పు జరిగింది","rpgChapter":"అధ్యాయం 1 · కోల్‌కతాలో మొదటి రోజు","rpgPre":"మీరు ఎస్ప్లనేడ్ వద్ద మెట్రో దిగుతారు. ఒక సీనియర్ మీ పేరు పిలుస్తాడు — ","rpgPost":"! — {lang}లో మీరు ఎక్కడికి వెళ్తున్నారని అడుగుతాడు. మీరు ఏమి చెబుతారు?","rpgChoices":["లైబ్రరీకి","క్యాంటీన్‌కి","నేను దారి తప్పాను, సహాయం చేయండి!"],"classKicker":"స్టేషన్ 03 · పురోగతి విశ్లేషణ","classTitle":"మీ అభ్యాస పురోగతి","statusKicker":"స్టేషన్ 04 · తెర వెనుక","statusTitle":"API స్థితి","online":"ఆన్‌లైన్","footer":"ప్రతి భారతీయ గొంతు కోసం రూపొందించబడింది.","stations":[{"title":"ఆటో & క్యాంపస్ ప్రయాణం","meaning":"ఆటో డ్రైవర్‌ను క్యాంపస్‌కి రమ్మని అడగడం"},{"title":"క్యాంటీన్ & హాస్టల్","meaning":"ఒక టీ, ఒక సమోసా ఆర్డర్ చేయడం"},{"title":"క్లాస్‌రూమ్‌లో నిలదొక్కుకోవడం","meaning":"ఉపాధ్యాయుడిని మళ్ళీ వివరించమని అడగడం"}],"langNames":{"hi":"హిందీ","en":"ఇంగ్లీషు","bn":"బెంగాలీ","te":"తెలుగు"},"categoryLabel":"విభాగాలు","progSaved":"ఈ పరికరంలో సేవ్ చేయబడింది","progEmptyTitle":"ఇంకా అభ్యాసం నమోదు కాలేదు","progEmptyText":"వాయిస్ ట్యూటర్‌లో ఒక వాక్యం చెప్పండి — మీరు నేర్చుకునే ప్రతి భాష స్కోర్లు ఇక్కడ కనిపిస్తాయి.","progStart":"అభ్యాసం ప్రారంభించండి →","progAll":"అన్ని భాషలు","progAttempts":"ప్రయత్నాలు","progAvg":"సగటు స్కోర్","progMastered":"నేర్చుకున్న వాక్యాలు","progStreak":"వరుస రోజులు","progTrend":"స్కోర్ ధోరణి (చివరి 20)","progByCat":"వర్గాల వారీగా పురోగతి","progNeedsWork":"మరింత సాధన అవసరం","progNoWeak":"ఇక్కడ ఏమీ లేదు — సాధన చేసిన ప్రతి వాక్యానికి 60 లేదా అంతకంటే ఎక్కువ స్కోర్ ఉంది.","progRecent":"ఇటీవలి ప్రయత్నాలు","progPractise":"సాధన చేయండి","progPracticed":"సాధన చేసినవి","progBest":"ఉత్తమం","progStory":"స్టోరీ RPG","progReset":"పురోగతిని రీసెట్ చేయండి","progResetConfirm":"ఈ పరికరంలో సేవ్ చేసిన పురోగతి మొత్తం తొలగించాలా?","streakTitle":"సాధన స్ట్రీక్","streakDays":"రోజులు వరుసగా","streakBest":"ఉత్తమ స్ట్రీక్","streakLast14":"గత 14 రోజులు","streakMilestones":"మైలురాళ్ళు","streakDayUnit":"{n} రోజులు","streakDone":"✅ ఈరోజు సాధన పూర్తయింది — మీ స్ట్రీక్ సురక్షితం!","streakKeep":"⏳ మీ {n} రోజుల స్ట్రీక్ కొనసాగించడానికి ఈరోజు ఒక వాక్యం సాధన చేయండి!","streakStart":"🌱 కొత్త స్ట్రీక్ ప్రారంభించడానికి ఈరోజు ఒక వాక్యం సాధన చేయండి.","streakAttemptsOn":"ప్రయత్నాలు","streakPractiseNow":"ఇప్పుడే సాధన చేయండి →"}};
+for (const l of Object.keys(UI)) {
+  UI[l].mic = UI[l].micBlocked;
+  UI[l].generic = UI[l].genericError;
+}
+
+const CATEGORIES = [{"id":"campus","icon":"🎓","name":"Campus & Class","hi":"कैंपस और क्लास","bn":"ক্যাম্পাস ও ক্লাস","te":"క్యాంపస్ & క్లాస్"},{"id":"canteen","icon":"☕","name":"Canteen & Chai","hi":"कैंटीन और चाय","bn":"ক্যান্টিন ও চা","te":"క్యాంటీన్ & టీ"},{"id":"commute","icon":"🛺","name":"Auto & Metro","hi":"ऑटो और मेट्रो","bn":"অটো ও মেট্রো","te":"ఆటో & మెట్రో"},{"id":"market","icon":"🛍️","name":"Market & UPI","hi":"बाज़ार और पेमेंट","bn":"বাজার ও পেমেন্ট","te":"మార్కెట్ & పేమెంట్"},{"id":"hostel","icon":"🏠","name":"Hostel Life","hi":"हॉस्टल की ज़िंदगी","bn":"হোস্টেল জীবন","te":"హాస్టల్ లైఫ్"},{"id":"social","icon":"🤝","name":"Friends & Social","hi":"दोस्ती और बातचीत","bn":"বন্ধুত্ব ও গল্প","te":"స్నేహం & పరిచయం"},{"id":"health","icon":"🏥","name":"Health & Clinic","hi":"सेहत और दवाई","bn":"স্বাস্থ্য ও চিকিৎসা","te":"ఆరోగ్యం & క్లినిక్"}];
+const STATIONS = [{"id":0,"category":"campus","title":"Clarify with Professor","meaning":"Asking a teacher or professor to explain a concept once more","hi":["सर, फिर से समझाइए","Sir, phir se samjhaiye"],"en":["Sir, could you please explain that again?","Sur, kood yoo pleez ek-splayn dhat uh-gen?"],"bn":["স্যার, আবার বুঝিয়ে বলবেন?","Sir, abar bujhiye bolben?"],"te":["సార్, మళ్ళీ వివరించండి","Sir, malli vivarinchandi"]},{"id":1,"category":"campus","title":"Central Library","meaning":"Asking for the location of the campus central library","hi":["सेंट्रल लाइब्रेरी कहाँ है?","Central library kahan hai?"],"en":["Where is the central library?","Wair iz dhuh sen-truhl ly-brer-ee?"],"bn":["সেন্ট্রাল লাইব্রেরিটা কোন দিকে?","Central library-ta kon dike?"],"te":["సెంట్రల్ లైబ్రరీ ఎక్కడ ఉంది?","Central library ekkada undi?"]},{"id":2,"category":"campus","title":"Project Deadline","meaning":"Asking classmates about final assignment submission date","hi":["प्रोजेक्ट सबमिशन की आखिरी तारीख कब है?","Project submission ki aakhiri tareekh kab hai?"],"en":["When is the project submission deadline?","Wen iz dhuh proj-ekt suhb-mish-uhn ded-lyn?"],"bn":["প্রজেক্ট জমা দেওয়ার শেষ তারিখ কবে?","Project joma deowar shesh tarikh kobe?"],"te":["ప్రాజెక్ట్ సబ్మిట్ చేయడానికి చివరి తేదీ ఎప్పుడు?","Project submit cheyadaniki chivari thedi eppudu?"]},{"id":3,"category":"campus","title":"Borrow Class Notes","meaning":"Asking a classmate to share their handwritten or digital notes","hi":["क्या मुझे आज के क्लास नोट्स मिल सकते हैं?","Kya mujhe aaj ke class notes mil sakte hain?"],"en":["Can I borrow your lecture notes for today?","Kan eye bah-roh yoor lek-chur nohts for tuh-day?"],"bn":["আজকের ক্লাসের নোটগুলো একটু দেখতে দেবে?","Aajker class-er note-gulo ektu dekhte debe?"],"te":["ఈరోజు క్లాస్ నోట్స్ కొంచెం ఇస్తారా?","Eeroju class notes konchem isthara?"]},{"id":4,"category":"campus","title":"Lab Venue","meaning":"Inquiring about practical laboratory room and venue","hi":["कल का प्रैक्टिकल लैब कहाँ होगा?","Kal ka practical lab kahan hoga?"],"en":["Where will tomorrow's practical lab be held?","Wair wil tuh-mah-roh'z prak-tih-kuhl lab bee held?"],"bn":["কালকের প্র্যাকটিক্যাল ল্যাবটা কোথায় হবে?","Kalker practical lab-ta kothay hobe?"],"te":["రేపటి ప్రాక్టికల్ ల్యాబ్ ఎక్కడ జరుగుతుంది?","Repati practical lab ekkada jaruguthundi?"]},{"id":5,"category":"campus","title":"Enter Faculty Cabin","meaning":"Polite permission before entering faculty office or class","hi":["क्या मैं अंदर आ सकता हूँ, प्रोफेसर?","Kya main andar aa sakta hoon, professor?"],"en":["May I come in, Professor?","May eye kum in, proh-fes-er?"],"bn":["প্রফেসর, আমি কি ভেতরে আসতে পারি?","Professor, ami ki bhetore aashte pari?"],"te":["ప్రొఫెసర్, నేను లోపలికి రావచ్చా?","Professor, nenu lopaliki ravachha?"]},{"id":6,"category":"campus","title":"Desk in Classroom","meaning":"Checking if a bench or desk is occupied before sitting","hi":["क्या यहाँ कोई बैठा है?","Kya yahan koi baitha hai?"],"en":["Is this seat taken?","Iz dhis seet tay-kuhn?"],"bn":["এই সিটটায় কেউ বসেছে কি?","Ei seat-tay keu boseche ki?"],"te":["ఈ సీట్లో ఎవరైనా కూర్చున్నారా?","Ee seat-lo evaraina kurchunnara?"]},{"id":7,"category":"campus","title":"Attendance Sheet","meaning":"Checking the circulation of the student roll sheet","hi":["अटेंडेंस शीट यहाँ तक पहुँच गई क्या?","Attendance sheet yahan tak pahunch gayi kya?"],"en":["Has the attendance sheet reached here?","Haz dhuh uh-ten-duhns sheet reecht heer?"],"bn":["অ্যাটেনডেন্স শিটটা কি এদিকে এসেছে?","Attendance sheet-ta ki edike esheche?"],"te":["అటెండెన్స్ షీట్ ఇక్కడికి వచ్చిందా?","Attendance sheet ikkadiki vachinda?"]},{"id":8,"category":"canteen","title":"Chai and Samosa","meaning":"Ordering classic Indian evening snack combination","hi":["एक चाय और समोसा देना","Ek chai aur samosa dena"],"en":["One tea and a samosa, please","Wun tee and uh suh-moh-suh, pleez"],"bn":["একটা চা আর একটা সিঙ্গাড়া দিন","Ekta cha aar ekta singara din"],"te":["ఒక టీ, ఒక సమోసా ఇవ్వండి","Oka tea, oka samosa ivvandi"]},{"id":9,"category":"canteen","title":"Less Sugar Chai","meaning":"Customizing your beverage sweetness preference","hi":["चाय में चीनी कम रखना, भैया","Chai mein cheeni kam rakhna, bhaiya"],"en":["Please make the tea with less sugar","Pleez mayk dhuh tee with les shoo-gur"],"bn":["চায়ে চিনি একটু কম দেবেন, দাদা","Chaye chini ektu kom deben, dada"],"te":["టీలో చెక్కర కొంచెం తక్కువ వేయండి, అన్నా","Tea-lo chekkara konchem thakkuva veyandi, anna"]},{"id":10,"category":"canteen","title":"Mess Menu","meaning":"Inquiring about today's meal preparation in the hostel mess","hi":["आज मेस में खाने में क्या बना है?","Aaj mess mein khaane mein kya bana hai?"],"en":["What is on the hostel mess menu today?","Wuht iz on dhuh hos-tuhl mes men-yoo tuh-day?"],"bn":["আজকে হোস্টেল মেসে কী রান্না হয়েছে?","Aajke hostel mess-e kee ranna hoyeche?"],"te":["ఈరోజు హాస్టల్ మెస్‌లో ఏం వండారు?","Eeroju hostel mess-lo em vandaru?"]},{"id":11,"category":"canteen","title":"No Onion, No Garlic","meaning":"Specifying dietary preference or satvik food requirements","hi":["यह बिना प्याज और लहसुन के बनाना","Yeh bina pyaaz aur lehsun ke banana"],"en":["Please prepare this without onion and garlic","Pleez pree-pair dhis widh-out uhn-yuhn and gar-lik"],"bn":["এটা পেঁয়াজ-রসুন ছাড়া বানিয়ে দেবেন","Eta peyaj-roshun chara baniye deben"],"te":["ఇది ఉల్లిపాయ, వెల్లుల్లి లేకుండా చేయండి","Idi ullipaya, vellulli lekunda cheyandi"]},{"id":12,"category":"canteen","title":"Cold Coffee & Sandwich","meaning":"Ordering cold drinks and quick snacks at the cafeteria","hi":["एक कोल्ड कॉफ़ी और वेज सैंडविच मिलेगा?","Ek cold coffee aur veg sandwich milega?"],"en":["Can I get one cold coffee and a veg sandwich?","Kan eye get wun kohld koh-fee and uh vej sand-wich?"],"bn":["একটা কোল্ড কফি আর ভেজ স্যান্ডউইচ হবে?","Ekta cold coffee aar veg sandwich hobe?"],"te":["ఒక కోల్డ్ కాఫీ, వెజ్ శాండ్‌విచ్ దొరుకుతుందా?","Oka cold coffee, veg sandwich dorukuthunda?"]},{"id":13,"category":"canteen","title":"Drinking Water","meaning":"Asking for filtered potable drinking water location","hi":["यहाँ पीने का साफ़ पानी कहाँ मिलेगा?","Yahan peene ka saaf paani kahan milega?"],"en":["Where can I find drinking water here?","Wair kan eye fynd dring-king wah-tur heer?"],"bn":["এখানে খাবার জল কোথায় পাব?","Ekhane khabar jol kothay pabo?"],"te":["ఇక్కడ తాగే నీళ్లు ఎక్కడ దొరుకుతాయి?","Ikkada thage neellu ekkada dorukuthayi?"]},{"id":14,"category":"canteen","title":"Pack as Takeaway","meaning":"Requesting takeaway meal container","hi":["इसे पार्सल पैक कर दीजिए","Ise parcel pack kar deejiye"],"en":["Please pack this for takeaway","Pleez pak dhis for tayk-uh-way"],"bn":["এটা পার্সেল প্যাক করে দিন","Eta parcel pack kore din"],"te":["దీన్ని పార్శిల్ కట్టి ఇవ్వండి","Deenni parcel katti ivvandi"]},{"id":15,"category":"canteen","title":"Total Canteen Bill","meaning":"Asking for the total canteen bill amount due","hi":["कुल कितना बिल हुआ, भैया?","Kul kitna bill hua, bhaiya?"],"en":["How much is the total bill?","How much iz dhuh toh-tuhl bil?"],"bn":["দাদা, মোট কত বিল হলো?","Dada, mot koto bill holo?"],"te":["మొత్తం ఎంత బిల్లు అయింది, అన్నా?","Motham entha billu ayindi, anna?"]},{"id":16,"category":"commute","title":"Auto to Campus","meaning":"Hailing an auto-rickshaw to college campus","hi":["भैया, कैंपस चलोगे?","Bhaiya, campus chaloge?"],"en":["Will you take me to the campus?","Wil yoo tayk mee too dhuh kam-puhs?"],"bn":["দাদা, ক্যাম্পাসে যাবেন?","Dada, campus-e jaben?"],"te":["అన్నా, క్యాంపస్‌కి వస్తారా?","Anna, campus-ki vastaara?"]},{"id":17,"category":"commute","title":"Meter or Fixed Fare","meaning":"Confirming if auto driver will follow official meter","hi":["मीटर से चलोगे या फिक्स किराया है?","Meter se chaloge ya fix kiraya hai?"],"en":["Will you run by meter or fixed fare?","Wil yoo ruhn by mee-tur or fikst fair?"],"bn":["মিটারে যাবেন নাকি নির্দিষ্ট ভাড়া?","Meter-e jaben naaki nirdishto bhara?"],"te":["మీటర్ వేస్తారా లేక ఫిక్స్డ్ రేటా?","Meter vesthara leka fixed rata?"]},{"id":18,"category":"commute","title":"Metro Token or Card","meaning":"Purchasing metro transit tokens or recharging smart card","hi":["मेट्रो कार्ड या टोकन कहाँ मिलेगा?","Metro card ya token kahan milega?"],"en":["Where can I buy a metro card or token?","Wair kan eye by uh meh-troh kard or toh-kuhn?"],"bn":["মেট্রোর কার্ড বা টোকেন কোথায় কাটব?","Metro-r card ba token kothay katbo?"],"te":["మెట్రో కార్డు లేదా టోకెన్ ఎక్కడ కొనుక్కోవాలి?","Metro card leda token ekkada konukkovali?"]},{"id":19,"category":"commute","title":"Bus to Station","meaning":"Finding the right bus route to the train terminal","hi":["हावड़ा स्टेशन के लिए कौन सी बस जाएगी?","Howrah station ke liye kaun si bus jaayegi?"],"en":["Which bus goes towards the railway station?","Which buhs gohz tuh-wardz dhuh rayl-way stay-shuhn?"],"bn":["হাওড়া স্টেশনের দিকে কোন বাসটা যাবে?","Howrah station-er dike kon bus-ta jabe?"],"te":["రైల్వే స్టేషన్ వైపు ఏ బస్సు వెళ్తుంది?","Railway station vaipu ae bus velthundi?"]},{"id":20,"category":"commute","title":"Drop at Main Gate","meaning":"Specifying drop-off point to auto or cab driver","hi":["मुझे मेन गेट के पास उतार देना","Mujhe main gate ke paas utaar dena"],"en":["Please drop me near the main gate","Pleez drop mee neer dhuh mayn gayt"],"bn":["আমাকে মেইন গেটের সামনে নামিয়ে দেবেন","Aamake main gate-er shamne naamiye deben"],"te":["నన్ను మెయిన్ గేటు దగ్గర దించండి","Nannu main gate daggara dinchandi"]},{"id":21,"category":"commute","title":"Metro Stop Check","meaning":"Confirming train stopping at destination station","hi":["क्या यह ट्रेन एस्प्लेनेड मेट्रो पर रुकेगी?","Kya yeh train Esplanade metro par rukegi?"],"en":["Does this train stop at Esplanade?","Duhz dhis trayn stop at Es-pluh-nayd?"],"bn":["এই ট্রেনটা কি এসপ্ল্যানেড স্টেশনে থামবে?","Ei train-ta ki Esplanade station-e thambe?"],"te":["ఈ ట్రైన్ ఎస్ప్లనేడ్ స్టేషన్‌లో ఆగుతుందా?","Ee train Esplanade station-lo aaguthunda?"]},{"id":22,"category":"commute","title":"Time to Airport","meaning":"Estimating travel duration through city traffic","hi":["यहाँ से एयरपोर्ट पहुँचने में कितना समय लगेगा?","Yahan se airport pahunchne mein kitna samay lagega?"],"en":["How long will it take to reach the airport?","How long wil it tayk too reech dhuh air-port?"],"bn":["এখান থেকে এয়ারপোর্ট পৌঁছতে কতক্ষণ লাগবে?","Ekhan theke airport pouchhote kotokkhon lagbe?"],"te":["ఇక్కడి నుండి ఎయిర్‌పోర్టుకు ఎంత సమయం పడుతుంది?","Ikkadi nundi airport-ku entha samayam paduthundi?"]},{"id":23,"category":"commute","title":"Ticket to Destination","meaning":"Purchasing a single transit journey pass","hi":["पार्क स्ट्रीट के लिए एक टिकट दीजिए","Park Street ke liye ek ticket deejiye"],"en":["Please give me one ticket to Park Street","Pleez giv mee wun tik-uht too Park Street"],"bn":["পার্ক স্ট্রিটের একটা টিকিট দিন","Park Street-er ekta ticket din"],"te":["పార్క్ స్ట్రీట్‌కి ఒక టికెట్ ఇవ్వండి","Park Street-ki oka ticket ivvandi"]},{"id":24,"category":"market","title":"Price per Kilo","meaning":"Asking fruit/vegetable price in street bazaar","hi":["ये आम कितने रुपये किलो हैं?","Ye aam kitne rupaye kilo hain?"],"en":["How much are these per kilogram?","How much ar dheez pur kil-oh-gram?"],"bn":["এই আমগুলো কিলো কত করে?","Ei aam-gulo kilo koto kore?"],"te":["ఈ మామిడికాయలు కిలో ఎంత?","Ee mamidikayalu kilo entha?"]},{"id":25,"category":"market","title":"UPI Payment Option","meaning":"Asking shopkeeper about QR digital transaction","hi":["क्या यहाँ गूगल पे या यूपीआई चलेगा?","Kya yahan Google Pay ya UPI chalega?"],"en":["Do you accept UPI or QR code payment?","Doo yoo ak-sept yoo-pee-eye or kyu-ar kohd pay-muhnt?"],"bn":["এখানে কি গুগল পে বা ইউপিআই নেওয়া হবে?","Ekhane ki Google Pay ba UPI neowa hobe?"],"te":["ఇక్కడ గూగుల్ పే లేదా యూపీఐ తీసుకుంటారా?","Ikkada Google Pay leda UPI theesukuntara?"]},{"id":26,"category":"market","title":"Locate QR Standee","meaning":"Locating merchant payment scan code","hi":["आपका पेमेंट स्कैनर कहाँ रखा है?","Aapka payment scanner kahan rakha hai?"],"en":["Where is your payment QR code scanner?","Wair iz yoor pay-muhnt kyu-ar kohd skan-ur?"],"bn":["আপনার কিউআর কোড স্ক্যানারটা কোথায়?","Aapnar QR code scanner-ta kothay?"],"te":["మీ పేమెంట్ క్యూఆర్ కోడ్ ఎక్కడ ఉంది?","Mee payment QR code ekkada undi?"]},{"id":27,"category":"market","title":"Bargain Discount","meaning":"Polite bargaining in street shopping","hi":["भैया, थोड़ा दाम कम कर लीजिए ना","Bhaiya, thoda daam kam kar lijiye na"],"en":["Can you give a small discount, please?","Kan yoo giv uh smawl dis-kownt, pleez?"],"bn":["দাদা, দামটা একটু কম রাখা যাবে না?","Dada, daam-ta ektu kom rakha jabe na?"],"te":["అన్నా, కొంచెం ధర తగ్గించండి","Anna, konchem dhara thagginchandi"]},{"id":28,"category":"market","title":"Cash Change","meaning":"Requesting smaller cash denomination from shopkeeper","hi":["क्या पाँच सौ रुपये के छुट्टे मिलेंगे?","Kya paanch sau rupaye ke chhutte milenge?"],"en":["Do you have change for five hundred rupees?","Doo yoo hav chaynj for fyv huhn-dred roo-peez?"],"bn":["পাঁচশো টাকার খুচরো হবে কি?","Pachsho takar khuchro hobe ki?"],"te":["ఐదు వందల రూపాయల చిల్లర దొరుకుతుందా?","Aidu vandhala roopayala chillara dorukuthunda?"]},{"id":29,"category":"market","title":"Shopping Carry Bag","meaning":"Asking for a cloth or paper shopping bag","hi":["सामान के लिए एक थैला दे दीजिए","Saamaan ke liye ek thaila de deejiye"],"en":["Could you give me a carry bag, please?","Kood yoo giv mee uh ka-ree bag, pleez?"],"bn":["জিনিসপত্রের জন্য একটা ব্যাগ দিন","Jinisphotrer jonno ekta bag din"],"te":["సామాన్లకు ఒక సంచి ఇవ్వండి","Samanklu oka sanchi ivvandi"]},{"id":30,"category":"market","title":"Larger Size Stationery","meaning":"Inquiring about notebook dimensions in bookstore","hi":["क्या यह नोटबुक बड़े साइज़ में है?","Kya yeh notebook bade size mein hai?"],"en":["Do you have this notebook in a larger size?","Doo yoo hav dhis noht-book in uh lar-jur syz?"],"bn":["এই খাতাটার বড় সাইজ পাওয়া যাবে?","Ei khata-tar boro size paowa jabe?"],"te":["ఈ బుక్ పెద్ద సైజులో ఉందా?","Ee book pedda size-lo unda?"]},{"id":31,"category":"market","title":"Payment Confirmation","meaning":"Informing merchant after successful online money transfer","hi":["मैंने पैसे भेज दिए हैं, अपना फोन चेक कीजिए","Maine paise bhej diye hain, apna phone check kijiye"],"en":["I have sent the payment, please check","Eye hav sent dhuh pay-muhnt, pleez chek"],"bn":["টাকাটা পাঠিয়ে দিয়েছি, একটু ফোনটা দেখুন","Taka-ta pathiye diyechi, ektu phone-ta dekhun"],"te":["డబ్బులు పంపించాను, మీ ఫోన్ ఒకసారి చూడండి","Dabbulu pampinchanu, mee phone okasari chudandi"]},{"id":32,"category":"hostel","title":"Plumbing Complaint","meaning":"Reporting a hostel water supply problem to warden","hi":["कमरा नंबर 204 में पानी नहीं आ रहा है","Kamra number 204 mein paani nahi aa raha hai"],"en":["There is no water coming in room 204","Dhair iz noh wah-tur kum-ing in room too-oh-for"],"bn":["২০৪ নম্বর ঘরে জল আসছে না","Dushow char nombor ghore jol aashche na"],"te":["రూమ్ నంబర్ 204 లో నీళ్లు రావడం లేదు","Room number 204 lo neellu ravadam ledu"]},{"id":33,"category":"hostel","title":"Hostel Curfew","meaning":"Inquiring about night curfew gate closing hours","hi":["रात को हॉस्टल का गेट कितने बजे बंद होता है?","Raat ko hostel ka gate kitne baje band hota hai?"],"en":["What time does the hostel gate lock at night?","Wuht tym duhz dhuh hos-tuhl gayt lok at nyt?"],"bn":["রাতে হোস্টেলের মেন গেট কটায় বন্ধ হয়?","Raate hostel-er main gate kotay bondho hoy?"],"te":["రాత్రి హాస్టల్ గేటు ఎన్ని గంటలకు మూస్తారు?","Rathri hostel gate enni gantalaku moostharu?"]},{"id":34,"category":"hostel","title":"Courier Delivery","meaning":"Checking security desk for online parcel delivery","hi":["क्या मेरे नाम का कोई कूरियर पार्सल आया है?","Kya mere naam ka koi courier parcel aaya hai?"],"en":["Has any courier delivery arrived for me?","Haz eh-nee koor-ee-ur deh-liv-uh-ree uh-ryvd for mee?"],"bn":["আমার নামে কি কোনো কুরিয়ার পার্সেল এসেছে?","Aamar naame ki kono courier parcel esheche?"],"te":["నా పేరు మీద ఏదైనా కొరియర్ పార్శిల్ వచ్చిందా?","Naa peru meeda edaina courier parcel vachinda?"]},{"id":35,"category":"hostel","title":"Hostel Wi-Fi Down","meaning":"Reporting internet outage on the floor","hi":["इस फ्लोर का वाई-फाई नहीं चल रहा है","Is floor ka Wi-Fi nahi chal raha hai"],"en":["The internet Wi-Fi on this floor is down","Dhuh in-tur-net wy-fy on dhis flor iz down"],"bn":["এই ফ্লোরের ওয়াই-ফাই কাজ করছে না","Ei floor-er Wi-Fi kaaj korche na"],"te":["ఈ ఫ్లోర్‌లో వై-ఫై పని చేయడం లేదు","Ee floor-lo Wi-Fi pani cheyadam ledu"]},{"id":36,"category":"hostel","title":"Laundry Area","meaning":"Locating hostel washing machines and drying lines","hi":["कपड़े धोने और सुखाने की जगह कहाँ है?","Kapde dhone aur sukhaane ki jagah kahan hai?"],"en":["Where is the place to wash and dry laundry?","Wair iz dhuh plays too wosh and dry lawn-dree?"],"bn":["জামাকাপড় ধোওয়া এবং শুকানোর জায়গা কোনটা?","Jaamakapor dhowa ebong shukanor jaayga konta?"],"te":["బట్టలు ఉతుక్కోవడానికి, ఆరేయడానికి స్థలం ఎక్కడ ఉంది?","Battalu uthukkovadaniki, aareyadaniki sthalam ekkada undi?"]},{"id":37,"category":"hostel","title":"Exam Study Quiet","meaning":"Asking neighbours for quiet hours during exam preparation","hi":["गाना थोड़ा धीमा बजाओगे? कल मेरी परीक्षा है","Gaana thoda dheema bajaoge? Kal meri pareeksha hai"],"en":["Could you lower the sound? I have an exam tomorrow","Kood yoo loh-wur dhuh sownd? Eye hav an eg-zam tuh-mah-roh"],"bn":["গানের আওয়াজটা একটু কমাবে? কাল আমার পরীক্ষা আছে","Ganer aowaz-ta ektu komabe? Kaal aamar porikkha aache"],"te":["సౌండ్ కొంచెం తగ్గిస్తారా? రేపు నాకు పరీక్ష ఉంది","Sound konchem thaggisthara? Repu naaku pareeksha undi"]},{"id":38,"category":"hostel","title":"Weekend Outpass","meaning":"Requesting warden outpass signature for visiting family","hi":["वार्डन सर, मुझे वीकेंड पर घर जाने के लिए आउटपास चाहिए","Warden sir, mujhe weekend par ghar jaane ke liye outpass chahiye"],"en":["Warden sir, I need a weekend leave outpass","War-duhn sur, eye need uh week-end leev owt-pas"],"bn":["ওয়ার্ডেন স্যার, ছুটির দিনে বাইরে যাওয়ার পাস দরকার","Warden sir, chutir dine baire jaowar pass dorkar"],"te":["వార్డెన్ సార్, వారాంతంలో ఇంటికి వెళ్ళడానికి ఔట్‌పాస్ కావాలి","Warden sir, varanthamlo intiki velladaniki outpass kavali"]},{"id":39,"category":"social","title":"Hometown Introduction","meaning":"Polite icebreaker with fellow students","hi":["नमस्ते! आप मूल रूप से कहाँ के रहने वाले हैं?","Namaste! Aap mool roop se kahan ke rehne waale hain?"],"en":["Hello! Which state or city are you from?","Hel-loh! Which stayt or sit-ee ar yoo fruhm?"],"bn":["নমস্কার! আপনার বাড়ি আসলে কোন শহরে?","Nomoshkar! Aapnar bari aashole kon shohore?"],"te":["నమస్కారం! మీ సొంత ఊరు ఎక్కడ?","Namaskaram! Mee sontha ooru ekkada?"]},{"id":40,"category":"social","title":"Department & Branch","meaning":"Inquiring about academic fields of study","hi":["आपकी पढ़ाई की कौन सी ब्रांच है?","Aapki padhai ki kaun si branch hai?"],"en":["Which department or branch are you studying in?","Which dih-part-muhnt or branch ar yoo stuh-dee-ing in?"],"bn":["আপনার ডিপার্টমেন্ট এবং ব্রাঞ্চ কী?","Aapnar department ebong branch kee?"],"te":["మీది ఏ బ్రాంచ్, ఏ డిపార్ట్‌మెంట్?","Meedi ae branch, ae department?"]},{"id":41,"category":"social","title":"Evening Chai Invitation","meaning":"Gathering hostel friends for chai break outing","hi":["चलो, शाम को साथ में चाय पीने चलते हैं!","Chalo, shaam ko saath mein chai peene chalte hain!"],"en":["Come, let us all go have tea together!","Kum, let uhs awl goh hav tee tuh-gedh-ur!"],"bn":["চলুন, বিকেলে একসাথে চা খেতে যাই!","Cholun, bikele ekshathe cha khete jaai!"],"te":["రండి, సాయంత్రం అందరం కలిసి టీ తాగుదాం!","Randi, sayanthram andaram kalisi tea thaagudam!"]},{"id":42,"category":"social","title":"Exchange Numbers","meaning":"Exchanging phone contacts with new acquaintances","hi":["आपसे मिलकर बहुत अच्छा लगा! आपका नंबर क्या है?","Aapse milkar bahut achha laga! Aapka number kya hai?"],"en":["It was great meeting you! Can I get your number?","It wuz grayt mee-ting yoo! Kan eye get yoor nuhm-bur?"],"bn":["আপনার সাথে আলাপ হয়ে খুব ভালো লাগল! ফোন নম্বরটা দেবেন?","Aapnar shathe aalaap hoye khoob bhalo laglo! Phone number-ta deben?"],"te":["మిమ్మల్ని కలవడం చాలా సంతోషం! మీ ఫోన్ నంబర్ ఎంత?","Mimmalni kalavadam chala santhosham! Mee phone number entha?"]},{"id":43,"category":"social","title":"Play Sports","meaning":"Inviting hostel mates for evening sports on ground","hi":["क्या आज शाम को क्रिकेट या बैडमिंटन खेलोगे?","Kya aaj shaam ko cricket ya badminton kheloge?"],"en":["Would you like to play sports this evening?","Wood yoo lyk too play sports dhis eev-ning?"],"bn":["আজ বিকেলে ক্রিকেট বা ব্যাডমিন্টন খেলবেন নাকি?","Aaj bikele cricket ba badminton khelben naaki?"],"te":["ఈ సాయంత్రం క్రికెట్ లేదా బ్యాడ్మింటన్ ఆడదామా?","Ee sayanthram cricket leda badminton aadadama?"]},{"id":44,"category":"social","title":"Speak Slower Request","meaning":"Asking local speaker to slow down for comprehension","hi":["मैं अभी यह भाषा सीख रहा हूँ, कृपया थोड़ा धीरे बोलिए","Main abhi yeh bhasha seekh raha hoon, kripya thoda dheere boliye"],"en":["I am still learning, please speak a bit slower","Eye am stil lur-ning, pleez speek uh bit sloh-wur"],"bn":["আমি এখনও এই ভাষাটা শিখছি, একটু আস্তে বলবেন দয়া করে","Ami ekhono ei bhasha-ta shikhchi, ektu aaste bolben doya kore"],"te":["నేను ఇప్పుడే ఈ భాష నేర్చుకుంటున్నాను, కొంచెం నెమ్మదిగా మాట్లాడండి","Nenu ippude ee bhasha nerchukuntunnanu, konchem nemmadiga matladandi"]},{"id":45,"category":"social","title":"Saying Thank You","meaning":"Learning local politeness and gratitude phrase","hi":["आपकी मातृभाषा में 'बहुत-बहुत धन्यवाद' कैसे कहते हैं?","Aapki matribhasha mein 'bahut bahut dhanyavaad' kaise kehte hain?"],"en":["How do you say 'Thank you' in your mother tongue?","How doo yoo say thank yoo in yoor muh-dhur tuhng?"],"bn":["আপনার মাতৃভাষায় 'অনেক ধন্যবাদ' কীভাবে বলে?","Aapnar matribhashay 'onek dhonnobad' keebhabe bole?"],"te":["మీ మాతృభాషలో 'చాలా ధన్యవాదాలు' అని ఎలా అంటారు?","Mee mathrubhashalo 'chala dhanyavadalu' ani ela antaru?"]},{"id":46,"category":"social","title":"Weekend Outing","meaning":"Planning weekend trip to local tourist spots with classmates","hi":["क्या इस रविवार को शहर घूमने के लिए खाली हो?","Kya is ravivar ko shahar ghoomne ke liye khaali ho?"],"en":["Are you free this Sunday to visit the city?","Ar yoo free dhis Suhn-day too viz-it dhuh sit-ee?"],"bn":["এই রবিবার শহরটা ঘুরে দেখতে যাবেন নাকি?","Ei robibar shohor-ta ghure dekhte jaben naaki?"],"te":["ఈ ఆదివారం నగరం చూడటానికి ఖాళీగా ఉన్నారా?","Ee aadivaram nagaram chudataniki khaaliga unnara?"]},{"id":47,"category":"health","title":"Nearest Pharmacy","meaning":"Asking for emergency medicine chemist shop","hi":["पास में दवा की दुकान कहाँ है?","Paas mein dawa ki dukaan kahan hai?"],"en":["Where is the nearest medical store?","Wair iz dhuh neer-est med-ih-kuhl stor?"],"bn":["কাছের ওষুধের দোকানটা কোথায়?","Kaacher oshudher dokan-ta kothay?"],"te":["దగ్గర్లో మందుల షాప్ ఎక్కడ ఉంది?","Daggarlo mandula shop ekkada undi?"]},{"id":48,"category":"health","title":"Headache and Fever","meaning":"Explaining symptoms to college dispensary doctor","hi":["मुझे बहुत तेज़ सिरदर्द और बुखार है","Mujhe bahut tez sirdard aur bukhaar hai"],"en":["I have a bad headache and fever","Eye hav uh bad hed-ayk and fee-vur"],"bn":["আমার খুব তীব্র মাথা যন্ত্রণা আর জ্বর এসেছে","Aamar khoob teebro matha jontrona aar jwor esheche"],"te":["నాకు విపరీతమైన తలనొప్పి, జ్వరం ఉన్నాయి","Naaku vipareethamaina thalanoppi, jwaram unnayi"]},{"id":49,"category":"health","title":"Stomach Ache Relief","meaning":"Requesting stomach pain relief at pharmacy","hi":["पेट दर्द के लिए कोई दवाई दे दीजिए","Pet dard ke liye koi dawai de deejiye"],"en":["Please give me some medicine for stomach ache","Pleez giv mee suhm med-ih-sin for stuhm-uk ayk"],"bn":["পেট ব্যথার জন্য একটা ওষুধ দিন, দয়া করে","Pet byathar jonno ekta oshudh din, doya kore"],"te":["కడుపు నొప్పికి ఏదైనా మందు ఇవ్వండి","Kadupu noppiki edaina mandu ivvandi"]},{"id":50,"category":"health","title":"Medication Dosage","meaning":"Asking pharmacist about prescription dosage and schedule","hi":["यह गोली दिन में कितनी बार खानी है?","Yeh goli din mein kitni baar khaani hai?"],"en":["How many times a day should I take this tablet?","How men-ee tymz uh day wood eye tayk dhis tab-luht?"],"bn":["এই ট্যাবলেটটা দিনে কতবার খেতে হবে?","Ei tablet-ta dine kotobar khete hobe?"],"te":["ఈ మాత్రను రోజుకు ఎన్ని సార్లు వేసుకోవాలి?","Ee mathranu rojuku enni saarlu vesukovali?"]},{"id":51,"category":"health","title":"Call Ambulance","meaning":"Calling for emergency hospital vehicle assistance","hi":["जल्दी एम्बुलेंस बुलाइए, यह इमरजेंसी है!","Jaldi ambulance bulaiye, yeh emergency hai!"],"en":["Please call an ambulance, it is urgent!","Pleez kawl an am-byoo-luhns, it iz ur-juhnt!"],"bn":["তাড়াতাড়ি অ্যাম্বুলেন্স ডাকুন, জরুরি দরকার!","Tarathari ambulance dakun, joruri dorkar!"],"te":["త్వరగా అంబులెన్స్ పిలవండి, ఇది ఎమర్జెన్సీ!","Twaraga ambulance pilavandi, idi emergency!"]},{"id":52,"category":"health","title":"Allergy Check","meaning":"Inquiring about medical drug allergies","hi":["क्या आपको किसी दवाई से एलर्जी है?","Kya aapko kisi dawai se allergy hai?"],"en":["Are you allergic to any medications?","Ar yoo uh-lur-jik too eh-nee med-ih-kay-shuhnz?"],"bn":["আপনার কি কোনো ওষুধের প্রতি অ্যালার্জি আছে?","Aapnar ki kono oshudher proti allergy aache?"],"te":["మీకు ఏవైనా మందులతో అలర్జీ ఉందా?","Meeku evaina mandulatho allergy unda?"]},{"id":53,"category":"health","title":"Urgent Doctor Request","meaning":"Asking hostel warden or security for immediate doctor assistance","hi":["मुझे तुरंत डॉक्टर की ज़रूरत है, मदद कीजिए","Mujhe turant doctor ki zaroorat hai, madad kijiye"],"en":["I urgently need a doctor, please help me","Eye ur-juhnt-lee need uh dok-tur, pleez help mee"],"bn":["আমার এখনই ডাক্তার দরকার, দয়া করে সাহায্য করুন","Aamar ekhoni doctor dorkar, doya kore sahajjo korun"],"te":["నాకు వెంటనే డాక్టర్ అవసరం, దయచేసి సహాయం చేయండి","Naaku ventane doctor avasaram, dayachesi sahayam cheyandi"]}];
+
+const LANGS = [
+  {code:"hi", flag:"🇮🇳", label:"Hindi", script:"हिन्दी", bcp:"hi-IN"},
+  {code:"en", flag:"🇬🇧", label:"English", script:"English", bcp:"en-IN"},
+  {code:"bn", flag:"🏛️", label:"Bengali", script:"বাংলা", bcp:"bn-IN"},
+  {code:"te", flag:"🌾", label:"Telugu", script:"తెలుగు", bcp:"te-IN"}
+];
+
+const RPG_PHRASES = [
+  {
+    title: "To the library",
+    hi: ["मुझे लाइब्रेरी जाना है", "Mujhe library jaana hai", "I need to go to the library"],
+    bn: ["আমি লাইব্রেরিতে যাব", "Ami library-te jabo", "I need to go to the library"],
+    te: ["నేను లైబ్రరీకి వెళ్ళాలి", "Nenu library-ki vellali", "I need to go to the library"],
+    en: ["I need to go to the library", "Eye need too goh too dhuh ly-brer-ee", "I need to go to the library"],
+    reply: {
+      en: "Senior: 'Straight down this road! Take a left after the auditorium.'",
+      hi: "सीनियर: 'इस रास्ते सीधे जाओ! ऑडिटोरियम के बाद बाएं मुड़ जाना।'",
+      bn: "সিনিয়র: 'এই রাস্তা ধরে সোজা যাও! অডিটোরিয়ামের পরে বাঁ দিকে।' ",
+      te: "సీనియర్: 'ఈ దారిలో నేరుగా వెళ్లి, ఆడిటోరియం తర్వాత ఎడమవైపు తిరగండి!'"
+    }
+  },
+  {
+    title: "To the canteen",
+    hi: ["मैं कैंटीन जा रहा हूँ", "Main canteen ja raha hoon", "I'm heading to the canteen"],
+    bn: ["আমি ক্যান্টিনে যাচ্ছি", "Ami canteen-e jachhi", "I'm heading to the canteen"],
+    te: ["నేను క్యాంటీన్‌కి వెళ్తున్నాను", "Nenu canteen-ki velthunnanu", "I'm heading to the canteen"],
+    en: ["I am heading to the canteen", "Eye am hed-ing too dhuh kan-teen", "I am heading to the canteen"],
+    reply: {
+      en: "Senior: 'Chai time already? Follow the aroma of fresh samosas behind Block B!'",
+      hi: "सीनियर: 'अभी से चाय का समय? ब्लॉक बी के पीछे समोसे की खुशबू के पीछे चले जाओ!'",
+      bn: "সিনিয়র: 'এখনই চায়ের সময়? ব্লক বি-এর পেছনে গরম সিঙ্গাড়ার গন্ধ অনুসরণ করো!'",
+      te: "సీనియర్: 'అప్పుడే టీ టైమా? బ్లాక్ బి వెనుక వేడి సమోసాల వైపు వెళ్లండి!'"
+    }
+  },
+  {
+    title: "I'm lost, help!",
+    hi: ["माफ़ कीजिए, मुझे रास्ता नहीं पता", "Maaf kijiye, mujhe raasta nahi pata", "Excuse me, I am lost and need help"],
+    bn: ["মাফ করবেন, আমি পথ হারিয়ে ফেলেছি", "Maaf korben, ami poth hariye felechi", "Excuse me, I am lost and need help"],
+    te: ["క్షమించండి, నాకు దారి తెలియదు", "Kshaminchandi, naaku daari theliyadu", "Excuse me, I am lost and need help"],
+    en: ["Excuse me, I am lost and need help", "Ek-skyooz mee, eye am lost and need help", "Excuse me, I am lost and need help"],
+    reply: {
+      en: "Senior: 'Relax fresher! Welcome to the campus family. Come, let me show you around.'",
+      hi: "सीनियर: 'चिंता मत करो फ्रेशर! कैंपस परिवार में स्वागत है। आओ, मैं रास्ता दिखाता हूँ।'",
+      bn: "সিনিয়র: 'শান্ত হও ফ্রেশার! ক্যাম্পাস পরিবারে স্বাগত। চলো, আমি পথ দেখিয়ে দিচ্ছি।'",
+      te: "సీనియర్: 'కంగారు పడకు ఫ్రెషర్! వెల్‌కమ్ టు క్యాంపస్. రా, నేను దారి చూపిస్తాను.'"
+    }
+  }
+];
+
+const NAV = [["setup","navSetup"],["metro","navTutor"],["progress","navClassroom"]];
+const PIPELINE = ["16kHz Mono WAV","POST /stt/v3 (Prisma v2.5)","Evon v3.3 Evaluator","POST /api/v1/tts/inference (Timbre)"];
+
+const S = {
+  name: "",
+  native: "hi",
+  target: "bn",
+  applyUi: false,
+  tab: "lessons",
+  category: "campus", // active category
+  station: 0,         // active sentence ID (0..53)
+  phase: "idle",       // idle | speaking | recording | checking
+  speed: 0.9,
+  model: localStorage.getItem("gnaniModel") || "timbre-v3.0",
+  voice: localStorage.getItem("gnaniVoice") || "Shivani",
+  score: null,
+  heard: null,
+  err: null,
+  rpgSelected: null,
+  progLang: "all"
+};
+
+let rec = null;
+let mediaStream = null;
+let audioCtx = null;
+let scriptProcessor = null;
+let pcmChunks = [];
+let isRecordingWav = false;
+
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const $ = q => document.querySelector(q);
+
+// ---- Progress analysis: every scored attempt is kept on this device, per target language ----
+const PROGRESS_KEY = "sunsathiyaiProgress";
+const MASTERED = 85, WEAK = 60;
+function loadProgress(){
+  try { const v = JSON.parse(localStorage.getItem(PROGRESS_KEY) || "[]"); return Array.isArray(v) ? v : []; }
+  catch { return []; }
+}
+function saveProgress(list){
+  try { localStorage.setItem(PROGRESS_KEY, JSON.stringify(list.slice(-2000))); } catch { /* storage full or blocked */ }
+}
+function recordAttempt(value, heardText){
+  if (!String(heardText || "").trim() || typeof value !== "number") return;
+  const rpg = S.tab === "rpg" && S.rpgSelected !== null;
+  const list = loadProgress();
+  list.push({ l: S.target, p: rpg ? "r" + S.rpgSelected : "s" + S.station, c: rpg ? "rpg" : (STATIONS[S.station] || {}).category, s: value, t: Date.now() });
+  saveProgress(list);
+}
+function dayKey(ts){ const d = new Date(ts); return d.getFullYear() + "-" + d.getMonth() + "-" + d.getDate(); }
+function streakDays(list){
+  const days = new Set(list.map(a => dayKey(a.t)));
+  const d = new Date();
+  if (!days.has(dayKey(d.getTime()))) d.setDate(d.getDate() - 1);
+  let n = 0;
+  while (days.has(dayKey(d.getTime()))) { n++; d.setDate(d.getDate() - 1); }
+  return n;
+}
+function startOfDay(ts){ const d = new Date(ts); return new Date(d.getFullYear(), d.getMonth(), d.getDate()).getTime(); }
+function nextDay(ts){ const d = new Date(ts); d.setDate(d.getDate() + 1); return d.getTime(); }
+function longestStreak(list){
+  const days = [...new Set(list.map(a => startOfDay(a.t)))].sort((a, b) => a - b);
+  let best = 0, run = 0, prev = null;
+  for (const d of days) { run = prev !== null && nextDay(prev) === d ? run + 1 : 1; best = Math.max(best, run); prev = d; }
+  return best;
+}
+const STREAK_MILESTONES = [3, 7, 14, 30];
+function renderStreak(list, sum, t, ui){
+  const bcp = (LANGS.find(l => l.code === ui) || LANGS[1]).bcp;
+  const counts = new Map();
+  for (const a of list) { const d = startOfDay(a.t); counts.set(d, (counts.get(d) || 0) + 1); }
+  const today = startOfDay(Date.now());
+  const doneToday = counts.has(today);
+  const best = longestStreak(list);
+  const days = [];
+  const d = new Date(today); d.setDate(d.getDate() - 13);
+  for (let k = 0; k < 14; k++) { days.push(d.getTime()); d.setDate(d.getDate() + 1); }
+  const wd = new Intl.DateTimeFormat(bcp, { weekday: "narrow" });
+  const cells = days.map(day => {
+    const n = counts.get(day) || 0, dt = new Date(day);
+    return `<div class="streak-day" data-on="${n > 0}" data-today="${day === today}" title="${dt.toLocaleDateString(bcp)} · ${n} ${t.streakAttemptsOn}"><span class="streak-wd">${wd.format(dt)}</span><span class="streak-num">${dt.getDate()}</span><span class="streak-dot">${n > 0 ? "🔥" : "·"}</span></div>`;
+  }).join("");
+  const status = doneToday ? t.streakDone : sum.streak > 0 ? t.streakKeep.replace("{n}", sum.streak) : t.streakStart;
+  const badges = STREAK_MILESTONES.map(m => `<span class="streak-badge" data-earned="${best >= m}">${best >= m ? "🏅" : "🔒"} ${t.streakDayUnit.replace("{n}", m)}</span>`).join("");
+  return `<div class="brutal-card p-6 sm:p-8 streak-panel">
+    <div class="streak-now"><p class="font-mono text-xs uppercase text-g-purple">${t.streakTitle}</p>
+      <p class="font-display text-7xl text-g-red ${sum.streak > 0 ? "streak-flame" : ""}">${sum.streak}🔥</p>
+      <p class="text-sm font-semibold">${t.streakDays}</p></div>
+    <div class="space-y-3 min-w-0"><div class="flex items-center justify-between gap-2"><span class="font-mono text-xs uppercase text-muted-foreground">${t.streakLast14}</span><span class="font-mono text-xs text-muted-foreground">${t.streakBest}: <b class="text-g-yellow">${best}</b></span></div>
+      <div class="streak-days">${cells}</div>
+      <div class="streak-status" data-done="${doneToday}"><span class="text-sm font-semibold">${status}</span>${doneToday ? "" : `<a href="#metro" class="btn-gemini shrink-0 px-4 py-2 text-xs uppercase">${t.streakPractiseNow}</a>`}</div></div>
+    <div class="space-y-3"><p class="font-mono text-xs uppercase text-muted-foreground">${t.streakMilestones}</p><div class="streak-badges">${badges}</div></div>
+  </div>`;
+}
+function bestByPhrase(list){
+  const best = new Map();
+  for (const a of list) {
+    if (a.p[0] !== "s") continue;
+    const k = a.l + ":" + a.p.slice(1);
+    best.set(k, Math.max(best.get(k) ?? 0, a.s));
+  }
+  return best;
+}
+function summarize(list){
+  const best = bestByPhrase(list);
+  const avg = list.length ? Math.round(list.reduce((n, a) => n + a.s, 0) / list.length) : 0;
+  const mastered = [...best.values()].filter(v => v >= MASTERED).length;
+  return { attempts: list.length, avg, best, mastered, practised: best.size, streak: streakDays(list), last: list.length ? list[list.length - 1].t : null };
+}
+function timeAgo(ts, ui){
+  const bcp = (LANGS.find(l => l.code === ui) || LANGS[1]).bcp;
+  const rtf = new Intl.RelativeTimeFormat(bcp, { numeric: "auto" });
+  const sec = Math.round((ts - Date.now()) / 1000);
+  const steps = [[60, "second"], [3600, "minute", 60], [86400, "hour", 3600], [604800, "day", 86400], [Infinity, "week", 604800]];
+  for (const [limit, unit, div] of steps) if (Math.abs(sec) < limit) return rtf.format(Math.round(sec / (div || 1)), unit);
+  return "";
+}
+function scoreTone(v){ return v >= MASTERED ? "text-g-green" : v >= WEAK ? "text-g-yellow" : "text-g-red"; }
+function sparkline(list){
+  const pts = list.slice(-20).map(a => a.s);
+  if (pts.length < 2) return `<p class="font-mono text-xs text-muted-foreground">${pts.length ? pts[0] + "/100" : "—"}</p>`;
+  const w = 300, h = 90, step = w / (pts.length - 1), y = v => h - 6 - (v / 100) * (h - 12);
+  const line = pts.map((v, i) => `${(i * step).toFixed(1)},${y(v).toFixed(1)}`).join(" ");
+  return `<svg viewBox="0 0 ${w} ${h}" class="prog-spark" preserveAspectRatio="none" role="img" aria-label="Score trend">
+    <line x1="0" x2="${w}" y1="${y(MASTERED)}" y2="${y(MASTERED)}" class="prog-spark-goal"/>
+    <polyline points="${line}" class="prog-spark-line"/>
+    ${pts.map((v, i) => `<circle cx="${(i * step).toFixed(1)}" cy="${y(v).toFixed(1)}" r="3.5" class="prog-spark-dot ${scoreTone(v)}"/>`).join("")}
+  </svg>`;
+}
+function phraseLabel(a){
+  if (a.p[0] === "r") { const r = RPG_PHRASES[+a.p.slice(1)]; return r ? [r.title, (r[a.l] || [])[0] || ""] : ["", ""]; }
+  const s = STATIONS[+a.p.slice(1)];
+  return s ? [s.title, (s[a.l] || [])[0] || ""] : ["", ""];
+}
+
+function renderProgress(t, ui){
+  const all = loadProgress();
+  const head = `<div class="flex flex-col justify-between gap-4 border-b-[3px] border-foreground pb-6 md:flex-row md:items-end"><div><span class="font-mono text-xs uppercase text-g-purple">${t.classKicker}</span><h2 class="mt-1 font-display text-3xl uppercase sm:text-5xl">${t.classTitle}</h2></div><span class="font-mono text-xs text-muted-foreground">💾 ${t.progSaved}</span></div>`;
+  if (!all.length) {
+    return `<section id="progress" class="scroll-mt-36 space-y-8">${head}
+     <div class="brutal-card p-6 sm:p-8 space-y-4 text-center"><p class="text-5xl">📈</p><h3 class="font-display text-xl sm:text-2xl">${t.progEmptyTitle}</h3><p class="mx-auto max-w-xl text-muted-foreground">${t.progEmptyText}</p>
+     <a href="#metro" class="btn-gemini inline-flex px-6 py-3 text-sm uppercase">${t.progStart}</a></div></section>`;
+  }
+  const langsUsed = LANGS.filter(l => all.some(a => a.l === l.code));
+  if (S.progLang !== "all" && !langsUsed.some(l => l.code === S.progLang)) S.progLang = "all";
+  const list = S.progLang === "all" ? all : all.filter(a => a.l === S.progLang);
+  const sum = summarize(list);
+  const langCount = S.progLang === "all" ? langsUsed.length : 1;
+  const totalPhrases = STATIONS.length * langCount;
+
+  const langCards = langsUsed.map(l => {
+    const ls = summarize(all.filter(a => a.l === l.code));
+    const pct = Math.round((ls.mastered / STATIONS.length) * 100);
+    return `<button data-prog-lang="${l.code}" data-active="${S.progLang === l.code}" class="prog-lang btn-outline-gemini p-4 text-left space-y-2">
+      <span class="flex items-center justify-between gap-2"><span class="font-bold">${l.flag} ${esc(t.langNames[l.code])}</span><span class="font-mono text-xs">${ls.avg}/100</span></span>
+      <span class="prog-bar"><span class="prog-fill" style="width:${pct}%"></span></span>
+      <span class="block font-mono text-[11px]">${ls.mastered}/${STATIONS.length} ${t.progMastered} · ${ls.attempts} ${t.progAttempts}</span>
+    </button>`;
+  }).join("");
+
+  const stats = [
+    [sum.attempts, t.progAttempts, "text-g-blue"],
+    [sum.avg, t.progAvg, scoreTone(sum.avg)],
+    [`${sum.mastered}<span class="text-2xl text-muted-foreground">/${totalPhrases}</span>`, t.progMastered, "text-g-purple"],
+    [`${sum.streak}🔥`, t.progStreak, "text-g-red"],
+  ].map(([n, x, c]) => `<div class="brutal-card p-5"><p class="font-display text-4xl sm:text-5xl ${c}">${n}</p><p class="mt-2 text-sm font-semibold">${x}</p></div>`).join("");
+
+  const cats = CATEGORIES.map(cat => {
+    const ids = STATIONS.filter(s => s.category === cat.id).map(s => s.id);
+    const langs = S.progLang === "all" ? langsUsed.map(l => l.code) : [S.progLang];
+    let m = 0, p = 0;
+    for (const lc of langs) for (const id of ids) { const b = sum.best.get(lc + ":" + id); if (b !== undefined) { p++; if (b >= MASTERED) m++; } }
+    const total = ids.length * langs.length;
+    const name = (ui !== "en" && cat[ui]) || cat.name;
+    return `<div class="space-y-1"><div class="flex items-center justify-between gap-2 text-sm"><span class="font-semibold">${cat.icon} ${esc(name)}</span><span class="font-mono text-xs text-muted-foreground">${m}/${total} · ${p} ${t.progPracticed}</span></div>
+      <span class="prog-bar"><span class="prog-fill prog-fill-soft" style="width:${total ? (p / total) * 100 : 0}%"></span><span class="prog-fill" style="width:${total ? (m / total) * 100 : 0}%"></span></span></div>`;
+  }).join("");
+
+  const weak = [...sum.best.entries()].filter(([, v]) => v < WEAK).sort((a, b) => a[1] - b[1]).slice(0, 5).map(([k, v]) => {
+    const [lc, id] = k.split(":"); const s = STATIONS[+id];
+    return `<li class="flex items-center justify-between gap-3 rounded-md border-2 border-foreground/50 bg-background p-3">
+      <span class="min-w-0"><span class="block truncate text-sm font-bold">${esc(s[lc][0])}</span><span class="block font-mono text-[11px] text-muted-foreground">${esc(s.title)} · ${esc(t.langNames[lc])} · ${t.progBest} <b class="${scoreTone(v)}">${v}</b></span></span>
+      <button data-prog-goto="${lc}:${id}" class="btn-outline-gemini shrink-0 px-3 py-1.5 text-xs">${t.progPractise} →</button></li>`;
+  }).join("");
+
+  const recent = list.slice(-6).reverse().map(a => {
+    const [title, text] = phraseLabel(a);
+    return `<li class="flex items-center justify-between gap-3 border-b border-foreground/20 py-2 last:border-0">
+      <span class="min-w-0"><span class="block truncate text-sm font-semibold">${esc(text || title)}</span><span class="block font-mono text-[11px] text-muted-foreground">${a.c === "rpg" ? "🎮 " + t.progStory : esc(title)} · ${esc(t.langNames[a.l])} · ${timeAgo(a.t, ui)}</span></span>
+      <span class="font-mono text-sm font-bold ${scoreTone(a.s)}">${a.s}</span></li>`;
+  }).join("");
+
+  return `<section id="progress" class="scroll-mt-36 space-y-8">${head}
+   <div class="flex flex-wrap items-center gap-3">
+     <button data-prog-lang="all" data-active="${S.progLang === "all"}" class="btn-outline-gemini px-4 py-2 text-sm">🌐 ${t.progAll} (${langsUsed.length})</button>
+   </div>
+   <div class="prog-langs">${langCards}</div>
+   <div class="grid grid-cols-2 gap-4 md:grid-cols-4">${stats}</div>
+   ${renderStreak(list, sum, t, ui)}
+   <div class="prog-grid">
+     <div class="brutal-card p-6 space-y-4"><h3 class="font-display text-lg uppercase">${t.progTrend}</h3>${sparkline(list)}
+       <p class="font-mono text-[11px] text-muted-foreground">- - - ${MASTERED}/100 = ${t.progMastered}</p></div>
+     <div class="brutal-card p-6 space-y-4"><h3 class="font-display text-lg uppercase">${t.progByCat}</h3><div class="space-y-3">${cats}</div></div>
+     <div class="brutal-card p-6 space-y-4"><h3 class="font-display text-lg uppercase">${t.progNeedsWork}</h3>${weak ? `<ul class="space-y-2">${weak}</ul>` : `<p class="text-sm text-muted-foreground">${t.progNoWeak}</p>`}</div>
+     <div class="brutal-card p-6 space-y-4"><h3 class="font-display text-lg uppercase">${t.progRecent}</h3><ul>${recent}</ul></div>
+   </div>
+   <div class="flex justify-end"><button data-prog-reset="1" class="btn-outline-gemini px-4 py-2 text-xs uppercase">🗑 ${t.progReset}</button></div>
+  </section>`;
+}
+
+function norm(s){
+  return String(s || "")
+    .toLowerCase()
+    .normalize("NFC")
+    .replace(/[0-9]/g, d => ({"1":"एक","2":"दो","3":"तीन","4":"चार","5":"पाँच"}[d] || d))
+    .replace(/[\p{P}\p{S}]/gu, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function score(exp, heard){
+  const a = Array.from(norm(exp).replace(/ /g, ""));
+  const b = Array.from(norm(heard).replace(/ /g, ""));
+  if (!a.length || !b.length) return 0;
+  const dp = Array.from({length: b.length + 1}, (_, i) => i);
+  for (let i = 1; i <= a.length; i++){
+    let prev = dp[0];
+    dp[0] = i;
+    for (let j = 1; j <= b.length; j++){
+      const t = dp[j];
+      dp[j] = Math.min(dp[j] + 1, dp[j - 1] + 1, prev + (a[i - 1] === b[j - 1] ? 0 : 1));
+      prev = t;
+    }
+  }
+  return Math.max(0, Math.round((1 - dp[b.length] / Math.max(a.length, b.length)) * 100));
+}
+
+function computeWordFeedback(expectedText, heardText){
+  const expWords = norm(expectedText).split(" ").filter(Boolean);
+  const heardWords = norm(heardText).split(" ").filter(Boolean);
+  if (!heardWords.length) return [];
+  return expWords.map(w => {
+    const exact = heardWords.includes(w);
+    const fuzzy = heardWords.some(h => score(w, h) >= 65);
+    return {
+      word: w,
+      status: exact ? "matched" : fuzzy ? "close" : "missed"
+    };
+  });
+}
+
+function reset(){
+  S.score = null;
+  S.heard = null;
+  S.err = null;
+}
+
+function setPhase(p){
+  S.phase = p;
+  render();
+}
+
+function encodeWAV(samples, sampleRate = 16000){
+  const buffer = new ArrayBuffer(44 + samples.length * 2);
+  const view = new DataView(buffer);
+  function writeString(offset, str){
+    for (let i = 0; i < str.length; i++) view.setUint8(offset + i, str.charCodeAt(i));
+  }
+  writeString(0, "RIFF");
+  view.setUint32(4, 36 + samples.length * 2, true);
+  writeString(8, "WAVE");
+  writeString(12, "fmt ");
+  view.setUint32(16, 16, true);
+  view.setUint16(20, 1, true); // PCM
+  view.setUint16(22, 1, true); // 1 channel
+  view.setUint32(24, sampleRate, true);
+  view.setUint32(28, sampleRate * 2, true);
+  view.setUint16(32, 2, true);
+  view.setUint16(34, 16, true);
+  writeString(36, "data");
+  view.setUint32(40, samples.length * 2, true);
+  let offset = 44;
+  for (let i = 0; i < samples.length; i++, offset += 2){
+    const s = Math.max(-1, Math.min(1, samples[i]));
+    view.setInt16(offset, s < 0 ? s * 0x8000 : s * 0x7FFF, true);
+  }
+  return new Blob([view], { type: "audio/wav" });
+}
+
+function browserSpeak(textToSpeak){
+  if (!("speechSynthesis" in window)){
+    S.err = { text: "Speech playback isn't supported in this browser." };
+    return setPhase("idle");
+  }
+  const u = new SpeechSynthesisUtterance(textToSpeak);
+  u.lang = LANGS.find(l => l.code === S.target).bcp;
+  u.rate = S.speed || 0.9;
+  u.onend = () => setPhase("idle");
+  u.onerror = () => { S.err = { key: "playFailed" }; setPhase("idle"); };
+  speechSynthesis.cancel();
+  speechSynthesis.speak(u);
+}
+
+async function hear(textOverride){
+  reset();
+  setPhase("speaking");
+  const targetText = textOverride || (
+    S.tab === "rpg" && S.rpgSelected !== null
+      ? RPG_PHRASES[S.rpgSelected][S.target][0]
+      : STATIONS[S.station][S.target][0]
+  );
+  try {
+    const r = await fetch("/api/public/tts", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        text: targetText,
+        language: S.target,
+        speed: S.speed || 0.9,
+        model: S.model,
+        voice: S.voice
+      })
+    });
+    if (!r.ok) throw new Error("tts " + r.status);
+    const url = URL.createObjectURL(await r.blob());
+    const a = new Audio(url);
+    a.onended = () => { URL.revokeObjectURL(url); setPhase("idle"); };
+    a.onerror = () => { URL.revokeObjectURL(url); browserSpeak(targetText); };
+    await a.play();
+  } catch (e) {
+    console.warn("Gnani TTS proxy failed, using browser speech synthesis fallback", e);
+    browserSpeak(targetText);
+  }
+}
+
+async function startWavRecording(){
+  reset();
+  try {
+    mediaStream = await navigator.mediaDevices.getUserMedia({ audio: true });
+    audioCtx = new (window.AudioContext || window.webkitAudioContext)({ sampleRate: 16000 });
+    const source = audioCtx.createMediaStreamSource(mediaStream);
+    scriptProcessor = audioCtx.createScriptProcessor(4096, 1, 1);
+    pcmChunks = [];
+    scriptProcessor.onaudioprocess = e => {
+      pcmChunks.push(new Float32Array(e.inputBuffer.getChannelData(0)));
+    };
+    source.connect(scriptProcessor);
+    scriptProcessor.connect(audioCtx.destination);
+    isRecordingWav = true;
+    setPhase("recording");
+  } catch (err) {
+    console.warn("MediaRecorder/AudioContext error, falling back to Web Speech", err);
+    fallbackWebSpeech();
+  }
+}
+
+async function stopWavRecording(){
+  if (!isRecordingWav) return;
+  isRecordingWav = false;
+  setPhase("checking");
+
+  if (scriptProcessor) { scriptProcessor.disconnect(); scriptProcessor = null; }
+  if (audioCtx) { audioCtx.close(); audioCtx = null; }
+  if (mediaStream) {
+    mediaStream.getTracks().forEach(t => t.stop());
+    mediaStream = null;
+  }
+
+  const totalLen = pcmChunks.reduce((acc, c) => acc + c.length, 0);
+  if (totalLen < 6000){
+    S.err = { text: "Recording too short. Please speak clearly." };
+    setPhase("idle");
+    return;
+  }
+
+  const merged = new Float32Array(totalLen);
+  let offset = 0;
+  for (const c of pcmChunks){
+    merged.set(c, offset);
+    offset += c.length;
+  }
+  pcmChunks = [];
+
+  const wavBlob = encodeWAV(merged, 16000);
+
+  try {
+    const fd = new FormData();
+    fd.append("file", wavBlob, "recording.wav");
+    fd.append("language", S.target);
+    const r = await fetch("/api/public/stt", { method: "POST", body: fd });
+    const data = await r.json();
+
+    if (!r.ok) {
+      if (data.keyMissing) {
+        S.err = { text: "Gnani API key missing in .env. Note: Speech recognition fallback is ready in Chrome/Edge." };
+        setTimeout(() => fallbackWebSpeech(), 400);
+        return;
+      }
+      throw new Error(data.error || "STT failed");
+    }
+
+    const transcript = (data.transcript || "").trim();
+    S.heard = transcript;
+    const expected = S.tab === "rpg" && S.rpgSelected !== null
+      ? RPG_PHRASES[S.rpgSelected][S.target][0]
+      : STATIONS[S.station][S.target][0];
+    S.score = score(expected, transcript);
+    recordAttempt(S.score, transcript);
+    setPhase("idle");
+  } catch (e) {
+    console.warn("STT error:", e);
+    S.err = { text: e.message || "Failed to transcribe audio via Gnani STT" };
+    setPhase("idle");
+  }
+}
+
+function fallbackWebSpeech(){
+  const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+  if (!SR){
+    S.err = { key: "micBlocked" };
+    return render();
+  }
+  rec = new SR();
+  rec.lang = LANGS.find(l => l.code === S.target).bcp;
+  rec.interimResults = false;
+  rec.maxAlternatives = 1;
+  let text = "";
+  rec.onresult = e => { text = Array.from(e.results).map(r => r[0].transcript).join(" "); };
+  rec.onerror = e => {
+    S.err = (e.error === "not-allowed" || e.error === "service-not-allowed")
+      ? { key: "micBlocked" }
+      : { key: "genericError" };
+  };
+  rec.onend = () => {
+    rec = null;
+    if (!S.err) {
+      S.heard = text;
+      const expected = S.tab === "rpg" && S.rpgSelected !== null
+        ? RPG_PHRASES[S.rpgSelected][S.target][0]
+        : STATIONS[S.station][S.target][0];
+      S.score = score(expected, text);
+      recordAttempt(S.score, text);
+    }
+    setPhase("idle");
+  };
+  try {
+    rec.start();
+    setPhase("recording");
+  } catch {
+    S.err = { key: "genericError" };
+    render();
+  }
+}
+
+function toggleMic(){
+  if (S.phase === "recording"){
+    if (isRecordingWav) stopWavRecording();
+    else if (rec) rec.stop();
+    return;
+  }
+  if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia){
+    startWavRecording();
+  } else {
+    fallbackWebSpeech();
+  }
+}
+
+function render(){
+  const scrollY = window.scrollY;
+  const ui = S.applyUi ? S.native : "en", t = UI[ui];
+  document.documentElement.lang = ui;
+  const nat = LANGS.find(l => l.code === S.native), tgt = LANGS.find(l => l.code === S.target);
+
+  // Validate active sentence and category
+  const catSentences = STATIONS.filter(s => s.category === S.category);
+  let curSentence = STATIONS[S.station];
+  if (!curSentence || curSentence.category !== S.category) {
+    curSentence = catSentences[0] || STATIONS[0];
+    S.station = curSentence.id;
+  }
+  const curIdxInCat = catSentences.findIndex(s => s.id === S.station);
+  const activeCat = CATEGORIES.find(c => c.id === S.category) || CATEGORIES[0];
+  const catDisplayName = activeCat[S.applyUi ? S.native : "name"] || activeCat.name;
+
+  const ph = curSentence[S.target];
+  const tgtName = t.langNames[S.target], nm = esc(S.name);
+  const errText = S.err && (S.err.key ? (t[S.err.key] || UI.en[S.err.key]) : esc(S.err.text));
+  const busy = S.phase;
+
+  $("#app").innerHTML = `
+<header class="sticky top-0 z-50 border-b-[3px] border-foreground bg-background">
+ <div class="mx-auto grid max-w-7xl grid-cols-[1fr_auto_1fr] items-center gap-2 px-4 py-3 sm:gap-4 lg:px-8">
+  <a href="#setup" class="col-start-2 flex flex-col items-center text-center">
+   <span class="relative font-display text-xl tracking-tight sm:text-3xl">SunSathiyAI
+    <span class="absolute left-full top-1/2 ml-3 hidden -translate-y-1/2 whitespace-nowrap rounded-sm border-2 border-foreground bg-gemini px-1.5 py-0.5 font-mono text-[10px] text-background lg:inline-block">&lt;/&gt; ARTHA LIVE</span></span>
+   <span class="hidden font-mono text-[11px] text-muted-foreground sm:block">${t.tagline}</span></a>
+  <div class="col-start-3 flex items-center gap-2 justify-self-end rounded-md border-[3px] border-foreground bg-card px-3 py-1.5 font-mono text-xs font-semibold">
+   <span class="text-g-blue">${nat.code.toUpperCase()}</span><span class="text-muted-foreground">→</span><span class="text-g-yellow">${tgt.code.toUpperCase()}</span></div>
+ </div>
+ <nav class="hidden items-center justify-center gap-8 border-t-2 border-foreground/30 px-4 py-2 text-sm font-semibold md:flex">
+  ${NAV.map(([id,k])=>`<a href="#${id}" class="link-gemini">${t[k]}</a>`).join("")}</nav>
+</header>
+<div class="overflow-hidden border-b-[3px] border-foreground bg-gemini py-2 font-mono text-xs font-semibold text-background">
+ <div class="animate-marquee flex w-max gap-10 whitespace-nowrap">
+  ${[0,1].map(()=>`<div class="flex gap-10"><span>${t.marqueeStart}</span>${PIPELINE.map((p,i)=>`<span>${i+1}. ${p} →</span>`).join("")}<span>${t.marqueeEnd}</span></div>`).join("")}
+ </div></div>
+<main class="mx-auto max-w-7xl space-y-28 px-4 py-14 lg:px-8">
+<section id="setup" class="scroll-mt-36 space-y-12">
+ <div class="mx-auto max-w-4xl space-y-6 text-center">
+  <span class="inline-block -rotate-1 rounded-sm border-[3px] border-foreground bg-card px-3 py-1 font-mono text-xs shadow-[var(--shadow-brutal)]">${t.heroBadge}</span>
+  <h1 class="font-display text-4xl uppercase leading-[0.95] sm:text-7xl">${t.heroPre}<span class="text-gemini">${t.heroHighlight}</span>${t.heroPost}</h1>
+  <p class="mx-auto max-w-2xl text-base text-muted-foreground sm:text-lg">${t.heroSub}</p></div>
+ <div class="brutal-card mx-auto max-w-3xl space-y-8 p-6 sm:p-10">
+  <div class="space-y-3"><label for="nm" class="block font-mono text-xs font-semibold uppercase tracking-wider text-muted-foreground">${t.fieldName}</label>
+   <input id="nm" value="${nm}" placeholder="Enter your name" class="w-full rounded-md border-[3px] border-foreground bg-background px-4 py-3 font-semibold outline-none transition-shadow focus:shadow-[var(--shadow-brutal-color)]"></div>
+  <div class="space-y-3"><label class="block font-mono text-xs font-semibold uppercase tracking-wider text-muted-foreground">${t.fieldComfort}</label>
+   <div class="space-y-4"><div class="grid grid-cols-2 gap-4 sm:grid-cols-4">
+    ${LANGS.map(l=>`<button data-native="${l.code}" data-active="${S.native===l.code}" class="btn-outline-gemini p-3 text-left text-sm">${l.flag} ${l.script}<span class="block text-xs opacity-70">${l.label}</span></button>`).join("")}</div>
+    <label class="flex cursor-pointer items-center gap-3 rounded-md border-[3px] border-foreground bg-background px-4 py-3 text-sm font-semibold">
+     <input id="apply" type="checkbox" ${S.applyUi?"checked":""} class="h-6 w-6 cursor-pointer rounded-sm border-[3px] border-foreground">${t.applyLabel}</label></div></div>
+  <div class="space-y-3"><label class="block font-mono text-xs font-semibold uppercase tracking-wider text-muted-foreground">${t.fieldTarget}</label>
+   <div class="grid grid-cols-1 gap-4 sm:grid-cols-3">
+    ${LANGS.filter(l=>l.code!==S.native).map(l=>`<button data-target="${l.code}" data-active="${S.target===l.code}" class="btn-outline-gemini p-3 text-left text-sm">${l.flag} ${l.script} <span class="opacity-70">· ${l.label}</span></button>`).join("")}</div></div>
+  <div class="space-y-3"><label class="block font-mono text-xs font-semibold uppercase tracking-wider text-muted-foreground">4. Gnani AI voice model</label>
+   <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+    <input id="gmodel" list="gmodels" value="${esc(S.model)}" placeholder="Model (e.g. timbre-v3.0)" class="w-full rounded-md border-[3px] border-foreground bg-background px-4 py-3 font-mono text-sm font-semibold outline-none">
+    <datalist id="gmodels"><option value="timbre-v3.0"><option value="timbre-v2.0"></datalist>
+    <input id="gvoice" value="${esc(S.voice)}" placeholder="Voice (e.g. Shivani)" class="w-full rounded-md border-[3px] border-foreground bg-background px-4 py-3 font-mono text-sm font-semibold outline-none">
+   </div></div>
+  <a href="#metro" id="launch" class="btn-gemini flex w-full items-center justify-center gap-2 py-4 text-sm uppercase tracking-wide">${esc(t.launch.replace("{name}", S.name||t.friend))}</a>
+ </div></section>
+<section id="metro" class="scroll-mt-36 space-y-8">
+ <div class="flex flex-col justify-between gap-4 border-b-[3px] border-foreground pb-6 md:flex-row md:items-end">
+  <div><span class="font-mono text-xs uppercase text-g-purple">${t.tutorKicker}</span><h2 class="mt-1 font-display text-3xl uppercase sm:text-5xl">${t.tutorTitle}</h2></div>
+  <div class="flex gap-3"><button data-tab="lessons" data-active="${S.tab==="lessons"}" class="btn-outline-gemini px-4 py-2 text-sm font-bold">${t.tabLessons}</button>
+   <button data-tab="rpg" data-active="${S.tab==="rpg"}" class="btn-outline-gemini px-4 py-2 text-sm font-bold">${t.tabRpg}</button></div></div>
+
+ ${S.tab==="lessons" ? `
+  <div class="space-y-6">
+   <!-- Category Pills -->
+   <div class="space-y-2">
+    <div class="flex items-center justify-between">
+      <span class="font-mono text-xs uppercase tracking-wider text-muted-foreground font-bold">${t.categoryLabel || "Categories"} (7 modules · 54 phrases):</span>
+      <span class="font-mono text-xs text-g-yellow">Selected: ${activeCat.icon} ${catDisplayName} (${catSentences.length})</span>
+    </div>
+    <div class="flex flex-wrap gap-2">
+      ${CATEGORIES.map(cat => {
+        const count = STATIONS.filter(s => s.category === cat.id).length;
+        const catName = cat[S.applyUi ? S.native : "name"] || cat.name;
+        const isActive = S.category === cat.id;
+        return `
+          <button data-cat="${cat.id}" data-active="${isActive}" class="btn-outline-gemini px-3 py-2 text-xs font-bold transition-all ${isActive ? 'scale-[1.03] ring-2 ring-foreground' : ''}">
+            <span>${cat.icon}</span> <span>${catName}</span> <span class="opacity-75 font-mono text-[11px]">(${count})</span>
+          </button>
+        `;
+      }).join("")}
+    </div>
+   </div>
+
+   <!-- Sentence Chips for Active Category -->
+   <div class="space-y-2">
+    <span class="font-mono text-xs uppercase tracking-wider text-muted-foreground">Select phrase to practice:</span>
+    <div class="grid grid-cols-2 gap-2.5 sm:grid-cols-4">
+      ${catSentences.map((s, idx) => {
+        const isSel = S.station === s.id;
+        return `
+          <button data-station="${s.id}" data-active="${isSel}" class="btn-outline-gemini p-3 text-left transition-all ${isSel ? 'ring-2 ring-foreground scale-[1.02]' : ''}">
+            <div class="flex items-center justify-between">
+              <span class="font-mono text-[10px] font-bold opacity-75">#0${idx + 1}</span>
+              ${isSel ? '<span class="h-2 w-2 rounded-full bg-g-green animate-pulse"></span>' : ''}
+            </div>
+            <span class="mt-1 block font-bold text-xs truncate">${s.title}</span>
+            <span class="mt-1 block font-mono text-[11px] text-g-yellow truncate">${s[S.target][0]}</span>
+          </button>
+        `;
+      }).join("")}
+    </div>
+   </div>
+
+   <!-- Active Practice Hero Card -->
+   <div class="brutal-card grid gap-8 p-6 sm:p-10 md:grid-cols-[1fr_auto] md:items-center">
+    <div class="space-y-4">
+      <div class="flex flex-wrap items-center justify-between gap-2 border-b-2 border-foreground/20 pb-3">
+        <span class="inline-flex items-center gap-2 font-mono text-xs uppercase text-g-purple font-bold">
+          <span>${activeCat.icon}</span>
+          <span>${catDisplayName}</span>
+          <span class="text-muted-foreground">· Phrase ${curIdxInCat + 1} of ${catSentences.length}</span>
+        </span>
+        <div class="flex items-center gap-2">
+          <button data-nav-sentence="prev" ${curIdxInCat <= 0 ? 'disabled' : ''} class="btn-outline-gemini px-2.5 py-1 font-mono text-xs font-bold disabled:opacity-40" title="Previous phrase">← Prev</button>
+          <span class="font-mono text-xs font-bold">${curIdxInCat + 1}/${catSentences.length}</span>
+          <button data-nav-sentence="next" ${curIdxInCat >= catSentences.length - 1 ? 'disabled' : ''} class="btn-outline-gemini px-2.5 py-1 font-mono text-xs font-bold disabled:opacity-40" title="Next phrase">Next →</button>
+        </div>
+      </div>
+
+      <span class="font-mono text-xs uppercase text-muted-foreground block">${t.sayThis.replace("{lang}",tgtName)}</span>
+      <p class="font-display text-3xl sm:text-5xl leading-tight">${ph[0]}</p>
+      <p class="font-mono text-sm text-g-yellow">${ph[1]}</p>
+      <p class="text-muted-foreground font-medium">“${curSentence.meaning}”</p>
+
+      <div class="flex flex-wrap items-center gap-3 pt-2">
+        <button id="hear" ${busy!=="idle"?"disabled":""} class="btn-outline-gemini px-4 py-2 text-sm disabled:opacity-60">${busy==="speaking"?t.speaking:t.hear}</button>
+        <button id="speed-btn" class="btn-outline-gemini px-3 py-2 text-xs font-mono" title="Toggle audio speed">${S.speed === 0.7 ? "🐢 0.7x Slow" : "⚡ 0.9x Normal"}</button>
+      </div>
+
+      ${S.heard!==null?`
+        <div class="space-y-3 rounded-md border-[3px] border-foreground bg-background p-4">
+          <div class="flex items-center justify-between"><p class="font-mono text-xs uppercase tracking-wider text-muted-foreground">${t.weHeard}</p><span class="font-mono text-xs text-muted-foreground">16kHz Audio Pipeline</span></div>
+          <p class="text-lg font-medium">${esc(S.heard)||t.nothingClear}</p>
+          ${S.score!==null?`
+            <div class="pt-2 border-t border-foreground/20 space-y-2">
+              <div class="flex flex-wrap items-center gap-3">
+                <span class="inline-flex items-center gap-2 rounded-md border-2 border-foreground bg-gemini px-3 py-1 font-mono text-xs font-bold text-background">${t.scoreLabel}: ${S.score}/100 ${S.score>=85?"🔥 Great!":S.score>=60?"👍 Good":"🔁 "+t.tryAgain}</span>
+                <span class="font-mono text-xs text-muted-foreground">Word Analysis:</span>
+              </div>
+              <div class="flex flex-wrap gap-2 pt-1">${computeWordFeedback(ph[0], S.heard).map(item=>`<span class="rounded px-2 py-0.5 font-mono text-xs font-bold border-2 ${item.status==='matched'?'border-g-green bg-g-green/20 text-g-green':item.status==='close'?'border-g-yellow bg-g-yellow/20 text-g-yellow':'border-g-red bg-g-red/20 text-g-red'}">${esc(item.word)} ${item.status==='matched'?'✓':item.status==='close'?'≈':'✗'}</span>`).join("")}</div>
+            </div>`:""}
+        </div>`:""}
+      ${errText?`<div class="rounded-md border-2 border-destructive bg-destructive/10 p-3 font-mono text-sm text-destructive flex items-center gap-2"><span>⚠️</span><span>${errText}</span></div>`:""}
+    </div>
+
+    <div class="flex flex-col items-center gap-3">
+      <button id="mic" ${busy==="speaking"||busy==="checking"?"disabled":""} class="btn-gemini grid h-36 w-36 place-items-center rounded-full text-5xl disabled:opacity-60 ${busy==="recording"?"glow-pulse":""}" aria-label="${busy==="recording"?t.micStop:t.micStart}">${busy==="recording"?"⏹":busy==="checking"?"⏳":"🎙️"}</button>
+      ${busy==="recording"?`<div class="flex items-center justify-center gap-1.5 h-6"><span class="wave-bar"></span><span class="wave-bar"></span><span class="wave-bar"></span><span class="wave-bar"></span><span class="wave-bar"></span></div>`:""}
+      <span class="font-mono text-xs text-muted-foreground">${busy==="recording"?t.tapToStop:busy==="checking"?t.checking:t.tapToSpeak}</span>
+    </div>
+   </div>
+  </div>`
+ : `<div class="space-y-6">
+   ${S.rpgSelected === null ? `
+    <div class="brutal-card space-y-6 p-6 sm:p-10">
+      <div class="flex items-center justify-between">
+        <span class="font-mono text-xs uppercase text-g-purple">${t.rpgChapter}</span>
+        <span class="rounded-sm border-2 border-foreground bg-gemini px-2 py-0.5 font-mono text-xs font-bold text-background">Scenario 01</span>
+      </div>
+      <p class="text-xl sm:text-2xl">${t.rpgPre}<b id="rpgname">${nm||""}</b>${t.rpgPost.replace("{lang}",tgtName)}</p>
+      <p class="text-sm font-semibold text-muted-foreground">Choose your response to practice in ${tgtName}:</p>
+      <div class="grid gap-4 sm:grid-cols-3">
+        ${RPG_PHRASES.map((r, i) => `
+          <button data-rpg-select="${i}" class="btn-outline-gemini p-5 text-left transition-all hover:scale-[1.02]">
+            <span class="block font-mono text-xs opacity-75">Option 0${i+1}</span>
+            <span class="mt-1 block font-bold text-base">🎤 ${r.title}</span>
+            <span class="mt-2 block font-mono text-xs text-g-yellow">${r[S.target][0]}</span>
+          </button>
+        `).join("")}
+      </div>
+    </div>`
+   : `
+    <div class="brutal-card space-y-6 p-6 sm:p-10">
+      <div class="flex items-center justify-between border-b-2 border-foreground/30 pb-3">
+        <button data-rpg-back="true" class="btn-outline-gemini px-3 py-1 font-mono text-xs font-bold">← Back to Choices</button>
+        <span class="font-mono text-xs uppercase text-g-purple">${RPG_PHRASES[S.rpgSelected].title}</span>
+      </div>
+      <div class="grid gap-8 md:grid-cols-[1fr_auto] md:items-center">
+        <div class="space-y-4">
+          <span class="font-mono text-xs uppercase text-muted-foreground">Speak this line in ${tgtName}:</span>
+          <p class="font-display text-3xl sm:text-5xl">${RPG_PHRASES[S.rpgSelected][S.target][0]}</p>
+          <p class="font-mono text-sm text-g-yellow">${RPG_PHRASES[S.rpgSelected][S.target][1]}</p>
+          <p class="text-muted-foreground font-medium">“${RPG_PHRASES[S.rpgSelected][S.target][2]}”</p>
+          <div class="flex flex-wrap items-center gap-3">
+            <button id="hear" ${busy!=="idle"?"disabled":""} class="btn-outline-gemini px-4 py-2 text-sm disabled:opacity-60">${busy==="speaking"?t.speaking:t.hear}</button>
+            <button id="speed-btn" class="btn-outline-gemini px-3 py-2 text-xs font-mono">${S.speed === 0.7 ? "🐢 0.7x Slow" : "⚡ 0.9x Normal"}</button>
+          </div>
+          ${S.heard !== null ? `
+            <div class="space-y-3 rounded-md border-[3px] border-foreground bg-background p-4">
+              <p class="font-mono text-xs uppercase tracking-wider text-muted-foreground">${t.weHeard}</p>
+              <p class="text-lg font-medium">${esc(S.heard) || t.nothingClear}</p>
+              ${S.score !== null ? `
+                <div class="pt-2 border-t border-foreground/20 space-y-2">
+                  <span class="inline-flex items-center gap-2 rounded-md border-2 border-foreground bg-gemini px-3 py-1 font-mono text-xs font-bold text-background">${t.scoreLabel}: ${S.score}/100 ${S.score >= 85 ? "🔥 Great!" : S.score >= 60 ? "👍 Good" : "🔁 " + t.tryAgain}</span>
+                  <div class="flex flex-wrap gap-2 pt-1">${computeWordFeedback(RPG_PHRASES[S.rpgSelected][S.target][0], S.heard).map(item=>`<span class="rounded px-2 py-0.5 font-mono text-xs font-bold border-2 ${item.status==='matched'?'border-g-green bg-g-green/20 text-g-green':item.status==='close'?'border-g-yellow bg-g-yellow/20 text-g-yellow':'border-g-red bg-g-red/20 text-g-red'}">${esc(item.word)} ${item.status==='matched'?'✓':item.status==='close'?'≈':'✗'}</span>`).join("")}</div>
+                </div>
+              ` : ""}
+            </div>
+            ${S.score !== null && S.score >= 60 ? `
+              <div class="rounded-md border-2 border-g-green bg-g-green/10 p-4 space-y-2">
+                <div class="flex items-center justify-between">
+                  <span class="font-display text-sm text-g-green">🌟 Mission Complete (+50 XP)</span>
+                  <span class="font-mono text-xs text-muted-foreground">Story Progressed</span>
+                </div>
+                <p class="text-sm font-semibold">${RPG_PHRASES[S.rpgSelected].reply[S.applyUi ? S.native : 'en']}</p>
+              </div>
+            ` : ""}
+          ` : ""}
+          ${errText ? `<div class="rounded-md border-2 border-destructive bg-destructive/10 p-3 font-mono text-sm text-destructive flex items-center gap-2"><span>⚠️</span><span>${errText}</span></div>` : ""}
+        </div>
+        <div class="flex flex-col items-center gap-3">
+          <button id="mic" ${busy==="speaking"||busy==="checking"?"disabled":""} class="btn-gemini grid h-36 w-36 place-items-center rounded-full text-5xl disabled:opacity-60 ${busy==="recording"?"glow-pulse":""}">${busy==="recording"?"⏹":busy==="checking"?"⏳":"🎙️"}</button>
+          ${busy==="recording"?`<div class="flex items-center justify-center gap-1.5 h-6"><span class="wave-bar"></span><span class="wave-bar"></span><span class="wave-bar"></span><span class="wave-bar"></span><span class="wave-bar"></span></div>`:""}
+          <span class="font-mono text-xs text-muted-foreground">${busy==="recording"?t.tapToStop:busy==="checking"?t.checking:t.tapToSpeak}</span>
+        </div>
+      </div>
+    </div>
+   `}
+   </div>`}
+</section>
+${renderProgress(t, ui)}
+</main>
+<footer class="border-t-[3px] border-foreground py-8"><div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-4 font-mono text-xs text-muted-foreground sm:flex-row lg:px-8"><span>SunSathiyAI</span><span>${t.footer}</span></div></footer>`;
+
+  window.scrollTo({ top: scrollY });
+}
+
+document.addEventListener("click", e => {
+  const b = e.target.closest("button, a");
+  if (!b) return;
+
+  if (b.dataset.native) {
+    S.native = b.dataset.native;
+    if (S.target === S.native) S.target = LANGS.find(x => x.code !== S.native).code;
+    reset();
+    render();
+  } else if (b.dataset.target) {
+    S.target = b.dataset.target;
+    reset();
+    render();
+  } else if (b.dataset.tab) {
+    S.tab = b.dataset.tab;
+    reset();
+    render();
+  } else if (b.dataset.cat) {
+    S.category = b.dataset.cat;
+    const first = STATIONS.find(s => s.category === S.category);
+    if (first) S.station = first.id;
+    reset();
+    render();
+  } else if (b.dataset.station !== undefined) {
+    S.station = +b.dataset.station;
+    reset();
+    render();
+  } else if (b.dataset.navSentence) {
+    const catSentences = STATIONS.filter(s => s.category === S.category);
+    const curIdx = catSentences.findIndex(s => s.id === S.station);
+    if (b.dataset.navSentence === "prev" && curIdx > 0) {
+      S.station = catSentences[curIdx - 1].id;
+      reset();
+      render();
+    } else if (b.dataset.navSentence === "next" && curIdx < catSentences.length - 1) {
+      S.station = catSentences[curIdx + 1].id;
+      reset();
+      render();
+    }
+  } else if (b.dataset.rpgSelect) {
+    S.rpgSelected = +b.dataset.rpgSelect;
+    reset();
+    render();
+  } else if (b.dataset.rpgBack) {
+    S.rpgSelected = null;
+    reset();
+    render();
+  } else if (b.dataset.progLang) {
+    S.progLang = b.dataset.progLang;
+    render();
+  } else if (b.dataset.progGoto) {
+    const [lc, id] = b.dataset.progGoto.split(":");
+    S.target = lc;
+    if (S.native === lc) S.native = LANGS.find(x => x.code !== lc).code;
+    S.tab = "lessons";
+    S.station = +id;
+    S.category = STATIONS[+id].category;
+    reset();
+    render();
+    document.getElementById("metro").scrollIntoView({ behavior: "smooth" });
+  } else if (b.dataset.progReset) {
+    const t = UI[S.applyUi ? S.native : "en"];
+    if (confirm(t.progResetConfirm)) { saveProgress([]); S.progLang = "all"; render(); }
+  } else if (b.id === "hear") {
+    hear();
+  } else if (b.id === "mic") {
+    toggleMic();
+  } else if (b.id === "speed-btn") {
+    S.speed = S.speed === 0.9 ? 0.7 : 0.9;
+    render();
+  }
+});
+
+document.addEventListener("change", e => {
+  if (e.target.id === "apply") {
+    S.applyUi = e.target.checked;
+    render();
+  }
+});
+
+document.addEventListener("input", e => {
+  if (e.target.id === "gmodel" || e.target.id === "gvoice") {
+    const k = e.target.id === "gmodel" ? "model" : "voice";
+    S[k] = e.target.value.trim();
+    localStorage.setItem(k === "model" ? "gnaniModel" : "gnaniVoice", S[k]);
+    return;
+  }
+  if (e.target.id !== "nm") return;
+  S.name = e.target.value;
+  const t = UI[S.applyUi ? S.native : "en"];
+  const launchBtn = $("#launch");
+  if (launchBtn) launchBtn.textContent = t.launch.replace("{name}", S.name || t.friend);
+  const rpgName = $("#rpgname");
+  if (rpgName) rpgName.textContent = S.name || "";
+});
+
+render();
+</script>
+</body>
+</html>

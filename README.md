@@ -1,76 +1,29 @@
-# SunSathiyAI
+# Welcome to your Lovable project
 
-SunSathiyAI is an interactive voice-enabled application that proxies Speech-to-Text (STT) and Text-to-Speech (TTS) requests to the Gnani (Vachana) platform securely.
+This project was built with [Lovable](https://lovable.dev).
 
----
+## Build with Lovable
 
-## 🚀 Quick Start (Local Run)
+Open your project in the [Lovable editor](https://lovable.dev) and keep building.
 
-### Prerequisites
-- **Node.js 20+** installed on your system.
-- No `npm install` needed (zero external dependencies).
+- **Ship faster**: describe what you want to build and Lovable handles the code.
+- **Stay in sync**: connect the project to GitHub and every change made in Lovable is committed straight to your repository.
+- **Full ownership**: this code is yours. Push to your repository and your changes sync back into Lovable, ready for your next prompt.
 
-### 1. Configure Environment Variables
-Copy `.env.example` to `.env`:
-```bash
-cp .env.example .env
-```
-Open `.env` and fill in your Gnani API key:
-```env
-GNANI_API_KEY=your_actual_api_key_here
-```
+## Development
 
-### 2. Run Server
-```bash
-node server.mjs
-# or
-npm start
+Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
+
+```sh
+git clone <this-repository-url>
+cd <repository-name>
+npm i
+npm run dev
 ```
 
-### 3. Open in Browser
-Navigate to [http://localhost:3000](http://localhost:3000).
+## Built with
 
----
-
-## 📁 Repository Structure
-
-```
-.
-├── index.html          # Main application page (accessible via root /)
-├── sunsathiyai.html    # Original application HTML
-├── server.mjs          # Node.js HTTP server & Gnani API proxy (/api/stt, /api/tts)
-├── package.json        # Project metadata & start scripts
-├── .env.example        # Environment variable template
-├── .gitignore          # Prevents committing secrets (.env)
-└── README.md           # Documentation
-```
-
----
-
-## 🌐 Deploying to GitHub & Cloud Platforms
-
-### Pushing to GitHub
-1. Initialize git and commit:
-   ```bash
-   git init
-   git add .
-   git commit -m "Initial commit of SunSathiyAI"
-   ```
-2. Create a new repository on [GitHub](https://github.com/new).
-3. Push to your GitHub repository:
-   ```bash
-   git remote add origin https://github.com/<your-username>/<your-repo-name>.git
-   git branch -M main
-   git push -u origin main
-   ```
-
-### Deploying the App
-Because the voice capabilities require the secure backend proxy in `server.mjs` to keep your `GNANI_API_KEY` private, deploy this project using a Node.js-compatible host connected to your GitHub repo:
-
-- **Render / Railway / Fly.io / Heroku**:
-  - Connect your GitHub repository.
-  - Set Build Command: *(leave empty or `npm install`)*
-  - Set Start Command: `node server.mjs` (or `npm start`)
-  - Add your Environment Variable:
-    - Key: `GNANI_API_KEY`
-    - Value: `<your-gnani-api-key>`
+- TanStack Start
+- TypeScript
+- React
+- Tailwind CSS
