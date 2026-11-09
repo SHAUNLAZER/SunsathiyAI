@@ -27,3 +27,11 @@ npm run dev
 - TypeScript
 - React
 - Tailwind CSS
+
+## Voice (Gnani / Vachana) setup
+
+1. Copy `.env.example` to `.env` and set `GNANI_API_KEY` (a `.dev.vars` copy is used when running on the Cloudflare/Wrangler runtime).
+2. Restart the dev server after changing it.
+3. For deployment, add `GNANI_API_KEY` as an environment variable/secret in your host (Vercel: Project → Settings → Environment Variables; Cloudflare: Worker secrets), then redeploy.
+
+The key is read only in server routes (`src/lib/gnani.ts`), so it is never sent to the browser.
